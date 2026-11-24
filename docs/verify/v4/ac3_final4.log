@@ -1,0 +1,31 @@
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 19:10:18 sha256=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+BUILD: newest src=settings_dialog.cpp mtime=2026-11-02 18:58:17
+BUILD: fresh=yes
+
+AC-3 NETWORK SPEED  2026-11-02 19:26:09
+COPY: main=NetBall.exe sha=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+COPY: priv=NetBall_v4.exe sha=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0  identical=True
+APP: pid=34188 launched
+APP: ball hwnd=0x1A40AA6 rect=(2093, 1085, 2181, 1173)
+CONFIG at start: mtime=19:23:19 bytes=193
+NIC: 7 eligible interface(s) after OperStatus/type/FilterInterface filter
+CURL: pid=26664 max_time=45s rate_limit=900k url=https://speed.cloudflare.com/__down?bytes=20000000
+NOTE: curl --max-time on a 20 MB payload ALWAYS exits 28 (truncated by
+      design). rc=28 is expected and is not a failure.
+SAMPLE 1: t=5.04s cap_rc=0 colors=699 ink_px=2228 ball=154x154 nic=71081 B/s
+SAMPLE 2: t=8.54s cap_rc=0 colors=696 ink_px=2256 ball=154x154 nic=113721 B/s
+SAMPLE 3: t=12.04s cap_rc=0 colors=367 ink_px=2183 ball=154x154 nic=118649 B/s
+SAMPLE 4: t=15.54s cap_rc=0 colors=378 ink_px=2238 ball=154x154 nic=127971 B/s
+SAMPLE 5: t=19.03s cap_rc=0 colors=345 ink_px=2152 ball=154x154 nic=71791 B/s
+CURL: rc=28 wall=45.04s
+CURL -w: '0 45.004986 0 000'
+OCR 1: text='106 KB/s 17 · 9 KB/s 存 88 ％ 0' ball_bps=108544 nic_bps=71081 err_vs_curl=n/a err_vs_nic=52.70% [scale=6 thr=0 crop=0.24]
+OCR 2: text='105 KB/s 9 · 53 KB/s 存 88 ％ 0' ball_bps=107520 nic_bps=113721 err_vs_curl=n/a err_vs_nic=5.45% [scale=6 thr=0 crop=0.24]
+OCR 3: text='112 KB/s 12 · 5 KB/s 存 88 ％' ball_bps=114688 nic_bps=118649 err_vs_curl=n/a err_vs_nic=3.34% [scale=6 thr=0 crop=0.24]
+OCR 4: text='102 KB/s 7 · 78 KB/s 存 88 ％' ball_bps=104448 nic_bps=127971 err_vs_curl=n/a err_vs_nic=18.38% [scale=6 thr=0 crop=0.24]
+OCR 5: text='96 · 4 KB/s 6 · 14 KB/s 存 87 ％' ball_bps=98713 nic_bps=71791 err_vs_curl=n/a err_vs_nic=37.50% [scale=6 thr=0 crop=0.24]
+APP: pid=34188 terminated (by PID only), rc=1
+
+GROUND_TRUTH bytes=0 seconds=45.005 rate=0.0 B/s (0.00 KB/s)
+GATE: bytes>=300000 -> False ; window>=20s -> True
+RESULT: BLOCKED-流量未建立 (0 bytes in 45.00s)

@@ -1,0 +1,169 @@
+BUILD: exe=NetBall_vfy.exe bytes=1053184 mtime=2026-11-02 18:36:37
+BUILD: newest source=src/ball_window.cpp mtime=2026-11-02 18:35:44
+BUILD: fresh=yes
+AC-5 RESOURCE / CPU / STARTUP CHECK
+  process      : NetBall_vfy
+  warmup       : 60 s before the steady-state window
+  sample window: 60 s (1 Hz)
+  limits       : WS(steady) <= 15 MB, CPU avg <= 0.5 %, startup <= 500 ms
+  logical cores: 16
+  launching exe for sampling ...
+  pid          : 30688  startedAt 2026/11/2 18:42:48
+  early values : WS=0.16 MB  Private=3.23 MB  PeakWS=16.69 MB  Handles=155  GDI=15  USER=10
+
+  warmup: 60 s (waiting for steady state before judging WS) ...
+    t=  1s  WS=  3.36 MB  GDI=15  USER=10
+    t=  2s  WS=  3.38 MB  GDI=15  USER=10
+    t=  3s  WS=  3.41 MB  GDI=15  USER=10
+    t=  4s  WS=  3.42 MB  GDI=15  USER=10
+    t=  5s  WS=  3.43 MB  GDI=15  USER=10
+    t=  6s  WS=  3.43 MB  GDI=15  USER=10
+    t=  7s  WS=  3.43 MB  GDI=15  USER=10
+    t=  8s  WS=  3.44 MB  GDI=15  USER=10
+    t=  9s  WS=  3.44 MB  GDI=15  USER=10
+    t= 10s  WS=  3.45 MB  GDI=15  USER=10
+    t= 11s  WS=  3.46 MB  GDI=15  USER=10
+    t= 12s  WS=  3.46 MB  GDI=15  USER=10
+    t= 13s  WS=  3.46 MB  GDI=15  USER=10
+    t= 14s  WS=  3.46 MB  GDI=15  USER=10
+    t= 15s  WS=  3.46 MB  GDI=15  USER=10
+    t= 16s  WS=  3.46 MB  GDI=15  USER=10
+    t= 17s  WS=  3.46 MB  GDI=15  USER=10
+    t= 18s  WS=  3.46 MB  GDI=15  USER=10
+    t= 19s  WS=  3.46 MB  GDI=15  USER=10
+    t= 20s  WS=  3.46 MB  GDI=15  USER=10
+    t= 21s  WS=  3.86 MB  GDI=15  USER=10
+    t= 22s  WS=  3.75 MB  GDI=15  USER=10
+    t= 23s  WS=  3.75 MB  GDI=15  USER=10
+    t= 24s  WS=  3.75 MB  GDI=15  USER=10
+    t= 25s  WS=  3.75 MB  GDI=15  USER=10
+    t= 26s  WS=  3.75 MB  GDI=15  USER=10
+    t= 27s  WS=  3.75 MB  GDI=15  USER=10
+    t= 28s  WS=  3.76 MB  GDI=15  USER=10
+    t= 29s  WS=  3.80 MB  GDI=15  USER=10
+    t= 30s  WS=  3.80 MB  GDI=15  USER=10
+    t= 31s  WS=  3.81 MB  GDI=15  USER=10
+    t= 32s  WS=  3.81 MB  GDI=15  USER=10
+    t= 33s  WS=  3.81 MB  GDI=15  USER=10
+    t= 34s  WS=  3.81 MB  GDI=15  USER=10
+    t= 35s  WS=  3.82 MB  GDI=15  USER=10
+    t= 36s  WS=  3.82 MB  GDI=15  USER=10
+    t= 37s  WS=  3.82 MB  GDI=15  USER=10
+    t= 38s  WS=  3.82 MB  GDI=15  USER=10
+    t= 39s  WS=  3.82 MB  GDI=15  USER=10
+    t= 40s  WS=  3.82 MB  GDI=15  USER=10
+    t= 42s  WS=  3.82 MB  GDI=15  USER=10
+    t= 43s  WS=  3.82 MB  GDI=15  USER=10
+    t= 44s  WS=  3.82 MB  GDI=15  USER=10
+    t= 45s  WS=  3.82 MB  GDI=15  USER=10
+    t= 46s  WS=  3.82 MB  GDI=15  USER=10
+    t= 47s  WS=  3.82 MB  GDI=15  USER=10
+    t= 48s  WS=  3.93 MB  GDI=15  USER=10
+    t= 49s  WS=  3.82 MB  GDI=15  USER=10
+    t= 50s  WS=  3.82 MB  GDI=15  USER=10
+    t= 51s  WS=  3.82 MB  GDI=15  USER=10
+    t= 52s  WS=  3.82 MB  GDI=15  USER=10
+    t= 53s  WS=  3.82 MB  GDI=15  USER=10
+    t= 54s  WS=  3.82 MB  GDI=15  USER=10
+    t= 55s  WS=  3.82 MB  GDI=15  USER=10
+    t= 56s  WS=  3.82 MB  GDI=15  USER=10
+    t= 57s  WS=  3.82 MB  GDI=15  USER=10
+    t= 58s  WS=  3.82 MB  GDI=15  USER=10
+    t= 59s  WS=  3.82 MB  GDI=15  USER=10
+    t= 60s  WS=  3.82 MB  GDI=15  USER=10
+    t= 61s  WS=  3.82 MB  GDI=15  USER=10
+  steady-state starts at t=61s  WS=3.82 MB
+
+  t_s   WS(MB)  Priv(MB)  PeakWS(MB)  Hand  GDI  USER   CPU%
+     0    3.82     3.19      16.69   155   15    10   0.0000
+     1    3.82     3.19      16.69   155   15    10   0.0000
+     2    3.82     3.19      16.69   155   15    10   0.0976
+     3    3.82     3.19      16.69   155   15    10   0.0000
+     4    3.82     3.19      16.69   155   15    10   0.0000
+     5    3.82     3.19      16.69   155   15    10   0.0000
+     6    3.82     3.19      16.69   155   15    10   0.0000
+     7    3.82     3.19      16.69   155   15    10   0.0000
+     8    3.82     3.19      16.69   155   15    10   0.0000
+     9    3.82     3.19      16.69   155   15    10   0.0000
+    10    3.82     3.19      16.69   155   15    10   0.0000
+    11    3.82     3.19      16.69   155   15    10   0.0000
+    12    3.82     3.19      16.69   155   15    10   0.0000
+    13    3.82     3.19      16.69   155   15    10   0.0000
+    14    3.82     3.19      16.69   155   15    10   0.0000
+    15    3.82     3.19      16.69   155   15    10   0.0000
+    16    3.82     3.19      16.69   155   15    10   0.0000
+    17    3.83     3.19      16.69   155   15    10   0.0000
+    18    3.83     3.20      16.69   155   15    10   0.0000
+    19    3.83     3.20      16.69   155   15    10   0.0000
+    20    3.83     3.20      16.69   155   15    10   0.0000
+    21    3.83     3.20      16.69   155   15    10   0.0000
+    22    3.83     3.20      16.69   155   15    10   0.0000
+    23    3.83     3.20      16.69   155   15    10   0.0000
+    24    3.84     3.20      16.69   155   15    10   0.0000
+    25    3.84     3.20      16.69   155   15    10   0.0000
+    26    3.84     3.20      16.69   155   15    10   0.0000
+    27    3.84     3.20      16.69   155   15    10   0.0000
+    28    3.84     3.20      16.69   155   15    10   0.0000
+    29    3.84     3.20      16.69   155   15    10   0.0000
+    30    3.84     3.20      16.69   155   15    10   0.0000
+    31    3.84     3.20      16.69   155   15    10   0.0000
+    32    3.84     3.20      16.69   155   15    10   0.0000
+    33    3.84     3.20      16.69   155   15    10   0.0000
+    34    3.84     3.20      16.69   155   15    10   0.0000
+    35    3.84     3.20      16.69   155   15    10   0.0000
+    36    3.84     3.20      16.69   155   15    10   0.0000
+    37    3.84     3.20      16.69   155   15    10   0.0000
+    38    3.84     3.20      16.69   155   15    10   0.0000
+    39    3.84     3.20      16.69   155   15    10   0.0000
+    40    3.84     3.20      16.69   155   15    10   0.0000
+    41    3.84     3.20      16.69   155   15    10   0.0000
+    42    3.84     3.20      16.69   155   15    10   0.0000
+    43    3.84     3.20      16.69   155   15    10   0.0000
+    44    3.84     3.20      16.69   155   15    10   0.0000
+    45    3.84     3.20      16.69   155   15    10   0.0000
+    46    3.84     3.20      16.69   155   15    10   0.0000
+    47    3.84     3.20      16.69   155   15    10   0.0000
+    48    3.84     3.20      16.69   155   15    10   0.0000
+    49    3.84     3.20      16.69   155   15    10   0.0000
+    50    3.84     3.20      16.69   155   15    10   0.0000
+    51    3.84     3.20      16.69   155   15    10   0.0000
+    52    3.84     3.20      16.69   155   15    10   0.0000
+    53    3.84     3.20      16.69   155   15    10   0.0000
+    54    3.84     3.20      16.69   155   15    10   0.0000
+    55    3.84     3.20      16.69   155   15    10   0.0000
+    56    3.84     3.20      16.69   155   15    10   0.0000
+    57    3.84     3.20      16.69   155   15    10   0.0000
+    58    3.84     3.20      16.69   155   15    10   0.0000
+    59    3.84     3.20      16.69   155   15    10   0.0000
+
+  sampled        : 60 points over 60.7 s
+  WS(steady)     : min 3.82 / avg 3.83 / max 3.84 MB (limit 15 MB)
+  WS(early t=0)  : 0.16 MB
+  Private  max   : 3.20 MB
+  PeakWS   max   : 16.69 MB
+  Handles  max   : 155
+  GDI obj  min/max: 15 / 15
+  USER obj max   : 10
+  CPU avg/peak   : 0.0016 % / 0.0976 %
+
+  measuring cold start (3 runs) ...
+    STARTUP TIME MEASUREMENT (cold start)
+      exe    : d:\agentproject\网速悬浮球\build\_tmp\vfy\NetBall_vfy.exe
+      runs   : 3
+      limit  : 500 ms
+      pre-clean: stopping leftover PID 30688 (name NetBall_vfy)
+    RUN 1: t_exist=10 ms  t_window=50 ms
+    True
+    RUN 2: t_exist=7 ms  t_window=52 ms
+    True
+    RUN 3: t_exist=8 ms  t_window=49 ms
+    True
+    
+    SUMMARY: runs=3  t_exist_ms(median)=8  t_window_ms(median)=50
+             t_exist  min=7 max=10
+             t_window min=49 max=52
+    METRIC: startup_ms=50 limit_ms=500 method=window-ready median
+    RESULT: PASS (startup 50 ms <= 500 ms)
+
+  evidence written: D:\agentproject\网速悬浮球\docs\verify\resources.txt
+RESULT: PASS (WS steady max 3.84 MB, CPU avg 0.0016 %, startup 50 ms)

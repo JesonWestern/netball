@@ -1,0 +1,33 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053184
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T7b AC-7 : opacity 20% vs 100% (white ball) ===========
+  candidate (700,320) backdrop drift over 0.9s = 0.00
+  test spot: 700,320
+  baseline (no ball) : 24713 bytes  region x=680 y=300 320x320
+CHECK: PASS baseline.png  (desktop baseline bytes=24713)
+  opacity  20% attempt 1: rect=L700 T320 280x280 png=ac7-op20.png bytes=40057 backdrop drift=0.00
+CHECK: PASS op20.png  (screenshot bytes=40057)
+CHECK: PASS op20.rect  (L=700 W=280 expect L=700 W=280)
+CHECK: PASS op20.backdrop-frozen  (drift 0.00 < 1.5, luminance gap is clean)
+  opacity 100% attempt 1: rect=L700 T320 280x280 png=ac7-op100.png bytes=19341 backdrop drift=0.00
+CHECK: PASS op100.png  (screenshot bytes=19341)
+CHECK: PASS op100.rect  (L=700 W=280 expect L=700 W=280)
+CHECK: PASS op100.backdrop-frozen  (drift 0.00 < 1.5, luminance gap is clean)
+
+AC-7 OPACITY (white ball #FFFFFF)
+  ball rect in shot : x=20 y=20 280x280
+  no-ball baseline  : rel_lum=0.0838
+  opacity  20%     : fill=#3C3C3C backdrop=#17181A implied_alpha=0.155 (want 0.20)
+  opacity 100%     : fill=#FCFCFC backdrop=#17181A implied_alpha=0.987 (want 1.00)
+  |rel_lum(fill@100%) - rel_lum(fill@20%)| = 0.9283
+  (this number also depends on the wallpaper: a white desktop makes a 20%%
+   white ball invisible, which is why the implied alpha below is authoritative)
+METRIC: alpha20=0.155 alpha100=0.987 back20=#17181A back100=#17181A fill20=#3C3C3C fill100=#FCFCFC rel_diff=0.9283
+METRIC-DETAIL: alpha20 within +-0.06 of 0.20 -> True ; alpha100 >= 0.95 -> True
+RESULT: PASS (the layered window really renders at 20%% and at 100%%)
+PYEXIT: 0
+CHECK: PASS opacity.alpha-applied  (t7b_img.py alpha exit=0)
+
+SUMMARY: checks=8 failed=0
+RESULT: PASS

@@ -1,0 +1,39 @@
+UNINS   : C:\Users\sihuo\AppData\Local\Programs\NetBall\unins000.exe
+MODE    : silent
+ARGS    : /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=D:\agentproject\Õ¯ÀŸ–¸∏°«Ú\build\_tmp\v2\inno_unins3.log
+LAUNCH_PID=18496
+LAUNCHER_EXITED EXITCODE=0 ELAPSED_MS=421
+APPDIR_GONE
+--- residual processes ---
+NO_LEFTOVER_PROCESS
+--- inno uninstall log markers ---
+  2026-11-02 20:40:04.288   Uninstallation process succeeded.
+  2026-11-02 20:40:04.288   Need to restart Windows? No
+  2026-11-02 20:40:04.288   Log closed.
+=== SNAPSHOT [final_clean] 2026-11-02 20:40:06 ===
+USER    : sihuo
+appdir  : C:\Users\sihuo\AppData\Local\Programs\NetBall
+desktop : C:\Users\sihuo\Desktop
+startmenu: C:\Users\sihuo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\NetBall
+--- appdir ---
+APPDIR_ABSENT
+--- desktop lnk ---
+DESKTOP_LNK_ABSENT
+--- startmenu group ---
+STARTMENU_ABSENT
+--- appdir uninstaller pair ---
+  MISSING unins000.exe
+  MISSING unins000.dat
+  MISSING unins000.msg
+  MISSING NetBall.exe
+  MISSING unins_lnk C:\Users\sihuo\AppData\Local\Programs\NetBall\Âç∏ËΩΩ NetBall.lnk
+--- run value ---
+RUNVALUE_ABSENT
+--- uninstall registry ---
+UNINSTALL_KEY_ABSENT
+--- appdata config ---
+CFGDIR_EXISTS
+  \config.ini size=193
+--- processes ---
+NO_RELATED_PROCESS
+=== END [final_clean] ===

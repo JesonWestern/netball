@@ -1,0 +1,47 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053184
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T7b AC-12 : right-click menu + tray menu ===========
+  ball: hwnd=0x1E0A74 rect=L700 T320 154x154 centre=(777,397)
+  HKCU Run\NetBall =  -> autostart check mark expected 0
+  ball menu window: 0x1C0A92
+  menu rect: L824 T443 255x248
+CHECK: PASS ball.menu.geometry  (menu size 255x248)
+CHECK: PASS ball.menu.screenshot  (captured while the popup was up: 11794 bytes)
+  --- MN_GETHMENU dump (ball) ---
+    HMENU=0xAF50C6D count=8
+    item 0 id=1001 checked=0 sep=0 enabled=1 text=设置(&S)...
+    item 1 id=0 checked=0 sep=1 enabled=0 text=
+    item 2 id=1002 checked=1 sep=0 enabled=1 text=总在最前(&T)
+    item 3 id=1003 checked=0 sep=0 enabled=1 text=开机自启(&A)
+    item 4 id=1004 checked=0 sep=0 enabled=1 text=重置位置(&R)
+    item 5 id=0 checked=0 sep=1 enabled=0 text=
+    item 6 id=1005 checked=0 sep=0 enabled=1 text=关于(&B)
+    item 7 id=1006 checked=0 sep=0 enabled=1 text=退出(&X)
+CHECK: PASS ball.menu.item-count  (6 selectable items (expect 6))
+CHECK: PASS ball.menu.item-ids  (ids = 1001,1002,1003,1004,1005,1006)
+CHECK: PASS ball.menu.separators  (2 separator(s) (expect 2))
+CHECK: PASS ball.menu.topmost-checked  (topmost item checked=1 (config alwaysontop=1))
+CHECK: PASS ball.menu.autostart-checked  (autostart item checked=0 (registry says 0))
+CHECK: PASS ball.menu.all-enabled  (all 6 items enabled)
+CHECK: PASS ball.menu.dismissed  (ESC closed the popup=True)
+  tray menu window: 0x200A92
+CHECK: PASS tray.menu.screenshot  (captured while the tray popup was up: 8960 bytes)
+  --- MN_GETHMENU dump (tray) ---
+    HMENU=0x9FD0B19 count=4
+    item 0 id=1001 checked=0 sep=0 enabled=1 text=设置(&S)...
+    item 1 id=1010 checked=0 sep=0 enabled=1 text=显示或隐藏(&H)
+    item 2 id=0 checked=0 sep=1 enabled=0 text=
+    item 3 id=1006 checked=0 sep=0 enabled=1 text=退出(&X)
+CHECK: PASS tray.menu.item-count  (3 selectable items (expect 3))
+CHECK: PASS tray.menu.item-ids  (ids = 1001,1010,1006)
+CHECK: PASS tray.menu.dismissed  (ESC closed the popup=True)
+  toggle 1: IsWindowVisible=False (visible shot 14787 B, hidden shot 11426 B)
+CHECK: PASS tray.showhide.hides  (IsWindowVisible=False after IDM_TRAY_SHOW)
+CHECK: PASS tray.showhide.hide-evidence  (before/after screenshots both real)
+  toggle 2: IsWindowVisible=True
+CHECK: PASS tray.showhide.restores  (IsWindowVisible=True after the second IDM_TRAY_SHOW)
+
+SUMMARY: checks=16 failed=0
+RESULT: PASS
+EXIT=0 

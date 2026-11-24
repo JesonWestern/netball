@@ -1,0 +1,48 @@
+===== install with desktopicon =====
+SETUP   : D:\agentproject\ÍøËÙĞü¸¡Çò\dist\NetBallSetup-1.0.0.exe
+ARGS    : /VERYSILENT /CURRENTUSER /SUPPRESSMSGBOXES /NORESTART /SP- /LANG=chinesesimplified /LOG=D:\agentproject\ÍøËÙĞü¸¡Çò\build\_tmp\v2\inno_install5.log /TASKS=desktopicon
+INNOLOG : D:\agentproject\ÍøËÙĞü¸¡Çò\build\_tmp\v2\inno_install5.log
+LOADER_EXITED_PID=31920 EXITCODE=0 ELAPSED_MS=567
+ARTIFACT_UNINS_PRESENT
+--- inno log markers ---
+  2026-11-02 20:39:10.868   Installation process succeeded.
+  2026-11-02 20:39:10.882   Deinitializing Setup.
+  2026-11-02 20:39:10.888   Log closed.
+===== shortcut targets =====
+Join-Path : æ‰¾ä¸åˆ°æ¥å—å®é™…å‚æ•°â€œ+â€çš„ä½ç½®å½¢å¼å‚æ•°ã€‚
+æ‰€åœ¨ä½ç½® D:\agentproject\ç½‘é€Ÿæ‚¬æµ®çƒ\build\_tmp\v2\p_lnk.ps1:13 å­—ç¬¦: 46
++ ...  = 'sm_launch_lnk';      Path = (Join-Path $sm $name + '.lnk');       ...
++                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Join-Path]ï¼ŒParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.JoinPathCommand
+ 
+LNK_DONE
+===== install dir raw listing =====
+ Volume in drive C has no label.
+ Volume Serial Number is F6B2-6750
+
+ Directory of C:\Users\sihuo\AppData\Local\Programs\NetBall
+
+2026/11/02  20:39    <DIR>          .
+2026/11/02  20:39    <DIR>          ..
+2026/11/02  19:10         1,053,184 NetBall.exe
+2026/11/02  18:08             4,190 README.txt
+2026/11/02  20:39             5,580 unins000.dat
+2026/11/02  20:39         4,386,294 unins000.exe
+2026/11/02  20:39             1,187 å¸è½½ NetBall.lnk
+               5 File(s)      5,450,435 bytes
+               2 Dir(s)  856,134,176,768 bytes free
+===== start menu raw listing =====
+ Volume in drive C has no label.
+ Volume Serial Number is F6B2-6750
+
+ Directory of C:\Users\sihuo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\NetBall
+
+2026/11/02  20:39    <DIR>          .
+2026/11/02  20:39    <DIR>          ..
+2026/11/02  20:39             1,258 NetBall ç½‘é€Ÿæ‚¬æµ®çƒ.lnk
+2026/11/02  20:39             1,265 å¸è½½ NetBall.lnk
+               2 File(s)          2,523 bytes
+               2 Dir(s)  856,134,176,768 bytes free
+===== desktop raw listing (filtered) =====
+2026/11/02  20:39             1,244 NetBall.lnk

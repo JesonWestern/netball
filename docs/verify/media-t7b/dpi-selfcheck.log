@@ -1,0 +1,35 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053184
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T7b DPI PREFLIGHT (tool gate, no AC verdict) ===========
+  GetDpiForMonitor(MDT_EFFECTIVE_DPI) = 168 dpi  (hr=0x0)
+  GetDpiForSystem() in this thread     = 168 dpi
+  scale factor                         = 1.75
+  size= 88 DIP | aware rect 154x154 (expect 154) | unaware control 88x88 | ratio 1.75
+CHECK: PASS dpi88.physical  (aware 154x154 == 154x154 = 88 DIP x 1.75)
+CHECK: PASS dpi88.context-restored  (re-measured after restoring PMv2: 154x154)
+         (the unaware control reproduces the old tooling bug: 88x88 logical vs 154x154 physical)
+CHECK: PASS dpi88.capture  (bytes=9809 region 170x170)
+  size=160 DIP | aware rect 280x280 (expect 280) | unaware control 160x160 | ratio 1.75
+CHECK: PASS dpi160.physical  (aware 280x280 == 280x280 = 160 DIP x 1.75)
+CHECK: PASS dpi160.context-restored  (re-measured after restoring PMv2: 280x280)
+         (the unaware control reproduces the old tooling bug: 160x160 logical vs 280x280 physical)
+CHECK: PASS dpi160.capture  (bytes=18482 region 296x296)
+
+  --- pixel proof: the captured fill must span the physical rect ---
+AC-6 SHAPE RENDER (pixel assertions on real CopyFromScreen captures)
+shape    file                         bbox        aspect  coverage off@10% off@25% verdict
+------------------------------------------------------------------------------------------------
+shape0-s88 selfcheck-size88.png         154x154     1.000   0.778    0.208   0.071   PASS  
+         fill=#FCFCFC bbox=(8,8)-(161,161) window=154x154
+shape0-s160 selfcheck-size160.png        280x280     1.000   0.781    0.200   0.068   PASS  
+         fill=#FCFCFC bbox=(8,8)-(287,287) window=280x280
+
+METRIC: shots=2 fails=0
+RESULT: PASS (every shape matched its geometric + pixel profile)
+PYEXIT: 0
+CHECK: PASS dpi.pixel-alignment  (fill bbox equals the physical rect (capture really shows the ball))
+
+SUMMARY: checks=7 failed=0 dpi_failed=0
+METRIC: scale=1.75 dpi=168 aware=PMv2 gate=PASS
+RESULT: PASS (capture path is DPI aware, rects are physical pixels)

@@ -1,0 +1,30 @@
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 19:10:18 sha256=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+BUILD: newest src=settings_dialog.cpp mtime=2026-11-02 18:58:17
+BUILD: fresh=yes
+
+AC-3 NETWORK SPEED  2026-11-02 19:18:54
+COPY: main=NetBall.exe sha=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+COPY: priv=NetBall_v4.exe sha=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0  identical=True
+APP: pid=32316 launched
+APP: ball hwnd=0x110E00 rect=(2093, 1085, 2181, 1173)
+CONFIG at start: mtime=19:05:49 bytes=193
+CURL: pid=2384 max_time=30s url=https://speed.cloudflare.com/__down?bytes=20000000
+NOTE: curl --max-time on a 20 MB payload ALWAYS exits 28 (truncated by
+      design). rc=28 is expected and is not a failure.
+SAMPLE 1: t=2.02s cap_rc=0 colors=432 ink_px=2233 ball=154x154
+SAMPLE 2: t=6.51s cap_rc=0 colors=422 ink_px=1998 ball=154x154
+SAMPLE 3: t=11.03s cap_rc=0 colors=421 ink_px=1979 ball=154x154
+SAMPLE 4: t=15.51s cap_rc=0 colors=426 ink_px=1973 ball=154x154
+SAMPLE 5: t=20.03s cap_rc=0 colors=425 ink_px=1983 ball=154x154
+CURL: rc=0 wall=20.95s
+CURL -w: '20000000 19.711673 1014627 200'
+OCR 1: text='223 KB/s 7 · 12 K B/s 勺 存 80 ％ At' ball_bps=228352 err=77.49% [scale=6 thr=0 crop=0.24]
+OCR 2: text='1023 KB/s 43 · 6 KB/s 内 存 81 ％ At' ball_bps=1047552 err=3.25% [scale=6 thr=0 crop=0.24]
+OCR 3: text='1 · 15 M B/s t ． 8 KB/s 内 存' ball_bps=8192 err=99.19% [scale=6 thr=110 crop=0.18]
+OCR 4: text='， 1 ． M B/s 2 KB/s 内 存 81 ％' ball_bps=2048 err=99.80% [scale=6 thr=110 crop=0.18]
+OCR 5: text='1 · 79 M B/s 633 KB/s 存 80 ％' ball_bps=648192 err=36.12% [scale=6 thr=0 crop=0.24]
+APP: pid=32316 terminated (by PID only), rc=1
+
+GROUND_TRUTH bytes=20000000 seconds=19.712 rate=1014627.2 B/s (990.85 KB/s)
+GATE: bytes>=300000 -> True ; window>=20s -> False
+RESULT: BLOCKED-流量未建立 (20000000 bytes in 19.71s)

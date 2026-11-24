@@ -1,0 +1,23 @@
+PRE_PROC=0
+PRE_APPDIR=False
+PRE_RUNVALUE="C:\Windows\System32\notepad.exe"
+INSTALL_EXITCODE=0
+APPDIR=True
+DESKTOP_LNK_EXISTS=True
+STARTMENU_ITEMS=2
+APP_LNK_ITEMS=1
+  LNK Ð¶ÔØ NetBall.lnk -> TARGET=C:\Users\sihuo\AppData\Local\Programs\NetBall\unins000.exe | WORKDIR=C:\Users\sihuo\AppData\Local\Programs\NetBall | ICON=,0
+  LNK NetBall ÍøËÙÐü¸¡Çò.lnk -> TARGET=C:\Users\sihuo\AppData\Local\Programs\NetBall\NetBall.exe | WORKDIR=C:\Users\sihuo\AppData\Local\Programs\NetBall | ICON=,0
+  LNK Ð¶ÔØ NetBall.lnk -> TARGET=C:\Users\sihuo\AppData\Local\Programs\NetBall\unins000.exe | WORKDIR=C:\Users\sihuo\AppData\Local\Programs\NetBall | ICON=,0
+  LNK NetBall.lnk -> TARGET=C:\Users\sihuo\AppData\Local\Programs\NetBall\NetBall.exe | WORKDIR=C:\Users\sihuo\AppData\Local\Programs\NetBall | ICON=,0
+LNK_TOTAL=4
+UNINSTALL_EXITCODE=0 MS=1032
+FINAL_APPDIR_GONE=True
+FINAL_STARTMENU_GONE=True
+FINAL_DESKTOP_GONE=True
+FINAL_RUNVALUE=DELETED
+FINAL_UNINSKEY_GONE=True
+UNINS_TMP_PROC=0
+UNINS_TMP_FILES=0
+CFG=38A32E914E9769C3F3CABA303B72D83FA6A91F59E7376AAA0101B90BED2A57EC
+FINAL_PROC=0

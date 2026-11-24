@@ -1,0 +1,107 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053696
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T14 closing : config baseline / processes / anchor / inventory ===========
+  baseline written: 173 bytes sha256=42cc1cadda4b2efcb357e5add28fccd87316b25a846a55993fd12d92f75ba157
+  DIFF key shape        expected=0          actual=0          ok
+  DIFF key size         expected=88         actual=88         ok
+  DIFF key opacity      expected=85         actual=85         ok
+  DIFF key textauto     expected=1          actual=1          ok
+  DIFF key shownet      expected=1          actual=1          ok
+  DIFF key showmem      expected=1          actual=1          ok
+  DIFF key refreshms    expected=1000       actual=1000       ok
+  DIFF key alwaysontop  expected=1          actual=1          ok
+  DIFF key autostart    expected=0          actual=0          ok
+  DIFF key posx         expected=-1         actual=-1         ok
+  DIFF key posy         expected=-1         actual=-1         ok
+  DIFF key bgcolor      expected=#181C24    actual=#181C24    ok
+  DIFF key textcolor    expected=#FFFFFF    actual=#FFFFFF    ok
+CHECK: PASS CFG.restored  (13/13 keys identical to the baseline)
+  extra keys present = 0
+  NetBall/NetBall_v5 processes = 0
+CHECK: PASS PROC.zero  (no residual NetBall process (0))
+  anchor after the whole run: 1053696 B sha256=e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983
+CHECK: PASS ANCHOR.unchanged  (build\out\NetBall.exe is still the broadcast binary (no rebuild during the run))
+
+  --- docs\verify\v5 ---
+    _shell_probe.txt                     18 B
+    run_0_anchor.log                   1627 B
+    run_0_anchor.ps1                   3984 B
+    run_A.log                          1453 B
+    run_A.ps1                          9810 B
+    run_A3.log                          941 B
+    run_A3.ps1                         2990 B
+    run_B.log                          4123 B
+    run_B.ps1                         12761 B
+    run_B3c.log                        1048 B
+    run_B3c.ps1                        4080 B
+    run_C1.log                         4240 B
+    run_C1.ps1                        14614 B
+    run_C2.log                         3126 B
+    run_C2.ps1                        10915 B
+    run_C3_pixels.log                  2025 B
+    run_C3_pixels.ps1                  6213 B
+    run_C4_shapes.log                  3325 B
+    run_C4_shapes.ps1                  6644 B
+    run_C5_inspect.log                 1816 B
+    run_C5_inspect.ps1                 2500 B
+    run_C6_shape_profile.log           1754 B
+    run_C6_shape_profile.ps1           1914 B
+    run_C7_fix.log                     1801 B
+    run_C7_fix.ps1                     8332 B
+    run_C8_alpha.log                   1387 B
+    run_C8_alpha.ps1                   4472 B
+    run_v5.cmd                          467 B
+    run_Z_hygiene.log                     0 B
+    run_Z_hygiene.ps1                  3891 B
+    total files = 30
+  --- docs\verify\media-v5 ---
+    a1-neg500.png                         40805 B
+    a2-settings.png                       42177 B
+    a3-illegal.png                        12040 B
+    b1-bottomright.png                    17492 B
+    b2-topleft.png                        18624 B
+    b3-after-reset.png                    12509 B
+    b3-ball-menu.png                      23175 B
+    b3c-after-reset.png                   11990 B
+    b3-tray-menu.png                      15449 B
+    c1-capsule160.png                     24752 B
+    c1-shape-0.png                         8142 B
+    c1-shape-1.png                         5817 B
+    c1-shape-2.png                        12134 B
+    c1-size160.png                        21053 B
+    c1-size48.png                          3142 B
+    c2-ac7-op100-black.png                 7383 B
+    c2-ac7-op100-white.png                 7253 B
+    c2-ac7-op20-black.png                 10872 B
+    c2-ac7-op20-white.png                 11516 B
+    c2-ac9-corrupt.png                     7122 B
+    c4-capsule-160-off.png                91249 B
+    c4-capsule-160-on.png                 45974 B
+    c4-capsule-88-off.png                 24339 B
+    c4-capsule-88-on.png                  18130 B
+    c4-circle-160-off.png                 91816 B
+    c4-circle-160-on.png                  35870 B
+    c4-circle-48-off.png                   7208 B
+    c4-circle-48-on.png                    5505 B
+    c4-circle-88-off.png                  25026 B
+    c4-circle-88-on.png                   16222 B
+    c4-roundedsq-88-off.png               15964 B
+    c4-roundedsq-88-on.png                 7771 B
+    c7-ac7-op100-black.png                 9226 B
+    c7-ac7-op100-white.png                 9255 B
+    c7-ac7-op20-black.png                 13810 B
+    c7-ac7-op20-white.png                 13780 B
+    c7-ac9-corrupt.png                     7291 B
+    c8-op100-black.png                     6762 B
+    c8-op100-white.png                     6500 B
+    c8-op20-black.png                      6667 B
+    c8-op20-white.png                      9237 B
+    total files = 41
+  --- build\_tmp\v5 ---
+    anchor.txt                               66 B
+    NetBall_v5.exe                      1053696 B
+    total files = 2
+
+SUMMARY: checks=3 failed=0
+RESULT: PASS

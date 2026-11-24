@@ -1,0 +1,19 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053696
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T14 B3c : tray reset position (normal case) ===========
+  anchor sha = e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983 bytes=1053696
+  start rect: L=700 T=300 R=854 B=454 154x154
+  after reset: L=3662 T=1898 R=3816 B=2052 154x154
+CHECK: PASS B3c.moved  ((700,300) -> (3662,1898))
+CHECK: PASS B3c.inside-virtual  (rect fully inside the virtual screen: True)
+CHECK: PASS B3c.default-spot  (rect (3662,1898) vs documented default (3662,1898))
+  ini after reset: posx=3662 posy=1898
+
+  --- cross-DPI observation: reset while the ball sits on the left monitor ---
+  on left monitor: L=-1600 T=400 110x110 (DPI 125% -> 110px)
+  after reset   : L=3706 T=1942 R=3860 B=2096 154x154
+  OBS overhang right = 20 px, bottom = -64 px (13% of the width)
+  config restored: posx=-1 posy=-1
+SUMMARY: checks=3 failed=0
+RESULT: PASS

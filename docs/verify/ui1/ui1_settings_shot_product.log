@@ -1,0 +1,39 @@
+﻿19:36:49.179  root = D:\agentproject\网速悬浮球
+19:36:49.184  mode = product
+19:36:49.185  EVIDENCE_CLASS = product (subject under test: build\out\NetBall.exe, anchor asserted via -ExpectSha)
+19:36:49.238  exe    = D:\agentproject\网速悬浮球\build\out\NetBall.exe
+19:36:49.243  mtime  = 2026-11-02 19:10:18   size = 1053184 bytes
+19:36:49.243  sha256 = 7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+19:36:49.244  mtime(precision) = 2026-11-02 19:10:18.485
+19:36:49.247  anchor compare: expected (len=64) = 7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+19:36:49.248  anchor compare: actual   (len=64) = 7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+19:36:49.250  anchor compare result: EQUAL (-cne test on 64-char upper-case hex, both sides printed above)
+19:36:49.252  src    = D:\agentproject\网速悬浮球\src\settings_dialog.cpp
+19:36:49.252  src mtime = 2026-11-02 18:58:17   size = 39602
+19:36:49.254  src sha256 = 01B504B5F962E6C78C83CA12CCD542C57DC2056178A4DAEA6D38BD02FE22EBBE
+19:36:49.255  staleness assertion OK: exe mtime > settings_dialog.cpp mtime
+19:36:49.267  newest src file = settings_dialog.cpp @ 2026-11-02 18:58:17
+19:36:49.269  window grant accepted: ui1-GO-1930
+19:36:49.277  config.ini before: 38A32E914E9769C3F3CABA303B72D83FA6A91F59E7376AAA0101B90BED2A57EC  (saved to D:\agentproject\网速悬浮球\docs\verify\ui1\config-before-product.ini)
+19:36:49.286  launching product...
+19:36:50.565  ball hwnd = 0x1B0E24
+19:36:50.570  posted WM_COMMAND(1001) to ball window
+19:36:50.570  settings hwnd = 0x150C7C
+19:36:51.185  window rect = (3162,1232)-(3840,2076)  size=678x844
+19:36:51.186  client rect = 672x798   dpi=168
+19:36:51.187  geometry assertion OK: 672x798 physical px, dpi 168
+19:36:51.737  saved D:\agentproject\网速悬浮球\docs\verify\ui1\settings-8swatches.png  (31763 bytes)
+19:36:51.794  RESULT: settings-8swatches.png  678x844  bytes=31763  non-bg=100%
+19:36:51.797  RESULT: settings-8swatches.png OK (exists, size and ink checks passed)
+19:36:51.804  click blue swatch at client (315,464)
+19:36:53.045  saved D:\agentproject\网速悬浮球\docs\verify\ui1\settings-preview-blue.png  (33951 bytes)
+19:36:53.051  RESULT: settings-preview-blue.png  678x844  bytes=33951  non-bg=100%
+19:36:53.051  RESULT: settings-preview-blue.png OK (exists, size and ink checks passed)
+19:36:53.655  settings window closed by WM_CLOSE
+19:36:53.912  process exited, exit code = 0
+19:36:53.926  remaining NetBall instances = 0
+19:36:53.931  config.ini restored, sha256 = 38A32E914E9769C3F3CABA303B72D83FA6A91F59E7376AAA0101B90BED2A57EC
+19:36:53.933  sha256 after  = 7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+19:36:53.934  mtime  after  = 2026-11-02 19:10:18.485   size = 1053184
+19:36:53.935  post-run assertion OK: identical bytes before and after the measurement
+19:36:53.935  DONE

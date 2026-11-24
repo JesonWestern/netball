@@ -1,0 +1,46 @@
+=== BUILD IDENTITY ===
+exe_bytes=1053184
+exe_mtime=2026-11-02 18:58:07
+exe_sha256=085989792DAE452E53721C4B792DBEA14E8F155E5E826BF45B2947DE006B2406
+
+=== NEWEST SOURCES ===
+src settings_dialog.cpp    2026-11-02 18:58:17
+src render.cpp             2026-11-02 18:57:36
+src ball_window.cpp        2026-11-02 18:35:44
+src tray.h                 2026-11-02 18:02:07
+src settings_dialog.h      2026-11-02 18:02:06
+
+=== PROCESSES (any NetBall image) ===
+proc pid=32560 name=NetBall_core1 start=18:59:09
+
+=== BUILD OUT INVENTORY (raw) ===
+entries=1
+  FILE NetBall.exe                    1053184 bytes
+
+=== CONFIG (%APPDATA%\NetBall\config.ini) ===
+path=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+cfg_bytes=193 cfg_mtime=2026-11-02 18:59:14
+  | [NetBall]
+  | shape=0
+  | size=88
+  | opacity=85
+  | textauto=1
+  | shownet=1
+  | showmem=1
+  | refreshms=1000
+  | alwaysontop=1
+  | autostart=0
+  | posx=-1
+  | posy=-1
+  | savedw=0
+  | savedh=0
+  | bgcolor=#181C24
+  | textcolor=#FFFFFF
+
+=== PYTHON BYTECODE RESIDUE under docs\verify ===
+__pycache__ entries=1
+  nb_build_info.cpython-312.pyc  3464 bytes  2026-11-02 18:41:48
+
+=== HOST ===
+os=Microsoft Windows NT 10.0.26300.0
+ps=5.1.26100.9711

@@ -1,0 +1,39 @@
+AC-17 DPI / SCALING CHECK (expected 175%)
+  LogPixels (HKCU)      : <not set>
+  GetDpiForSystem(raw)  : 96 dpi   (DPI-unaware host virtualises this to 96)
+  GetDpiForSystem(PMv2) : 168 dpi
+  GetDpiForMonitor      : 168 dpi   <- authoritative
+  effective scale       : 175%  (168 dpi)
+  config backup     : D:\agentproject\网速悬浮球\docs\verify\config-ac17-backup.ini
+
+  (size sweep skipped; pass -SizeSweep to cover size=48 and size=160)
+
+  config restored   : C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+
+  window hwnd       : 0xBD09B0
+  GetDpiForWindow   : 168 dpi -> 175%
+  DPI awareness     : PER_MONITOR_AWARE (2)
+    SCREEN CAPTURE
+      class : NetBallBallWnd
+      out   : D:\agentproject\网速悬浮球\docs\verify\dpi-175.png
+      hwnd  : 0xBD09B0
+      rect  : L=3662 T=1898 R=3816 B=2052  capture=166x166 (padding 6)
+      screen: L=-1920 T=0 R=3840 B=2160  primary-only bug would clip here
+      file  : 10052 bytes
+      colors: 613 distinct colours (full scan)
+      fill  : RGB(28,28,44)  luma=29.8  covers 17384 px of the window
+      ball  : box L=6 T=6 R=159 B=159  (154x154 px)
+      ink   : 2091 px  luma=255  box L=23 T=49 R=143 B=116  margin_to_shape_edge=16 px
+      spill : 193 px of glyph colour outside the shape mask (advisory: desktop backdrop included)
+    METRIC: shot=D:\agentproject\网速悬浮球\docs\verify\dpi-175.png bytes=10052 cx=166 cy=166 colors=613 content_px=2091 margin_px=16 spill_px=193
+      note  : spill_px is advisory only - the desktop visible through a non-rectangular
+              shape can be as bright as the glyphs, so overflow is judged by the ink
+              margin above plus a human look at the png.
+    RESULT: PASS (real CopyFromScreen capture saved)
+
+  screenshots for human read (blur judgement cannot be automated):
+    size=current  margin= 16px  D:\agentproject\网速悬浮球\docs\verify\dpi-175.png
+    - glyph pixels must not touch the edge (margin >= 1 px, checked automatically)
+    - strokes must look crisp, not doubled/smeared (human)
+METRIC: system_dpi=168 window_dpi=168 scale_pct=175 awareness=2 margins=sizecurrent=16
+RESULT: PASS (DPI aware at 175%, no glyph clipped at any tested size)

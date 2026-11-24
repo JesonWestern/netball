@@ -1,0 +1,42 @@
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 19:02:56 sha256=75D32FA27672A36F93144BF18623AEC73136CCCB34896A17B4303810A5BE4633
+BUILD: newest src=settings_dialog.cpp mtime=2026-11-02 18:58:17
+BUILD: fresh=yes
+
+AC-4 MEMORY  2026-11-02 19:04:19
+COPY: main=NetBall.exe sha=75D32FA27672A36F93144BF18623AEC73136CCCB34896A17B4303810A5BE4633
+COPY: priv=NetBall_v4.exe sha=75D32FA27672A36F93144BF18623AEC73136CCCB34896A17B4303810A5BE4633  identical=True
+APP: pid=28012 launched
+APP: ball hwnd=0x130C82 rect=(2093, 1085, 2181, 1173)
+CONFIG at start: mtime=18:50:18 bytes=193
+
+--- sample 1  (capture 1.01s, ball 88x88) ---
+  cap| SCREEN CAPTURE
+  cap|   class : NetBallBallWnd
+  cap|   out   : d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-1.png
+  cap|   hwnd  : 0x130C82
+  cap|   rect  : L=2093 T=1085 R=2181 B=1173  capture=100x100 (padding 6)
+  cap|   screen: L=-1536 T=0 R=2194 B=1234  primary-only bug would clip here
+  cap|   file  : 6532 bytes
+  cap|   colors: 437 distinct colours (full scan)
+  cap|   fill  : RGB(4,4,4)  luma=4.0  covers 5430 px of the window
+  cap|   ball  : box L=6 T=6 R=93 B=93  (88x88 px)
+  cap|   ink   : 812 px  luma=236  box L=22 T=32 R=99 B=68  margin_to_shape_edge=-6 px
+  cap|   spill : 808 px of glyph colour outside the shape mask (advisory: desktop backdrop included)
+  cap| METRIC: shot=d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-1.png bytes=6532 cx=100 cy=100 colors=437 content_px=812 margin_px=-6 spill_px=808
+  cap|   note  : spill_px is advisory only - the desktop visible through a non-rectangular
+  cap|           shape can be as bright as the glyphs, so overflow is judged by the ink
+  cap|           margin above plus a human look at the png.
+  cap| RESULT: PASS (real CopyFromScreen capture saved)
+  cap_rc=0  png_exists=True  colors=437  ink_px=812  margin=-6
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=80 post=80
+  delta_pp: pre=81 post=81 -> used=81  (tolerance 2 pp)
+  sample_verdict=FAIL
+APP: pid=28012 terminated (by PID only), rc=1
+
+=== AC-4 SUMMARY ===
+| # | ball_mem% | dwMemoryLoad | delta_pp | colors | verdict | evidence |
+|---|---|---|---|---|---|---|
+| 1 | OCR-FAIL | 80 | 81 | - | FAIL | mem-1.png |
+passed=0/1
+RESULT: FAIL (0/1 samples within 2 pp)

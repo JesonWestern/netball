@@ -1,0 +1,87 @@
+A/B: measuring d:\agentproject\网速悬浮球\build\_tmp\vfy\NetBall_vfy.exe (NOT the deliverable)
+BUILD: exe=NetBall_vfy.exe bytes=1053184 mtime=2026-11-02 18:36:37 sha256=F64D31DD597A92D347259F0CE3332C0B84D7541DACD7CBD911D5C449A8A93052
+BUILD: newest src=settings_dialog.cpp mtime=2026-11-02 18:58:17
+BUILD: fresh=NO -> exe predates source, this run is NOT a valid verdict
+
+AC-4 MEMORY  2026-11-02 19:07:21
+COPY: main=NetBall_vfy.exe sha=F64D31DD597A92D347259F0CE3332C0B84D7541DACD7CBD911D5C449A8A93052
+COPY: priv=NetBall_v4.exe sha=F64D31DD597A92D347259F0CE3332C0B84D7541DACD7CBD911D5C449A8A93052  identical=True
+APP: pid=8752 launched
+APP: ball hwnd=0xE10CCC rect=(2093, 1085, 2181, 1173)
+CONFIG at start: mtime=19:05:49 bytes=193
+
+--- sample 1  (capture 4.55s, ball 88x88) ---
+  cap| SCREEN CAPTURE
+  cap|   class : NetBallBallWnd
+  cap|   out   : d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-1.png
+  cap|   hwnd  : 0xE10CCC
+  cap|   rect  : L=2093 T=1085 R=2181 B=1173  capture=100x100 (padding 6)
+  cap|   screen: L=-1536 T=0 R=2194 B=1234  primary-only bug would clip here
+  cap|   file  : 362 bytes
+  cap|   colors: 1 distinct colours (full scan)
+  cap|   fill  : RGB(20,20,20)  luma=20.0  covers 7744 px of the window
+  cap|   ball  : box L=6 T=6 R=93 B=93  (88x88 px)
+  cap|   ink   : 0 px  (no glyph pixels distinguishable from fill and desktop)
+  cap| RESULT: FAIL (capture is a single flat colour - nothing rendered or window occluded)
+  cap_rc=1  png_exists=True  colors=1  ink_px=-1  margin=-999
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=82 post=82
+  delta_pp: pre=83 post=83 -> used=83  (tolerance 2 pp)
+  sample_verdict=FAIL
+
+--- sample 2  (capture 0.92s, ball 78x88) ---
+  cap| SCREEN CAPTURE
+  cap|   class : NetBallBallWnd
+  cap|   out   : d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-2.png
+  cap|   hwnd  : 0xE10CCC
+  cap|   rect  : L=2093 T=1085 R=2181 B=1173  capture=100x100 (padding 6)
+  cap|   screen: L=-1536 T=0 R=2194 B=1234  primary-only bug would clip here
+  cap|   file  : 18279 bytes
+  cap|   colors: 3068 distinct colours (full scan)
+  cap|   fill  : RGB(156,148,156)  luma=151.3  covers 3351 px of the window
+  cap|   ball  : box L=6 T=6 R=83 B=93  (78x88 px)
+  cap|   ink   : 343 px  luma=60  box L=44 T=0 R=98 B=99  margin_to_shape_edge=-15 px
+  cap|   spill : 340 px of glyph colour outside the shape mask (advisory: desktop backdrop included)
+  cap| METRIC: shot=d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-2.png bytes=18279 cx=100 cy=100 colors=3068 content_px=343 margin_px=-15 spill_px=340
+  cap|   note  : spill_px is advisory only - the desktop visible through a non-rectangular
+  cap|           shape can be as bright as the glyphs, so overflow is judged by the ink
+  cap|           margin above plus a human look at the png.
+  cap| RESULT: PASS (real CopyFromScreen capture saved)
+  cap_rc=0  png_exists=True  colors=3068  ink_px=343  margin=-15
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=82 post=83
+  delta_pp: pre=83 post=84 -> used=83  (tolerance 2 pp)
+  sample_verdict=FAIL
+
+--- sample 3  (capture 1.03s, ball 88x88) ---
+  cap| SCREEN CAPTURE
+  cap|   class : NetBallBallWnd
+  cap|   out   : d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-3.png
+  cap|   hwnd  : 0xE10CCC
+  cap|   rect  : L=2093 T=1085 R=2181 B=1173  capture=100x100 (padding 6)
+  cap|   screen: L=-1536 T=0 R=2194 B=1234  primary-only bug would clip here
+  cap|   file  : 1330 bytes
+  cap|   colors: 68 distinct colours (full scan)
+  cap|   fill  : RGB(44,44,52)  luma=44.9  covers 7744 px of the window
+  cap|   ball  : box L=6 T=6 R=93 B=93  (88x88 px)
+  cap|   ink   : 0 px  (no glyph pixels distinguishable from fill and desktop)
+  cap| METRIC: shot=d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-3.png bytes=1330 cx=100 cy=100 colors=68 content_px=0 margin_px=-1 spill_px=0
+  cap|   note  : spill_px is advisory only - the desktop visible through a non-rectangular
+  cap|           shape can be as bright as the glyphs, so overflow is judged by the ink
+  cap|           margin above plus a human look at the png.
+  cap| RESULT: PASS (real CopyFromScreen capture saved)
+  cap_rc=0  png_exists=True  colors=68  ink_px=-1  margin=-999
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=82 post=82
+  delta_pp: pre=83 post=83 -> used=83  (tolerance 2 pp)
+  sample_verdict=FAIL
+APP: pid=8752 terminated (by PID only), rc=1
+
+=== AC-4 SUMMARY ===
+| # | ball_mem% | dwMemoryLoad | delta_pp | colors | verdict | evidence |
+|---|---|---|---|---|---|---|
+| 1 | OCR-FAIL | 82 | 83 | - | FAIL | mem-1.png |
+| 2 | OCR-FAIL | 82 | 83 | - | FAIL | mem-2.png |
+| 3 | OCR-FAIL | 82 | 83 | - | FAIL | mem-3.png |
+passed=0/3
+RESULT: FAIL (0/3 samples within 2 pp)

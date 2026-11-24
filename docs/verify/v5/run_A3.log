@@ -1,0 +1,16 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053696
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T14 A3 : illegal coordinate 99999 ===========
+  cleanup: killing leftover NetBall_v5 pid=28776
+  anchor sha = e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983 bytes=1053696
+  ini written posx=99999 posy=99999
+  A3 rect: L=3662 T=1898 R=3816 B=2052 W=154 H=154
+  intersection with virtual screen = 154 x 154 px
+CHECK: PASS A3.illegal.not-honoured  (rect.L=3662 (99999 was NOT honoured))
+CHECK: PASS A3.illegal.intersects-virtual  (intersect=154x154)
+CHECK: PASS A3.illegal.fully-inside  (fully inside virtual screen: intersect 154x154 vs window 154x154)
+CHECK: PASS A3.illegal.usable  (visible strip 154x154 px (need >=32 in both axes))
+  config restored: posx=-1 posy=-1
+SUMMARY: checks=4 failed=0
+RESULT: PASS

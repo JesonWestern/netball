@@ -1,0 +1,7 @@
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 19:10:18 sha256=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+BUILD: newest src=settings_dialog.cpp mtime=2026-11-02 18:58:17
+BUILD: fresh=yes
+
+AC-4 MEMORY  2026-11-02 19:16:20
+BLOCKED: a foreign NetBall instance holds the global mutex: [(29400, 'NetBall.exe')]
+RESULT: BLOCKED (cannot obtain a ball window)

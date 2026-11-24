@@ -1,0 +1,36 @@
+AC-4 MEMORY  2026-11-02 18:55:01
+COPY: main=NetBall.exe sha=F64D31DD597A92D347259F0CE3332C0B84D7541DACD7CBD911D5C449A8A93052
+COPY: priv=NetBall_v4.exe sha=F64D31DD597A92D347259F0CE3332C0B84D7541DACD7CBD911D5C449A8A93052  identical=True
+APP: pid=28784 launched
+APP: ball hwnd=0x880A2A rect=(2061, 1053, 2181, 1173)
+
+--- sample 1  (t=0.00s) ---
+  cap_rc=0
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=79 post=79
+  delta_pp=80  (|ball - system|, tolerance 2 pp)
+  sample_verdict=FAIL
+
+--- sample 2  (t=0.00s) ---
+  cap_rc=0
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=76 post=76
+  delta_pp=77  (|ball - system|, tolerance 2 pp)
+  sample_verdict=FAIL
+
+--- sample 3  (t=0.00s) ---
+  cap_rc=0
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=76 post=76
+  delta_pp=77  (|ball - system|, tolerance 2 pp)
+  sample_verdict=FAIL
+APP: pid=28784 terminated (by PID only), rc=1
+
+=== AC-4 SUMMARY ===
+| # | ball_mem% | dwMemoryLoad | delta_pp | capture | verdict | evidence |
+|---|---|---|---|---|---|---|
+| 1 | OCR-FAIL | 79 | 80 | rc=0 | FAIL | mem-1.png |
+| 2 | OCR-FAIL | 76 | 77 | rc=0 | FAIL | mem-2.png |
+| 3 | OCR-FAIL | 76 | 77 | rc=0 | FAIL | mem-3.png |
+passed=0/3
+RESULT: FAIL (0/3 samples within 2 pp)

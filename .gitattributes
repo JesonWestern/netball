@@ -1,0 +1,3 @@
+# 本项目为 Windows 项目：README.txt / .iss / .bat 对 CRLF 与 BOM 敏感。
+# 关闭 Git 的换行自动转换，保证检出后的字节与当前工作区一致。
+* -text

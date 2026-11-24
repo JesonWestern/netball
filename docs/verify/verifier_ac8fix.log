@@ -1,0 +1,22 @@
+AC-8 / SHOTS  WCAG contrast measured on real screenshots
+  pattern : d:\agentproject\网速悬浮球\build\out\preset-*.png
+  files   : 11
+
+file                                         bg        text      contrast   verdict
+-----------------------------------------------------------------------------------
+preset-capsule-100-gray.png                  #C8C8C8   #000000   12.55      PASS  
+preset-capsule-85.png                        #158F5C   #000000   5.12       PASS  
+preset-circle-100-dark.png                   #181C24   #FFFFFF   17.07      PASS  
+preset-circle-100-white.png                  #FFFFFF   #000000   21.00      PASS  
+preset-circle-20-dark.png                    #2C2E3D   #FFFFFF   13.42      PASS  
+preset-circle-20.png                         #2C2E3D   #FFFFFF   13.42      PASS  
+preset-circle-85.png                         #1B1F29   #FFFFFF   16.48      PASS  
+preset-round-60-mid.png                      #616168   #000000   3.42       FAIL  
+preset-round-85.png                          #0759AD   #FFFFFF   6.90       PASS  
+preset-white-100.png                         #FFFFFF   #000000   21.00      PASS  
+preset-white-20.png                          #5A5B69   #000000   3.14       FAIL  
+
+  measured: 11 image(s)
+METRIC: images=11 fails=2 min_required=4.5
+RESULT: FAIL (2 screenshot(s) below 4.5:1)
+EXIT=0 

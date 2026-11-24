@@ -1,0 +1,66 @@
+AC-4 MEMORY  2026-11-02 18:58:32
+COPY: main=NetBall.exe sha=085989792DAE452E53721C4B792DBEA14E8F155E5E826BF45B2947DE006B2406
+COPY: priv=NetBall_v4.exe sha=085989792DAE452E53721C4B792DBEA14E8F155E5E826BF45B2947DE006B2406  identical=True
+APP: pid=15296 launched
+APP: ball hwnd=0x770B44 rect=(400, 183, 560, 343)
+
+--- sample 1  (capture 5.81s) ---
+  cap| SCREEN CAPTURE
+  cap|   class : NetBallBallWnd
+  cap|   out   : d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-1.png
+  cap|   hwnd  : 0x770B44
+  cap|   rect  : L=400 T=183 R=560 B=343  capture=172x172 (padding 6)
+  cap|   screen: L=-1536 T=0 R=2194 B=1234  primary-only bug would clip here
+  cap|   file  : 4332 bytes
+  cap|   colors: 608 distinct colours (full scan)
+  cap|   fill  : RGB(28,28,44)  luma=29.8  covers 14499 px of the window
+  cap|   ball  : box L=6 T=6 R=165 B=165  (160x160 px)
+  cap|   ink   : 773 px  luma=124  box L=29 T=0 R=166 B=158  margin_to_shape_edge=-6 px
+  cap|   spill : 89 px of glyph colour outside the shape mask (advisory: desktop backdrop included)
+  cap| RESULT: FAIL (glyph box reaches the shape bounding box, margin=-6 px -> text clipped/overflowing)
+  cap_rc=1  png_exists=True
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=76 post=77
+  delta_pp: pre=77 post=78 -> used=77  (tolerance 2 pp)
+  sample_verdict=FAIL
+
+--- sample 2  (capture 5.64s) ---
+  cap| SCREEN CAPTURE
+  cap|   class : NetBallBallWnd
+  cap|   out   : d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-2.png
+  cap|   hwnd  : 0x770B44
+  cap|   rect  : L=400 T=183 R=560 B=343  capture=172x172 (padding 6)
+  cap|   screen: L=-1536 T=0 R=2194 B=1234  primary-only bug would clip here
+  cap|   file  : 4332 bytes
+  cap|   colors: 608 distinct colours (full scan)
+  cap|   fill  : RGB(28,28,44)  luma=29.8  covers 14499 px of the window
+  cap|   ball  : box L=6 T=6 R=165 B=165  (160x160 px)
+  cap|   ink   : 773 px  luma=124  box L=29 T=0 R=166 B=158  margin_to_shape_edge=-6 px
+  cap|   spill : 89 px of glyph colour outside the shape mask (advisory: desktop backdrop included)
+  cap| RESULT: FAIL (glyph box reaches the shape bounding box, margin=-6 px -> text clipped/overflowing)
+  cap_rc=1  png_exists=True
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=77 post=77
+  delta_pp: pre=78 post=78 -> used=78  (tolerance 2 pp)
+  sample_verdict=FAIL
+
+--- sample 3  (capture 4.87s) ---
+  cap| SCREEN CAPTURE
+  cap|   class : NetBallBallWnd
+  cap|   out   : d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-3.png
+  cap| RESULT: SKIP (process 'NetBall_v4' not running)
+  cap_rc=2  png_exists=False
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=77 post=78
+  delta_pp: pre=78 post=79 -> used=78  (tolerance 2 pp)
+  sample_verdict=FAIL
+APP: pid=15296 terminated (by PID only), rc=0
+
+=== AC-4 SUMMARY ===
+| # | ball_mem% | dwMemoryLoad | delta_pp | capture | verdict | evidence |
+|---|---|---|---|---|---|---|
+| 1 | OCR-FAIL | 76 | 77 | rc=1 | FAIL | mem-1.png |
+| 2 | OCR-FAIL | 77 | 78 | rc=1 | FAIL | mem-2.png |
+| 3 | OCR-FAIL | 77 | 78 | rc=2 | FAIL | mem-3.png |
+passed=0/3
+RESULT: FAIL (0/3 samples within 2 pp)

@@ -1,0 +1,17 @@
+AC-9 CONFIG CORRUPTION ROBUSTNESS
+  path : C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+  exe  : d:\agentproject\网速悬浮球\build\out\NetBall.exe
+  backup: C:\Users\sihuo\AppData\Local\Temp\nb_config_backup.ini
+  corrupted keys : opacity=999, refreshms=abc, posx=999999, posy=999999, textauto=<deleted>
+  process alive  : True  (exit code still running)
+  virtual screen : L=-1920 T=0 W=5760 H=2160
+  dialogs(#32770): 0
+    win class=NetBallBallWnd     rect=(3662, 1898, 3816, 2052) visible=True
+    win class=GDI+ Hook Window Class rect=(0, 0, 1, 1) visible=False
+    win class=IME                rect=(0, 0, 0, 0) visible=False
+    win class=IME                rect=(0, 0, 0, 0) visible=False
+  ball rect      : L=3662 T=1898 R=3816 B=2052 visible=True on_screen=True
+  ini after run  : unchanged (clamped in memory)
+  config restored: C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+METRIC: alive=1 dialogs=0 ball_windows=1
+RESULT: PASS (corrupted config: no crash, no dialog, window still on-screen)

@@ -1,0 +1,223 @@
+﻿================ T7b FINAL WINDOW  2026-11-02 19:21:16 ================
+MEASURED BINARY comes from the anchor below; every step re-verifies it.
+
+----- STEP 0 : resource snapshot (prewindow) -----
+ENV: root=D:\agentproject\缃戦€熸偓娴悆
+ENV: exe=D:\agentproject\缃戦€熸偓娴悆\build\_tmp\t7b\NetBall_t7b.exe size=1053184
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=== T7b shared-resource snapshot: prewindow ===
+time            : 2026-11-02 19:21:17.260
+anchor.txt      : 7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+build\out exe   : 7269afaaf069365db42dff2c5d8f8f79658248fbb6f466890aff4c10b64a74f0 bytes=1053184 mtime=2026-11-02 19:10:18
+t7b copy        : 0d97001592b8da779dcdc23b9b1d1dc121f59b6700e47571037edac75792c7d9 bytes=1053184 mtime=2026-11-02 19:05:25
+--- netball processes ---
+none
+--- other likely test drivers (informational) ---
+python       0
+powershell   2
+pwsh         0
+cmd          10
+curl         0
+--- config.ini ---
+  [NetBall]
+  shape=0
+  size=88
+  opacity=85
+  textauto=1
+  shownet=1
+  showmem=1
+  refreshms=1000
+  alwaysontop=1
+  autostart=0
+  posx=-1
+  posy=-1
+  savedw=0
+  savedh=0
+  bgcolor=#181C24
+  textcolor=#FFFFFF
+  ini mtime: 2026-11-02 19:05:49.420
+--- foreground window ---
+  L=428 T=440 R=2430 B=1541 W=2002 H=1101 visible=1
+=== end snapshot ===
+snapshot written: D:\agentproject\缃戦€熸偓娴悆\docs\verify\media-t7b\res-prewindow.log
+
+----- STEP 0b : config takeover check -----
+  config.ini was already at the documented default - nothing to fix
+
+----- STEP dpi-selfcheck : dpi_selfcheck.ps1 -----
+  exit=0 elapsed=5s  lines=36
+  >> RESULT: PASS (every shape matched its geometric + pixel profile)
+  >> RESULT: PASS (capture path is DPI aware, rects are physical pixels)
+  mm METRIC: shots=2 fails=0
+  mm METRIC: scale=1.75 dpi=168 aware=PMv2 gate=PASS
+  anchor still matches after the step
+
+----- STEP ac6 : run_ac6.ps1 -----
+  exit=1 elapsed=7s  lines=40
+  >> RESULT: FAIL (1 shape(s) failed the pixel assertions)
+  >> RESULT: FAIL
+  anchor still matches after the step
+
+----- STEP ac7 : run_ac7.ps1 -----
+  exit=0 elapsed=7s  lines=34
+  >> RESULT: PASS (the layered window really renders at 20%% and at 100%%)
+  >> RESULT: PASS
+  mm METRIC: alpha20=0.155 alpha100=0.987 back20=#17181A back100=#17181A fill20=#3C3C3C fill100=#FCFCFC rel_diff=0.9283
+  mm METRIC-DETAIL: alpha20 within +-0.06 of 0.20 -> True ; alpha100 >= 0.95 -> True
+  anchor still matches after the step
+
+----- STEP ac8 : run_ac8.ps1 -----
+  exit=0 elapsed=23s  lines=150
+  >> RESULT: PASS (every preset shot >= 4.5:1 inside the fill mask)
+  >> RESULT: PASS (maximin rule holds; every feasible preset/opacity >= 4.5:1)
+  >> RESULT: PASS
+  mm METRIC: shots=9 fails=0 min_required=4.5
+  mm METRIC: cases=60 known_limitation=35 rule_violations=0 worst=1.248
+  anchor still matches after the step
+
+----- STEP ac17 : run_ac17.ps1 -----
+  exit=1 elapsed=14s  lines=102
+  >> RESULT: PASS (glyphs stay inside the shape at every tested size)
+  >> RESULT: FAIL
+  mm METRIC: shots=2 fails=0 max_spill=20
+  anchor still matches after the step
+
+----- STEP r3 : run_r3matrix.ps1 -----
+  exit=1 elapsed=65s  lines=254
+  >> RESULT: PASS (glyphs stay inside the shape at every tested size)
+  >> RESULT: FAIL (3 shot(s) below 4.5:1)
+  >> RESULT: PASS (every screenshot carries real content)
+  >> RESULT: FAIL
+  mm METRIC: shots=27 fails=0 max_spill=40
+  mm METRIC: files=62 flat=0
+  anchor still matches after the step
+
+----- STEP 7 : evidence sanity (flat) -----
+EVIDENCE SANITY (a flat screenshot proves nothing)
+  ac12-ball-hidden.png                 170x170   colors=538    ok
+  ac12-ball-menu.png                   279x272   colors=631    ok
+  ac12-ball-visible.png                170x170   colors=716    ok
+  ac12-tray-menu.png                   301x151   colors=422    ok
+  ac17-size160.png                     296x296   colors=1001   ok
+  ac17-size48.png                      100x100   colors=439    ok
+  ac6-shape0.png                       170x170   colors=392    ok
+  ac6-shape1.png                       170x170   colors=278    ok
+  ac6-shape2.png                       247x170   colors=457    ok
+  ac7-base.png                         320x320   colors=1544   ok
+  ac7-op100.png                        320x320   colors=603    ok
+  ac7-op20.png                         320x320   colors=1771   ok
+  ac8-default-bg.png                   300x300   colors=933    ok
+  ac8-swatch1-darkgray.png             300x300   colors=969    ok
+  ac8-swatch2-black.png                300x300   colors=884    ok
+  ac8-swatch3-white.png                300x300   colors=875    ok
+  ac8-swatch4-blue.png                 300x300   colors=1051   ok
+  ac8-swatch5-green.png                300x300   colors=1486   ok
+  ac8-swatch6-orange.png               300x300   colors=1529   ok
+  ac8-swatch7-purple.png               300x300   colors=1062   ok
+  ac8-swatch8-red.png                  300x300   colors=1060   ok
+  dpi-175-size160.png                  292x292   colors=978    ok
+  dpi-175-size48.png                    96x96    colors=417    ok
+  dpi-t7b-175.png                      292x292   colors=937    ok
+  r3-s160-dark-cs.png                  292x292   colors=2518   ok
+  r3-s160-dark-r1.png                  304x304   colors=1027   ok
+  r3-s160-dark-r2.png                  304x304   colors=1017   ok
+  r3-s160-dark-r3.png                  304x304   colors=2871   ok
+  r3-s160-gray-cs.png                  292x292   colors=3858   ok
+  r3-s160-gray-r1.png                  304x304   colors=4519   ok
+  r3-s160-gray-r2.png                  304x304   colors=4547   ok
+  r3-s160-gray-r3.png                  304x304   colors=4524   ok
+  r3-s160-white-cs.png                 292x292   colors=3514   ok
+  r3-s160-white-r1.png                 304x304   colors=4179   ok
+  r3-s160-white-r2.png                 304x304   colors=4163   ok
+  r3-s160-white-r3.png                 304x304   colors=4186   ok
+  r3-s48-dark-cs.png                    96x96    colors=407    ok
+  r3-s48-dark-r1.png                   108x108   colors=473    ok
+  r3-s48-dark-r2.png                   108x108   colors=474    ok
+  r3-s48-dark-r3.png                   108x108   colors=457    ok
+  r3-s48-gray-cs.png                    96x96    colors=496    ok
+  r3-s48-gray-r1.png                   108x108   colors=545    ok
+  r3-s48-gray-r2.png                   108x108   colors=545    ok
+  r3-s48-gray-r3.png                   108x108   colors=546    ok
+  r3-s48-white-cs.png                   96x96    colors=391    ok
+  r3-s48-white-r1.png                  108x108   colors=429    ok
+  r3-s48-white-r2.png                  108x108   colors=433    ok
+  r3-s48-white-r3.png                  108x108   colors=441    ok
+  r3-s88-dark-cs.png                   166x166   colors=696    ok
+  r3-s88-dark-r1.png                   178x178   colors=741    ok
+  r3-s88-dark-r2.png                   178x178   colors=743    ok
+  r3-s88-dark-r3.png                   178x178   colors=746    ok
+  r3-s88-gray-cs.png                   166x166   colors=759    ok
+  r3-s88-gray-r1.png                   178x178   colors=790    ok
+  r3-s88-gray-r2.png                   178x178   colors=801    ok
+  r3-s88-gray-r3.png                   178x178   colors=806    ok
+  r3-s88-white-cs.png                  166x166   colors=596    ok
+  r3-s88-white-r1.png                  178x178   colors=632    ok
+  r3-s88-white-r2.png                  178x178   colors=654    ok
+  r3-s88-white-r3.png                  178x178   colors=643    ok
+  selfcheck-size160.png                296x296   colors=499    ok
+  selfcheck-size88.png                 170x170   colors=394    ok
+METRIC: files=62 flat=0
+RESULT: PASS (every screenshot carries real content)
+
+----- STEP 8 : resource snapshot (postwindow) -----
+ENV: root=D:\agentproject\缃戦€熸偓娴悆
+ENV: exe=D:\agentproject\缃戦€熸偓娴悆\build\_tmp\t7b\NetBall_t7b.exe size=1053184
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=== T7b shared-resource snapshot: postwindow ===
+time            : 2026-11-02 19:23:19.411
+anchor.txt      : 7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+build\out exe   : 7269afaaf069365db42dff2c5d8f8f79658248fbb6f466890aff4c10b64a74f0 bytes=1053184 mtime=2026-11-02 19:10:18
+t7b copy        : 7269afaaf069365db42dff2c5d8f8f79658248fbb6f466890aff4c10b64a74f0 bytes=1053184 mtime=2026-11-02 19:10:18
+--- netball processes ---
+none
+--- other likely test drivers (informational) ---
+python       1
+powershell   2
+pwsh         0
+cmd          10
+curl         0
+--- config.ini ---
+  [NetBall]
+  shape=0
+  size=88
+  opacity=85
+  textauto=1
+  shownet=1
+  showmem=1
+  refreshms=1000
+  alwaysontop=1
+  autostart=0
+  posx=-1
+  posy=-1
+  savedw=0
+  savedh=0
+  bgcolor=#181C24
+  textcolor=#FFFFFF
+  ini mtime: 2026-11-02 19:23:17.852
+--- foreground window ---
+  L=0 T=0 R=3840 B=2076 W=3840 H=2076 visible=1
+=== end snapshot ===
+snapshot written: D:\agentproject\缃戦€熸偓娴悆\docs\verify\media-t7b\res-postwindow.log
+
+----- STEP 9 : config restore + diff -----
+  state after the window: 0 mismatch(es) vs default
+    shape        expect 0        actual 0
+    size         expect 88       actual 88
+    opacity      expect 85       actual 85
+    textauto     expect 1        actual 1
+    shownet      expect 1        actual 1
+    showmem      expect 1        actual 1
+    refreshms    expect 1000     actual 1000
+    alwaysontop  expect 1        actual 1
+    autostart    expect 0        actual 0
+    posx         expect -1       actual -1
+    posy         expect -1       actual -1
+    savedw       expect 0        actual 0
+    savedh       expect 0        actual 0
+    bgcolor      expect #181C24  actual #181C24
+    textcolor    expect #FFFFFF  actual #FFFFFF
+  RESULT: config restored, 0 mismatch(es)
+
+================ T7b WINDOW END 19:23:19 ================
+anchor sha256 = 7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+RESULT: WINDOW-COMPLETE (config clean)

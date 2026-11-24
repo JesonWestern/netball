@@ -1,0 +1,19 @@
+AC-3 FORMAL RUN
+BUILD: exe=NetBall_vfy.exe bytes=1053184 mtime=2026-11-02 18:36:37
+BUILD: newest source=src/ball_window.cpp mtime=2026-11-02 18:35:44
+BUILD: fresh=yes
+  app pid : 18364 (private copy, killed by PID at the end)
+  SCREEN CAPTURE
+    class : NetBallBallWnd
+    out   : d:\agentproject\ÍøËÙÐü¸¡Çò\docs\verify\net-shot-1.png
+    hwnd  : 0x2E09DC
+    rect  : L=400 T=183 R=560 B=343  capture=172x172 (padding 6)
+    screen: L=-1536 T=0 R=2194 B=1234  primary-only bug would clip here
+    file  : 566 bytes
+    colors: 1 distinct colours (full scan)
+    fill  : RGB(4,4,4)  luma=4.0  covers 25600 px of the window
+    ball  : box L=6 T=6 R=165 B=165  (160x160 px)
+    ink   : 0 px  (no glyph pixels distinguishable from fill and desktop)
+  RESULT: FAIL (capture is a single flat colour - nothing rendered or window occluded)
+  curl rc=28 out='629993 20.012710 31480 200'
+RESULT: BLOCKED (curl failed, no ground truth)

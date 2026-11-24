@@ -1,0 +1,20 @@
+﻿DOC=交付说明.md  BYTES=38524
+CTRL_POSITIVE_DOTNET=True (dotnet found the CJK needle)
+CTRL_NEGATIVE_DOTNET=True (fabricated phrase absent)
+CTRL_FINDSTR_RC=1 (0=hit,1=no-hit ; CJK needle vs UTF-8 file -> EXPECT 1 = the trap)
+INSTRUMENT_OK=True
+O1_CITES_R3=True lines=7 | O1_STILL_CITES_T9=False
+  O1_LINE: | 三段哈希闭环 | 安装包（`6cdfb092…777882`）→ Inno 解压落盘 → 安装后 `{app}\NetBall.exe`（`e085727c…ebe983`），三点同哈希，本版实测见 `docs\audit\AUDIT-REPORT-R3.md` §3（`PAYLOAD_MATCH=True`） |
+  O1_LINE: | AC-13 安装后三处在位 | **PASS** | `{app}\NetBall.exe`(1,053,696) + `{app}\unins000.exe`(4,386,294) + `{app}\卸载 NetBall.lnk`(1,187) 并存（本行三处体积取自 `dist\NetBallSetup-1.0.0.exe` 重打后（2,414,835 B / `6cdfb092…`）的一轮实际安装，`README.txt` 同步装入 5,258 B）；开始菜单组 `NetBall` 恰 2 项；四类快捷方式 target `match=True`；卸载键 `{8F3A1C2E-…-0C7D4B15A8E3}_is1` 显示名 `NetBall 网速悬浮球` / `1.0.0`。**注**：`unins000.exe` 体积由打包器（Inno Setup）版本决定，**不作锚点**；锚点只认 `build\out\NetBall.exe` 与 `dist\NetBallSetup-1.0.0.exe` 的 sha256 | `docs\audit\AUDIT-REPORT-R3.md` §3（本版实测：安装目录 5 个文件、开始菜单 2 项、`/TASKS=""` 桌面不存在、卸载键与 Run 值） |
+  O1_LINE: | AC-14 卸载无残留 | **PASS** | 三轮静默卸载（421 / 415 / ~400 ms）：安装目录、开始菜单、桌面 lnk、卸载键、**先人工写入的 Run 值**全部消失；无 `_unins.tmp` 僵尸进程；`%APPDATA%\NetBall` 静默路径保留（193 B config.ini） | `docs\audit\AUDIT-REPORT-R3.md` §3 卸载段（四清 + `_unins.tmp`=0 + 配置保留 + 无残留进程） |
+  O1_LINE: | AC-15 桌面图标可选 | **PASS（两态）** | `/TASKS=""` → 桌面 lnk **不存在**；`/TASKS="desktopicon"` → 存在 1,244 B lnk，`target={app}\NetBall.exe`、`workdir={app}`、`icon=,0`；向导中该项 `checkedonce` | `docs\audit\AUDIT-REPORT-R3.md` §3（`/TASKS=""` → 桌面 lnk 不存在）；`build\_tmp\ins1\r2_install.log`（`/TASKS=desktopicon` → 存在，target 指向 `{app}\NetBall.exe`） |
+  O1_LINE: 已完整验证的是 `/CURRENTUSER` 分支：安装目录 `%LOCALAPPDATA%\Programs\NetBall`，卸载键 `InstallLocation` 同值（`docs\audit\AUDIT-REPORT-R3.md` §3：`/CURRENTUSER` 安装、卸载键 `DisplayIcon={app}\NetBall.exe` 实测存在）。
+  O1_LINE: `docs\verify\v2\` 目录下 T9 报告 §A 的内嵌 payload 校验采用**回退口径**（本版的三点闭环实测见 `docs\audit\AUDIT-REPORT-R3.md` §3）：本机无 7-Zip，innoextract 1.9 对本包（Inno 6.7.3）报 `Unexpected setup loader revision: 2`，故第 1 段以「装到临时目录后取 Inno 解压出的落盘文件」代替直接解包。该口径以三点哈希闭环（包内 → 落盘 → `build\out` 源文件）支撑，**残余风险**：不覆盖「压缩流损坏却恰好解压成功」这类极端情形。
+  O1_LINE: | 安装/卸载独立验证（**本版**：装后 payload 哈希闭环、两态图标、卸载五清） | `docs\audit\AUDIT-REPORT-R3.md` §2/§3 |
+O2_OLD_CONFLATED_PRESENT=False | O2_HAS_SPLIT_WORDING=True
+O3_UNROW_COUNT=1 | O3_HAS_CAVEAT=True
+  O3_LINE: | AC-13 安装后三处在位 | **PASS** | `{app}\NetBall.exe`(1,053,696) + `{app}\unins000.exe`(4,386,294) + `{app}\卸载 NetBall.lnk`(1,187) 并存（本行三处体积取自 `dist\NetBallSetup-1.0.0.exe` 重打后（2,414,835 B / `6cdfb092…`）的一轮实际安装，`README.txt` 同
+STALE_TOTAL_HITS=0
+EXE_UNCHANGED=True (1053696 / E085727CF87E4DF22B551596B2CB53D407EF177BA2539B4D9E6AC0FB33EBE983)
+SETUP_UNCHANGED=True (2414835 / 6CDFB09245A4F5E3CF13F64CE2333783DD3FAE698D9AB19C1B5354B506777882)
+SPOT_VERDICT=PASS

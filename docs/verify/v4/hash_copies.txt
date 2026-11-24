@@ -1,0 +1,9 @@
+SHA256 的 build\_tmp\vfy\NetBall_vfy.exe 哈希:
+f64d31dd597a92d347259f0ce3332c0b84d7541dacd7cbd911d5c449a8a93052
+CertUtil: -hashfile 命令成功完成。
+SHA256 的 build\_tmp\core1\NetBall_core1.exe 哈希:
+085989792dae452e53721c4b792dbea14e8f155e5e826bf45b2947de006b2406
+CertUtil: -hashfile 命令成功完成。
+SHA256 的 build\out\NetBall.exe 哈希:
+75d32fa27672a36f93144bf18623aec73136cccb34896a17b4303810a5be4633
+CertUtil: -hashfile 命令成功完成。

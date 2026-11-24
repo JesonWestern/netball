@@ -1,0 +1,42 @@
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 19:05:25 sha256=0D97001592B8DA779DCDC23B9B1D1DC121F59B6700E47571037EDAC75792C7D9
+BUILD: newest src=settings_dialog.cpp mtime=2026-11-02 18:58:17
+BUILD: fresh=yes
+
+AC-4 MEMORY  2026-11-02 19:09:46
+COPY: main=NetBall.exe sha=0D97001592B8DA779DCDC23B9B1D1DC121F59B6700E47571037EDAC75792C7D9
+COPY: priv=NetBall_v4.exe sha=0D97001592B8DA779DCDC23B9B1D1DC121F59B6700E47571037EDAC75792C7D9  identical=True
+APP: pid=9984 launched
+APP: ball hwnd=0x1A0C4C rect=(2093, 1085, 2181, 1173)
+CONFIG at start: mtime=19:05:49 bytes=193
+
+--- sample 1  (capture 1.01s, ball 154x154) ---
+  cap| SCREEN CAPTURE
+  cap|   class : NetBallBallWnd
+  cap|   out   : d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-1.png
+  cap|   hwnd  : 0x1A0C4C
+  cap|   rect  : L=3662 T=1898 R=3816 B=2052  capture=166x166 (padding 6)
+  cap|   screen: L=-1920 T=0 R=3840 B=2160  primary-only bug would clip here
+  cap|   file  : 8113 bytes
+  cap|   colors: 353 distinct colours (full scan)
+  cap|   fill  : RGB(20,28,36)  luma=26.5  covers 19169 px of the window
+  cap|   ball  : box L=6 T=6 R=159 B=159  (154x154 px)
+  cap|   ink   : 2248 px  luma=255  box L=23 T=0 R=143 B=116  margin_to_shape_edge=-6 px
+  cap|   spill : 193 px of glyph colour outside the shape mask (advisory: desktop backdrop included)
+  cap| METRIC: shot=d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-1.png bytes=8113 cx=166 cy=166 colors=353 content_px=2248 margin_px=-6 spill_px=193
+  cap|   note  : spill_px is advisory only - the desktop visible through a non-rectangular
+  cap|           shape can be as bright as the glyphs, so overflow is judged by the ink
+  cap|           margin above plus a human look at the png.
+  cap| RESULT: PASS (real CopyFromScreen capture saved)
+  cap_rc=0  png_exists=True  colors=353  ink_px=2248  margin=-6
+  ocr_text='， 117 KB/s 4 ． 86 KB/s 内 存 82 ％'  ball_mem=82%  down_bps=119808
+  system_dwMemoryLoad: pre=82 post=82
+  delta_pp: pre=0 post=0 -> used=0  (tolerance 2 pp)
+  sample_verdict=PASS
+APP: pid=9984 terminated (by PID only), rc=1
+
+=== AC-4 SUMMARY ===
+| # | ball_mem% | dwMemoryLoad | delta_pp | colors | verdict | evidence |
+|---|---|---|---|---|---|---|
+| 1 | 82 | 82 | 0 | - | PASS | mem-1.png |
+passed=1/1
+RESULT: PASS (all 1 samples within 2 pp of GlobalMemoryStatusEx)

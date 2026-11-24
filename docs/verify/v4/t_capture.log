@@ -1,0 +1,12 @@
+[none] rc=1 out_len=554 exists=False
+Traceback (most recent call last):
+  File "d:\agentproject\ÍøËÙÐü¸¡Çò\docs\verify\v4\v4_t_capture.py", line 31, in <module>
+    print("   | " + line)
+UnicodeEncodeError: 'gbk' codec can't encode character '\ufffd' in position 21: illegal multibyte sequence
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\agentproject\ÍøËÙÐü¸¡Çò\docs\verify\v4\v4_t_capture.py", line 33, in <module>
+    print("[%s] EXCEPTION %r" % (label, e))
+UnicodeEncodeError: 'gbk' codec can't encode character '\ufffd' in position 67: illegal multibyte sequence

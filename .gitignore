@@ -1,0 +1,46 @@
+# ---------- 构建产物 ----------
+/build/out/
+/build/_tmp/
+/build/*.res
+/build/*.obj
+/build/*.o
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.obj
+*.o
+*.res
+
+# ---------- 发布包与大二进制 ----------
+/dist/
+*.zip
+*.7z
+*.msi
+
+# ---------- 临时文件 ----------
+*.tmp
+*.bak
+*.orig
+*.rej
+*.pyc
+*.pyo
+__pycache__/
+
+# ---------- Agent 临时工作区（仅保留看板与工作流） ----------
+/.agent/*
+!/.agent/board.md
+!/.agent/workflow.md
+
+# ---------- IDE / OS ----------
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ---------- 快捷方式 ----------
+*.lnk

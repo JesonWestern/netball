@@ -1,0 +1,91 @@
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 18:58:07 sha256=085989792DAE452E53721C4B792DBEA14E8F155E5E826BF45B2947DE006B2406
+BUILD: newest src=settings_dialog.cpp mtime=2026-11-02 18:58:17
+BUILD: fresh=NO -> exe predates source, this run is NOT a valid verdict
+
+AC-4 MEMORY  2026-11-02 19:02:23
+COPY: main=NetBall.exe sha=085989792DAE452E53721C4B792DBEA14E8F155E5E826BF45B2947DE006B2406
+COPY: priv=NetBall_v4.exe sha=085989792DAE452E53721C4B792DBEA14E8F155E5E826BF45B2947DE006B2406  identical=True
+APP: pid=19840 launched
+APP: ball hwnd=0x1570B76 rect=(2093, 1085, 2181, 1173)
+CONFIG at start: mtime=19:02:15 bytes=193
+
+--- sample 1  (capture 3.10s, ball 88x88) ---
+  cap| SCREEN CAPTURE
+  cap|   class : NetBallBallWnd
+  cap|   out   : d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-1.png
+  cap|   hwnd  : 0x1570B76
+  cap|   rect  : L=2093 T=1085 R=2181 B=1173  capture=100x100 (padding 6)
+  cap|   screen: L=-1536 T=0 R=2194 B=1234  primary-only bug would clip here
+  cap|   file  : 15009 bytes
+  cap|   colors: 3554 distinct colours (full scan)
+  cap|   fill  : RGB(228,236,252)  luma=235.4  covers 6504 px of the window
+  cap|   ball  : box L=6 T=6 R=93 B=93  (88x88 px)
+  cap|   ink   : 197 px  luma=172  box L=0 T=73 R=30 B=99  margin_to_shape_edge=-6 px
+  cap|   spill : 197 px of glyph colour outside the shape mask (advisory: desktop backdrop included)
+  cap| METRIC: shot=d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-1.png bytes=15009 cx=100 cy=100 colors=3554 content_px=197 margin_px=-6 spill_px=197
+  cap|   note  : spill_px is advisory only - the desktop visible through a non-rectangular
+  cap|           shape can be as bright as the glyphs, so overflow is judged by the ink
+  cap|           margin above plus a human look at the png.
+  cap| RESULT: PASS (real CopyFromScreen capture saved)
+  cap_rc=0  png_exists=True  colors=3554  ink_px=197  margin=-6
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=83 post=83
+  delta_pp: pre=84 post=84 -> used=84  (tolerance 2 pp)
+  sample_verdict=FAIL
+
+--- sample 2  (capture 0.99s, ball ?) ---
+  cap| SCREEN CAPTURE
+  cap|   class : NetBallBallWnd
+  cap|   out   : d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-2.png
+  cap|   hwnd  : 0x1570B76
+  cap|   rect  : L=2093 T=1085 R=2181 B=1173  capture=100x100 (padding 6)
+  cap|   screen: L=-1536 T=0 R=2194 B=1234  primary-only bug would clip here
+  cap|   file  : 1056 bytes
+  cap|   colors: 34 distinct colours (full scan)
+  cap|   fill  : RGB(60,132,252)  luma=124.2  covers 0 px of the window
+  cap|   ball  : fill region not found (window is transparent or occluded)
+  cap|   ink   : 0 px  (no glyph pixels distinguishable from fill and desktop)
+  cap| METRIC: shot=d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-2.png bytes=1056 cx=100 cy=100 colors=34 content_px=0 margin_px=-1 spill_px=0
+  cap|   note  : spill_px is advisory only - the desktop visible through a non-rectangular
+  cap|           shape can be as bright as the glyphs, so overflow is judged by the ink
+  cap|           margin above plus a human look at the png.
+  cap| RESULT: PASS (real CopyFromScreen capture saved)
+  cap_rc=0  png_exists=True  colors=34  ink_px=-1  margin=-999
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=83 post=83
+  delta_pp: pre=84 post=84 -> used=84  (tolerance 2 pp)
+  sample_verdict=FAIL
+
+--- sample 3  (capture 1.07s, ball 88x88) ---
+  cap| SCREEN CAPTURE
+  cap|   class : NetBallBallWnd
+  cap|   out   : d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-3.png
+  cap|   hwnd  : 0x1570B76
+  cap|   rect  : L=2093 T=1085 R=2181 B=1173  capture=100x100 (padding 6)
+  cap|   screen: L=-1536 T=0 R=2194 B=1234  primary-only bug would clip here
+  cap|   file  : 409 bytes
+  cap|   colors: 13 distinct colours (full scan)
+  cap|   fill  : RGB(196,196,196)  luma=196.0  covers 6952 px of the window
+  cap|   ball  : box L=6 T=6 R=93 B=93  (88x88 px)
+  cap|   ink   : 400 px  luma=28  box L=0 T=68 R=99 B=71  margin_to_shape_edge=-6 px
+  cap|   spill : 400 px of glyph colour outside the shape mask (advisory: desktop backdrop included)
+  cap| METRIC: shot=d:\agentproject\网速悬浮球\docs\verify\media-v4\mem-3.png bytes=409 cx=100 cy=100 colors=13 content_px=400 margin_px=-6 spill_px=400
+  cap|   note  : spill_px is advisory only - the desktop visible through a non-rectangular
+  cap|           shape can be as bright as the glyphs, so overflow is judged by the ink
+  cap|           margin above plus a human look at the png.
+  cap| RESULT: PASS (real CopyFromScreen capture saved)
+  cap_rc=0  png_exists=True  colors=13  ink_px=400  margin=-6
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=82 post=83
+  delta_pp: pre=83 post=84 -> used=83  (tolerance 2 pp)
+  sample_verdict=FAIL
+APP: pid=19840 terminated (by PID only), rc=1
+
+=== AC-4 SUMMARY ===
+| # | ball_mem% | dwMemoryLoad | delta_pp | colors | verdict | evidence |
+|---|---|---|---|---|---|---|
+| 1 | OCR-FAIL | 83 | 84 | - | FAIL | mem-1.png |
+| 2 | OCR-FAIL | 83 | 84 | - | FAIL | mem-2.png |
+| 3 | OCR-FAIL | 82 | 83 | - | FAIL | mem-3.png |
+passed=0/3
+RESULT: FAIL (0/3 samples within 2 pp)

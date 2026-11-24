@@ -1,0 +1,13 @@
+check_ac16_clean.ps1  OK  non_ascii_chars=0
+check_ac16_residue.ps1  OK  non_ascii_chars=0
+check_ac17_dpi.ps1  OK  non_ascii_chars=0
+check_ac1_exe.ps1  OK  non_ascii_chars=0
+check_ac2_window.ps1  OK  non_ascii_chars=0
+check_ac5_resources.ps1  OK  non_ascii_chars=0
+check_screenshot.ps1  OK  non_ascii_chars=0
+measure_startup.ps1  OK  non_ascii_chars=0
+run_all.ps1  OK  non_ascii_chars=0
+verifier_preflight.ps1  OK  non_ascii_chars=0
+verifier_psparse.ps1  OK  non_ascii_chars=0
+
+SUMMARY: scripts=11 parse_errors=0

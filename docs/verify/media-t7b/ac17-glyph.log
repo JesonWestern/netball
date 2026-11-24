@@ -1,0 +1,10 @@
+AC-17 GLYPH CONTAINMENT (text must stay inside the ball, nothing clipped)
+shot               ball        ink-bbox         margins l/t/r/b  spill     ink-px   verdict
+------------------------------------------------------------------------------------------------
+size48             85x85       19,31-81,67      11/23/11/25      0         1042     PASS  
+         worst chord overflow 0.0 px (positive = glyph outside the shape)
+size160            281x281     39,84-259,210    31/76/29/78      0         9857     PASS  
+         worst chord overflow 0.0 px (positive = glyph outside the shape)
+
+METRIC: shots=2 fails=0 max_spill=20
+RESULT: PASS (glyphs stay inside the shape at every tested size)

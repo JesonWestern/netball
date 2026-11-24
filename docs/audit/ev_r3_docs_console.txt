@@ -1,0 +1,52 @@
+=== A. STALE-VALUE SCAN (must be 0) ===
+STALE_TOTAL_HITS=0
+
+=== B. BANNED WORDING (must be 0 in JIAOFU + README) ===
+BANNED_TOTAL_HITS=0
+
+=== C. SECTION 4.10 PRESENCE / ELEMENTS ===
+SEC_4_10_LINE=185
+HAS_20PX=True
+HAS_87PCT=True
+HAS_V11=True
+HAS_CLAMP=True
+HAS_KNOWN_DEFECT=True
+--- BLOCK BEGIN ---
+### 4.10 跨 DPI 触发「重置位置」的越界（对应审计 D-10）
+
+**已知缺陷**｜跨 DPI 触发「重置位置」时，球右缘可能越界 ≤20px（约 87% 可见，仍可拖动/可再次重置）｜计划 **v1.1** 于 `WM_DPICHANGED` 内 `SetWindowPos` 后调用 `ClampWindowFullyInside` 修复。
+
+复现路径：球停在**低 DPI 副屏**（本机左屏 120 dpi）时执行「重置位置」——默认位置按**旧 DPI 下的 110 px 边距**算出；随后窗口被拖到 175%（168 dpi）主屏，`WM_DPICHANGED` 触发、尺寸按新 DPI 放大到 154 px，同一 110 px 边距在新 DPI 下不足以把窗口完全留在屏内，实测**右缘越出虚拟屏 20 px**：球约 **87% 可见，仍可点击、可正常拖动**。
+
+根因（已定位到代码）：`WM_DPICHANGED` 分支里尺寸变了，但**没有做二次钳制**，用旧 DPI 换算出的坐标没有被新屏幕边界重新约束——即坐标换算少了一步，属实现遗漏。
+
+影响与规避：球仍可点击、可拖动；再点一次「重置位置」或在当前屏拖动即可回到屏内。功能不受损、数据不受影响。
+
+修复计划（v1.1，见 §6 第 7 条）：`WM_DPICHANGED` 内 `SetWindowPos` 之后调用 `ClampWindowFullyInside`，并补一条自测——低 DPI 屏把 size 由 48 调到 160，再拖到高 DPI 屏，断言窗口完全位于虚拟屏内。
+
+---
+
+## 5. 验证方法与可信度
+
+### 5.1 锚点三元组与测量纪律
+每次测量必须绑定唯一二进制：**path + bytes + sha256**（mtime 仅作辅助，因为重建会改 mtime 但不改内容）。测量前后各算一次 sha，不一致即判 `BLOCKED-被替换`，本轮数据全部作废。
+
+本项目一天内出现过 6 个构建，**前 5 个（18:36 / 19:02 / 19:05 / 21:28 之前的各版）的全部测量数据已作废**，只有最终交付的 `e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983` 的结果进入验收。锚点历史与作废原因见 `docs\verify\v4\V4-REPORT.md` §0 与 `.agent\workflow.md`。
+
+### 5.2 `BLOCKED-*` 十道门禁
+验证脚本在**启动任何被测程序之前**逐项检查，任一不满足即中止并上报，不产出结论：
+
+| 门禁 | 触发条件 |
+|---|---|
+--- BLOCK END ---
+
+=== D. ANCHOR VALUES IN DOCS ===
+DOC_CONTAINS 1,053,696 in 2 files
+DOC_CONTAINS E085727C in 0 files
+DOC_CONTAINS 2,414,835 in 1 files
+DOC_CONTAINS 6CDFB092 in 0 files
+DOC_CONTAINS 5,258 in 1 files
+README_1_2 = True
+README_1_7_LEFT = False
+JIAOFU_1_7_LEFT = True
+PKG_EXPECT_1053696 = True

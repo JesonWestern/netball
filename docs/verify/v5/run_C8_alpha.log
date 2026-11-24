@@ -1,0 +1,26 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053696
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T14 AC-7 : implied alpha from white-vs-black ball (backdrop cancels) ===========
+  cleanup: killing leftover pid=33660
+  anchor sha = e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983 bytes=1053696
+
+--- opacity 20% ---
+  opacity= 20 bg=#FFFFFF ring luma=67.00 wallpaper luma=20.00 rect=2400,700 154x154
+  opacity= 20 bg=#000000 ring luma=21.08 wallpaper luma=20.00 rect=2400,700 154x154
+  implied alpha = (white 67.00 - black 21.08) / 255 = 0.180
+CHECK: PASS AC-7.op20  (implied alpha 0.180 vs expected 0.200 (tol 0.02))
+CHECK: PASS AC-7.op20.separation  (white-vs-black separation 45.9 luma is decisive)
+
+--- opacity 100% ---
+  opacity=100 bg=#FFFFFF ring luma=249.56 wallpaper luma=20.00 rect=2400,700 154x154
+  opacity=100 bg=#000000 ring luma=5.44 wallpaper luma=20.00 rect=2400,700 154x154
+  implied alpha = (white 249.56 - black 5.44) / 255 = 0.957
+CHECK: FAIL AC-7.op100  (implied alpha 0.957 vs expected 1.000 (tol 0.02))
+CHECK: PASS AC-7.op100.separation  (white-vs-black separation 244.1 luma is decisive)
+
+  config restored: 0 size=88 opacity=85 bg=#181C24 pos=-1,-1
+  processes left: 0
+SUMMARY: checks=4 failed=1
+RESULT: FAIL
+EXITCODE=

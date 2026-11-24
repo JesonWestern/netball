@@ -1,0 +1,17 @@
+proc none
+
+=== capture via check_screenshot.ps1 (ProcessName=NetBall) ===
+  SCREEN CAPTURE
+    class : NetBallBallWnd
+    out   : D:\agentproject\网速悬浮球\docs\verify\media-v4\probe-live.png
+  RESULT: SKIP (process 'NetBall' not running)
+CAPTURE_SECONDS=0.45 rc=2
+
+=== OCR via verifier_ocr.ps1 (-Scale 6 -Threshold 110 -CropLeftPct 0.18) ===
+  OCR: file missing -> D:\agentproject\网速悬浮球\docs\verify\media-v4\probe-live.png
+  RESULT: SKIP (screenshot missing)
+OCR_SECONDS=0.35 rc=3
+
+=== dwMemoryLoad (independent) ===
+dwMemoryLoad=78
+PRECHECK mem_delta=|ball - system| will be computed after OCR

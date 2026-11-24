@@ -1,0 +1,27 @@
+EVIDENCE SANITY (a flat screenshot proves nothing)
+  ac12-ball-hidden.png                 170x170   colors=538    ok
+  ac12-ball-menu.png                   279x272   colors=631    ok
+  ac12-ball-visible.png                170x170   colors=716    ok
+  ac12-tray-menu.png                   301x151   colors=422    ok
+  ac17-size160.png                     296x296   colors=2605   ok
+  ac17-size48.png                      100x100   colors=268    ok
+  ac6-shape0.png                       170x170   colors=99     ok
+  ac6-shape1.png                       170x170   colors=155    ok
+  ac6-shape2.png                       247x170   colors=251    ok
+  ac7-base.png                         320x320   colors=3      ok
+  ac7-op100.png                        320x320   colors=103    ok
+  ac7-op20.png                         320x320   colors=203    ok
+  ac8-default-bg.png                   300x300   colors=245    ok
+  ac8-swatch1-darkgray.png             300x300   colors=240    ok
+  ac8-swatch2-black.png                300x300   colors=151    ok
+  ac8-swatch3-white.png                300x300   colors=152    ok
+  ac8-swatch4-blue.png                 300x300   colors=544    ok
+  ac8-swatch5-green.png                300x300   colors=529    ok
+  ac8-swatch6-orange.png               300x300   colors=561    ok
+  ac8-swatch7-purple.png               300x300   colors=582    ok
+  ac8-swatch8-red.png                  300x300   colors=564    ok
+  dpi-175-size160.png                  292x292   colors=578    ok
+  dpi-175-size48.png                    96x96    colors=221    ok
+  dpi-t7b-175.png                      166x166   colors=331    ok
+METRIC: files=24 flat=0
+RESULT: PASS (every screenshot carries real content)

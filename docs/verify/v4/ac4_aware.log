@@ -1,0 +1,32 @@
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 19:05:25 sha256=0D97001592B8DA779DCDC23B9B1D1DC121F59B6700E47571037EDAC75792C7D9
+BUILD: newest src=settings_dialog.cpp mtime=2026-11-02 18:58:17
+BUILD: fresh=yes
+
+AC-4 MEMORY  2026-11-02 19:08:56
+COPY: main=NetBall.exe sha=0D97001592B8DA779DCDC23B9B1D1DC121F59B6700E47571037EDAC75792C7D9
+COPY: priv=NetBall_v4.exe sha=0D97001592B8DA779DCDC23B9B1D1DC121F59B6700E47571037EDAC75792C7D9  identical=True
+APP: pid=32636 launched
+APP: ball hwnd=0x3C0CE2 rect=(2093, 1085, 2181, 1173)
+CONFIG at start: mtime=19:05:49 bytes=193
+
+--- sample 1  (capture 3.16s, ball ?) ---
+  cap| D:\agentproject\网速悬浮球\docs\verify\check_screenshot.ps1 : 无法处理对参数“Padding”的参数转换。无法将值“NetBallBallWnd
+  cap| ”转换为类型“System.Int32”。错误:“输入字符串的格式不正确。”
+  cap| 所在位置 行:1 字符: 396
+  cap| + ... docs\verify\media-v4\mem-1.png' '-ClassName' 'NetBallBallWnd' '-Proce ...
+  cap| +                                                  ~~~~~~~~~~~~~~~~
+  cap|     + CategoryInfo          : InvalidData: (:) [check_screenshot.ps1]，ParameterBindingArgumentTransformationException
+  cap|     + FullyQualifiedErrorId : ParameterArgumentTransformationError,check_screenshot.ps1
+  cap_rc=1  png_exists=False  colors=-1  ink_px=-1  margin=-999
+  ocr_text=''  ball_mem=-1%  down_bps=0
+  system_dwMemoryLoad: pre=82 post=80
+  delta_pp: pre=83 post=81 -> used=81  (tolerance 2 pp)
+  sample_verdict=FAIL
+APP: pid=32636 terminated (by PID only), rc=1
+
+=== AC-4 SUMMARY ===
+| # | ball_mem% | dwMemoryLoad | delta_pp | colors | verdict | evidence |
+|---|---|---|---|---|---|---|
+| 1 | OCR-FAIL | 82 | 81 | - | FAIL | mem-1.png |
+passed=0/1
+RESULT: FAIL (0/1 samples within 2 pp)

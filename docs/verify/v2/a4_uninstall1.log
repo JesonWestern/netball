@@ -1,0 +1,12 @@
+UNINS   : C:\Users\sihuo\AppData\Local\Programs\NetBall\unins000.exe
+MODE    : silent
+ARGS    : /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=D:\agentproject\ÍøËÙÐü¸¡Çò\build\_tmp\v2\inno_unins1.log
+LAUNCH_PID=28724
+LAUNCHER_EXITED EXITCODE=0 ELAPSED_MS=398
+APPDIR_GONE
+--- residual processes ---
+NO_LEFTOVER_PROCESS
+--- inno uninstall log markers ---
+  2026-11-02 20:17:28.448   Uninstallation process succeeded.
+  2026-11-02 20:17:28.448   Need to restart Windows? No
+  2026-11-02 20:17:28.448   Log closed.

@@ -1,0 +1,22 @@
+AC-16 RESIDUE CHECK (part 2: build/out inventory)
+  dir : D:\agentproject\网速悬浮球\build\out
+  entries: 12
+    FILE NetBall.exe                        1053184 bytes
+    FILE preset-capsule-100-gray.png        8585 bytes
+    FILE preset-capsule-85.png              11034 bytes
+    FILE preset-circle-100-dark.png         7417 bytes
+    FILE preset-circle-100-white.png        6659 bytes
+    FILE preset-circle-20-dark.png          9172 bytes
+    FILE preset-circle-20.png               9166 bytes
+    FILE preset-circle-85.png               9183 bytes
+    FILE preset-round-60-mid.png            11153 bytes
+    FILE preset-round-85.png                7549 bytes
+    FILE preset-white-100.png               6532 bytes
+    FILE preset-white-20.png                12507 bytes
+
+  RESIDUE (11): preset-capsule-100-gray.png, preset-capsule-85.png, preset-circle-100-dark.png, preset-circle-100-white.png, preset-circle-20-dark.png, preset-circle-20.png, preset-circle-85.png, preset-round-60-mid.png, preset-round-85.png, preset-white-100.png, preset-white-20.png
+  Each entry above is a leftover test binary / log / screenshot.
+
+  VIOLATION: build/out is not clean -> separate AC-16 residue defect
+METRIC: entries=12 extra=11 expect_clean=1
+RESULT: FAIL (build/out not clean: 11 extra entries)

@@ -1,0 +1,7 @@
+﻿19:31:58.884  EVIDENCE_CLASS = product (subject under test: build\out\NetBall.exe, resumed capture in the same granted window)
+19:31:58.889  mode = product-resume
+19:31:58.944  exe    = D:\agentproject\网速悬浮球\build\out\NetBall.exe
+19:31:58.948  mtime  = 2026-11-02 19:10:18.485   size = 1053184
+19:31:58.949  sha256(before) = 7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+19:31:58.963  attached to pid=18240 start=19:10:18
+19:32:07.153  BLOCKED-NOWND: ball window not found in the running instance

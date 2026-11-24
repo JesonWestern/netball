@@ -1,0 +1,34 @@
+=========== T14 AC-6 / AC-17 pixel re-analysis (corner-reference mask) ===========
+
+  circle: 154x154 bg=(7,7,7) coverage=0.736 bbox=0,0..153,153
+    y=16 (10%) left=0 right=153 width=154 inset=0
+    y=39 (25%) left=0 right=152 width=153 inset=0
+    y=78 (50%) left=0 right=153 width=154 inset=0
+CHECK: FAIL PIX.circle.coverage  (coverage 0.736 vs analytic 0.785 (tol 0.04))
+CHECK: FAIL PIX.circle.inset10  (10%-height inset 0 vs analytic 0.2 (tol 0.04))
+CHECK: PASS PIX.circle.bbox-full  (ink bbox 154x154 fills the window 154x154)
+  rounded-square: 154x154 bg=(7,7,7) coverage=0.865 bbox=0,0..153,153
+    y=16 (10%) left=4 right=149 width=146 inset=0.026
+    y=39 (25%) left=0 right=153 width=154 inset=0
+    y=78 (50%) left=0 right=153 width=154 inset=0
+CHECK: FAIL PIX.rounded-square.coverage  (coverage 0.865 vs analytic 0.954 (tol 0.04))
+CHECK: PASS PIX.rounded-square.inset10  (10%-height inset 0.026 vs analytic 0.05 (tol 0.04))
+CHECK: PASS PIX.rounded-square.bbox-full  (ink bbox 154x154 fills the window 154x154)
+  capsule: 231x154 bg=(14,14,14) coverage=0.779 bbox=0,0..230,153
+    y=16 (10%) left=3 right=230 width=228 inset=0.013
+    y=39 (25%) left=4 right=222 width=219 inset=0.017
+    y=78 (50%) left=0 right=230 width=231 inset=0
+CHECK: FAIL PIX.capsule.coverage  (coverage 0.779 vs analytic 0.857 (tol 0.04))
+CHECK: FAIL PIX.capsule.inset10  (10%-height inset 0.013 vs analytic 0.133 (tol 0.04))
+CHECK: PASS PIX.capsule.bbox-full  (ink bbox 231x154 fills the window 231x154)
+
+  c1-size48.png: 84x84 bg=(0,0,0) coverage=0.717 bbox=0,0..82,82 mid-inset=0
+CHECK: PASS PIX.c1-size48.png.ink  (ink coverage 0.717 > 0.30)
+  c1-size160.png: 280x280 bg=(13,13,13) coverage=0.74 bbox=0,0..278,278 mid-inset=0
+CHECK: PASS PIX.c1-size160.png.ink  (ink coverage 0.74 > 0.30)
+  c1-capsule160.png: 420x280 bg=(123,123,123) coverage=0.994 bbox=0,0..418,278 mid-inset=0
+CHECK: PASS PIX.c1-capsule160.png.ink  (ink coverage 0.994 > 0.30)
+
+SUMMARY: checks=12 failed=5
+RESULT: FAIL
+EXITCODE=

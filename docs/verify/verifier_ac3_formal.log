@@ -1,0 +1,24 @@
+AC-3 FORMAL RUN
+BUILD: exe=NetBall_vfy.exe bytes=1053184 mtime=2026-11-02 18:36:37
+BUILD: newest source=src/ball_window.cpp mtime=2026-11-02 18:35:44
+BUILD: fresh=yes
+  app pid : 13388 (private copy, killed by PID at the end)
+  SCREEN CAPTURE
+    class : NetBallBallWnd
+    out   : d:\agentproject\ÍøËÙÐü¸¡Çò\docs\verify\net-shot-1.png
+    hwnd  : 0xD609B0
+    rect  : L=400 T=183 R=560 B=343  capture=172x172 (padding 6)
+    screen: L=-1536 T=0 R=2194 B=1234  primary-only bug would clip here
+    file  : 2365 bytes
+    colors: 216 distinct colours (full scan)
+    fill  : RGB(236,236,244)  luma=236.9  covers 24622 px of the window
+    ball  : box L=6 T=6 R=165 B=165  (160x160 px)
+    ink   : 46 px  luma=4  box L=16 T=0 R=149 B=13  margin_to_shape_edge=-6 px
+    spill : 3 px of glyph colour outside the shape mask (advisory: desktop backdrop included)
+  METRIC: shot=d:\agentproject\ÍøËÙÐü¸¡Çò\docs\verify\net-shot-1.png bytes=2365 cx=172 cy=172 colors=216 content_px=46 margin_px=-6 spill_px=3
+    note  : spill_px is advisory only - the desktop visible through a non-rectangular
+            shape can be as bright as the glyphs, so overflow is judged by the ink
+            margin above plus a human look at the png.
+  RESULT: PASS (real CopyFromScreen capture saved)
+  curl rc=28 out='193982 20.005685 9696 200'
+RESULT: BLOCKED (curl failed, no ground truth)

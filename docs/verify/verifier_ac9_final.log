@@ -1,0 +1,26 @@
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 18:36:37
+BUILD: newest source=src/ball_window.cpp mtime=2026-11-02 18:35:44
+BUILD: fresh=yes
+AC-9 CONFIG CHECK (all required keys present)
+  path : C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+  sections : ['NetBall']
+
+  key            value                    present   valid
+  --------------------------------------------------------------
+  shape          0                        YES       OK
+  size           160                      YES       OK
+  opacity        85                       YES       OK
+  bgcolor        #262A34                  YES       OK
+  textauto       1                        YES       OK
+  textcolor      #FFFFFF                  YES       OK
+  shownet        1                        YES       OK
+  showmem        1                        YES       OK
+  refreshms      1000                     YES       OK
+  alwaysontop    1                        YES       OK
+  posx           700                      YES       OK
+  posy           320                      YES       OK
+
+  extra keys (informational): autostart, savedh, savedw
+
+METRIC: keys=30 required=12
+RESULT: PASS (all 12 required keys present and parseable)

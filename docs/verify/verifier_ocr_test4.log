@@ -1,0 +1,6 @@
+OCR: upscaled 6x threshold=110 -> C:\Users\sihuo\AppData\Local\Temp\nb_ocr_upscaled.png (817x996)
+OCR_TEXT: 1 · 72 KB/s 274 写 内 存 75 ％
+D:\agentproject\网速悬浮球\docs\verify\verifier_ocr.ps1 : 使用“2”个参数调用“Matches”时发生异常:“正在分析“(\d+)\s*[%锛匽”－ 未终止的 [] 集。”
+    + CategoryInfo          : NotSpecified: (:) [verifier_ocr.ps1], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentException,verifier_ocr.ps1
+ 

@@ -1,0 +1,45 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053184
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T7b AC-10 : drag memory + off-screen reset ===========
+  primary screen (physical px): 3840x2160 at 0,0
+  initial rect : L=3662 T=1898 154x154 (on-screen=True)
+CHECK: PASS initial.on-screen  (default position L=3662 T=1898)
+  drag: cursor (3739,1975) -> (977,577) moves the window to 900,500
+  drag steps: 194 (<=16 px each)
+  after drag   : L=900 T=500 (asked 900,500)
+CHECK: PASS drag.moved  (window moved to L=900 T=500)
+CHECK: PASS drag.lands-on-target  (L=900 T=500 expect 900/500 (tolerance 3 px))
+CHECK: PASS exit.via-command-1006  (process exited=True)
+  ini after exit: posx=900 posy=500
+CHECK: PASS ini.posx  (posx=900 expect 900)
+CHECK: PASS ini.posy  (posy=500 expect 500)
+  restart rect : L=900 T=500 154x154
+CHECK: PASS restart.restores-position  (L=900 T=500 expect 900/500)
+  posx=99999   : L=3662 T=1898 154x154 on-screen=True
+CHECK: PASS oob.huge.falls-back-visible  (L=3662 T=1898)
+  posx=5000/2000: L=3662 T=1898 154x154 on-screen=True
+CHECK: PASS oob.offdesk.falls-back-visible  (L=3662 T=1898 (5000 is beyond the 3840 wide desktop))
+  posx=-500    : L=3662 T=1898 154x154 on-screen=True
+CHECK: PASS oob.negative.falls-back-visible  (L=3662 T=1898)
+  config --diff against the documented default:
+     shape        expect 0        actual 0
+     size         expect 88       actual 88
+     opacity      expect 85       actual 85
+     textauto     expect 1        actual 1
+     shownet      expect 1        actual 1
+     showmem      expect 1        actual 1
+     refreshms    expect 1000     actual 1000
+     alwaysontop  expect 1        actual 1
+     autostart    expect 0        actual 0
+     posx         expect -1       actual -1
+     posy         expect -1       actual -1
+     savedw       expect 0        actual 0
+     savedh       expect 0        actual 0
+     bgcolor      expect #181C24  actual #181C24
+     textcolor    expect #FFFFFF  actual #FFFFFF
+CHECK: PASS config.restored  (15/15 keys match, extra=0)
+
+SUMMARY: checks=11 failed=0
+RESULT: PASS
+EXIT=0 

@@ -1,0 +1,8 @@
+AC-16 RESIDUE CHECK (part 2: build/out inventory)
+  dir : D:\agentproject\网速悬浮球\build\out
+  entries: 1
+    FILE NetBall.exe                        1053184 bytes
+
+  inventory clean: only NetBall.exe
+METRIC: entries=1 extra=0
+RESULT: PASS (build/out contains only NetBall.exe)

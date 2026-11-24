@@ -1,0 +1,42 @@
+=== SNAPSHOT [after_install1_notask] 2026-11-02 20:16:53 ===
+USER    : sihuo
+appdir  : C:\Users\sihuo\AppData\Local\Programs\NetBall
+desktop : C:\Users\sihuo\Desktop
+startmenu: C:\Users\sihuo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\NetBall
+--- appdir ---
+APPDIR_EXISTS
+  NetBall.exe size=1053184
+  README.txt size=4190
+  unins000.dat size=5412
+  unins000.exe size=4386294
+  卸载 NetBall.lnk size=1187
+--- desktop lnk ---
+DESKTOP_LNK_ABSENT
+--- startmenu group ---
+STARTMENU_EXISTS
+  NetBall 网速悬浮球.lnk
+  卸载 NetBall.lnk
+  count=2
+--- appdir uninstaller pair ---
+  PRESENT unins000.exe 4386294
+  PRESENT unins000.dat 5412
+  MISSING unins000.msg
+  PRESENT NetBall.exe 1053184
+  PRESENT unins_lnk 1187 name_codepoints=U+5378 U+8F7D U+0020 U+004E U+0065 U+0074 U+0042 U+0061 U+006C U+006C U+002E U+006C U+006E U+006B
+--- run value ---
+RUNVALUE_ABSENT
+--- uninstall registry ---
+UNINSTALL_KEY_EXISTS HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\{8F3A1C2E-5B47-4D9A-9E62-0C7D4B15A8E3}_is1
+  DisplayName      : NetBall 网速悬浮球
+  DisplayVersion   : 1.0.0
+  DisplayIcon      : C:\Users\sihuo\AppData\Local\Programs\NetBall\NetBall.exe
+  UninstallString  : "C:\Users\sihuo\AppData\Local\Programs\NetBall\unins000.exe"
+  InstallLocation  : C:\Users\sihuo\AppData\Local\Programs\NetBall\
+  Publisher        : NetBall
+  matched_key: {8F3A1C2E-5B47-4D9A-9E62-0C7D4B15A8E3}_is1
+--- appdata config ---
+CFGDIR_EXISTS
+  \config.ini size=193
+--- processes ---
+NO_RELATED_PROCESS
+=== END [after_install1_notask] ===

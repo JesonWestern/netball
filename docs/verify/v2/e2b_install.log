@@ -1,0 +1,12 @@
+SETUP   : D:\agentproject\ÍøËÙÐü¸¡Çò\dist\NetBallSetup-1.0.0.exe
+ARGS    : /VERYSILENT /CURRENTUSER /SUPPRESSMSGBOXES /NORESTART /SP- /LANG=chinesesimplified /LOG=D:\agentproject\ÍøËÙÐü¸¡Çò\build\_tmp\v2\inno_install4.log /TASKS=
+INNOLOG : D:\agentproject\ÍøËÙÐü¸¡Çò\build\_tmp\v2\inno_install4.log
+LOADER_EXITED_PID=16760 EXITCODE=0 ELAPSED_MS=537
+ARTIFACT_UNINS_PRESENT
+--- inno log markers ---
+  2026-11-02 20:36:17.778   Installation process succeeded.
+  2026-11-02 20:36:17.778   Deinitializing Setup.
+  2026-11-02 20:36:17.795   Log closed.
+LAUNCHED pid=6656 exe=C:\Users\sihuo\AppData\Local\Programs\NetBall\unins000.exe
+STILL_RUNNING=True
+LAUNCH_DONE

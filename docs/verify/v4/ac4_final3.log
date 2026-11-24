@@ -1,0 +1,28 @@
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 19:10:18 sha256=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+BUILD: newest src=settings_dialog.cpp mtime=2026-11-02 18:58:17
+BUILD: fresh=yes
+
+AC-4 MEMORY  2026-11-02 19:14:51
+COPY: main=NetBall.exe sha=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+COPY: priv=NetBall_v4.exe sha=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0  identical=True
+APP: pid=32452 launched
+APP: ball hwnd=0x180D26 rect=(2093, 1085, 2181, 1173)
+CONFIG at start: mtime=19:05:49 bytes=193
+  (attempt 1 looks occluded: ink_px=71 - retrying)
+APP: pid=32452 terminated (by PID only), rc=1
+Traceback (most recent call last):
+  File "d:\agentproject\网速悬浮球\docs\verify\v4\v4_run.py", line 676, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "d:\agentproject\网速悬浮球\docs\verify\v4\v4_run.py", line 671, in main
+    return mode_ac4(args)
+           ^^^^^^^^^^^^^^
+  File "d:\agentproject\网速悬浮球\docs\verify\v4\v4_run.py", line 439, in mode_ac4
+    cap_txt, cap_rc, cap = capture(png)
+                           ^^^^^^^^^^^^
+  File "d:\agentproject\网速悬浮球\docs\verify\v4\v4_run.py", line 279, in capture
+    os.remove(out_png)
+  File "C:\Users\sihuo\AppData\Local\Programs\CodeBuddy CN\resources\app\extensions\genie\out\vendor\shim\sitecustomize.py", line 1488, in _safe_remove
+    return _orig_remove(path)
+           ^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'd:\\agentproject\\网速悬浮球\\docs\\verify\\media-v4\\mem-1.png'

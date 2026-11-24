@@ -1,0 +1,56 @@
+
+== circle-88  154x154
+  corner diffs: TL=0 TR=0 BL=0 BR=25  centre=29
+  TL on=(15,11,3) off=(15,11,3)
+  C  on=(0,38,0) off=(9,9,9)
+  row y=15 mask(x=0..45) = #########.########..........##################
+    coverage@thr10 = 0.82
+    coverage@thr25 = 0.803
+    coverage@thr60 = 0.778
+
+== roundedsq-88  154x154
+  corner diffs: TL=1 TR=0 BL=1 BR=0  centre=48
+  TL on=(14,11,0) off=(15,10,0)
+  C  on=(0,57,0) off=(9,9,9)
+  row y=15 mask(x=0..45) = .....#########################################
+    coverage@thr10 = 0.849
+    coverage@thr25 = 0.842
+    coverage@thr60 = 0.83
+
+== capsule-88  231x154
+  corner diffs: TL=0 TR=0 BL=0 BR=0  centre=246
+  TL on=(15,10,0) off=(15,10,0)
+  C  on=(0,255,0) off=(9,9,9)
+  row y=15 mask(x=0..45) = ..............................################
+    coverage@thr10 = 0.744
+    coverage@thr25 = 0.73
+    coverage@thr60 = 0.715
+
+== circle-48  84x84
+  corner diffs: TL=0 TR=0 BL=0 BR=0  centre=124
+  TL on=(16,11,0) off=(16,11,0)
+  C  on=(0,133,0) off=(9,9,9)
+  row y=8 mask(x=0..45) = ................##############################
+    coverage@thr10 = 0.765
+    coverage@thr25 = 0.736
+    coverage@thr60 = 0.71
+
+== circle-160  280x280
+  corner diffs: TL=40 TR=100 BL=42 BR=157  centre=84
+  TL on=(21,10,0) off=(39,37,40)
+  C  on=(0,0,0) off=(31,36,84)
+  row y=28 mask(x=0..45) = ###.###############.#.###..#################.#
+    coverage@thr10 = 0.995
+    coverage@thr25 = 0.986
+    coverage@thr60 = 0.927
+
+== capsule-160  420x280
+  corner diffs: TL=12 TR=3 BL=10 BR=1  centre=214
+  TL on=(210,210,217) off=(221,222,229)
+  C  on=(0,255,0) off=(35,41,108)
+  row y=28 mask(x=0..45) = ################..............................
+    coverage@thr10 = 0.917
+    coverage@thr25 = 0.897
+    coverage@thr60 = 0.878
+
+RESULT: INFO

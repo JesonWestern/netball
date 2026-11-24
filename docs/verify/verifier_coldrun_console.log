@@ -1,0 +1,20 @@
+[1/17] check_ac1_exe.ps1                  exit=0   PASS           586 ms
+[2/17] check_ac2_window.ps1               exit=0   PASS           440 ms
+[3/17] check_ac3_net.py                   exit=0   PASS           4112 ms
+[4/17] check_ac3_net.py --json            exit=0   PASS           111 ms
+[5/17] check_ac5_resources.ps1            exit=0   PASS           8714 ms
+[6/17] check_ac7_alpha.py                 exit=2   SKIP           105 ms
+[7/17] check_ac7_alpha.py --selftest      exit=0   PASS           140 ms
+[8/17] check_ac8_contrast.py --math       exit=0   PASS           102 ms
+[9/17] check_ac8_contrast.py --selftest   exit=0   PASS           160 ms
+[10/17] check_ac8_contrast.py --shots      exit=2   SKIP           104 ms
+[11/17] check_ac9_config.py                exit=0   PASS           110 ms
+[12/17] check_ac9_config.py --corrupt      exit=0   PASS           4568 ms
+[13/17] check_ac11_single.py               exit=0   PASS           5295 ms
+[14/17] check_ac16_clean.ps1               exit=0   PASS           391 ms
+[15/17] check_ac16_residue.ps1             exit=2   SKIP           312 ms
+[16/17] check_ac17_dpi.ps1                 exit=0   PASS           3289 ms
+[17/17] check_screenshot.ps1               exit=2   SKIP           378 ms
+
+written: D:\agentproject\网速悬浮球\docs\verify\coldrun.txt
+scripts without a RESULT line: 0 / 17

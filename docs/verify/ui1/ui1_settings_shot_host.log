@@ -1,0 +1,35 @@
+﻿19:38:40.050  root = D:\agentproject\网速悬浮球
+19:38:40.053  mode = host
+19:38:40.054  EVIDENCE_CLASS = reference-only (not product evidence) (subject under test: build\_tmp\ui1_t4test.exe)
+19:38:40.107  exe    = D:\agentproject\网速悬浮球\build\_tmp\ui1_t4test.exe
+19:38:40.111  mtime  = 2026-11-02 18:59:02   size = 140481 bytes
+19:38:40.111  sha256 = BF375AC2BF0DC9003E7391A70CC25EA4584116B3916B1077F23EBB6A51F8D32B
+19:38:40.112  mtime(precision) = 2026-11-02 18:59:02.119
+19:38:40.114  WARN no -ExpectSha supplied; anchor not asserted, T10 must cross-check the sha printed above
+19:38:40.116  src    = D:\agentproject\网速悬浮球\src\settings_dialog.cpp
+19:38:40.117  src mtime = 2026-11-02 18:58:17   size = 39602
+19:38:40.118  src sha256 = 01B504B5F962E6C78C83CA12CCD542C57DC2056178A4DAEA6D38BD02FE22EBBE
+19:38:40.119  staleness assertion OK: exe mtime > settings_dialog.cpp mtime
+19:38:40.132  newest src file = settings_dialog.cpp @ 2026-11-02 18:58:17
+19:38:40.134  window grant accepted: ui1-GO-1930
+19:38:40.142  config.ini before: 38A32E914E9769C3F3CABA303B72D83FA6A91F59E7376AAA0101B90BED2A57EC  (saved to D:\agentproject\网速悬浮球\docs\verify\ui1\config-before-host.ini)
+19:38:40.151  launching host harness (-show)...
+19:38:41.425  settings hwnd = 0x20EC8
+19:38:42.050  window rect = (120,128)-(798,972)  size=678x844
+19:38:42.051  client rect = 672x798   dpi=168
+19:38:42.053  geometry assertion OK: 672x798 physical px, dpi 168
+19:38:42.610  saved D:\agentproject\网速悬浮球\docs\verify\ui1\host-settings-8swatches.png  (33899 bytes)
+19:38:42.664  RESULT: host-settings-8swatches.png  678x844  bytes=33899  non-bg=100%
+19:38:42.667  RESULT: host-settings-8swatches.png OK (exists, size and ink checks passed)
+19:38:42.673  click blue swatch at client (315,464)
+19:38:43.915  saved D:\agentproject\网速悬浮球\docs\verify\ui1\host-settings-preview-blue.png  (36773 bytes)
+19:38:43.921  RESULT: host-settings-preview-blue.png  678x844  bytes=36773  non-bg=100%
+19:38:43.921  RESULT: host-settings-preview-blue.png OK (exists, size and ink checks passed)
+19:38:44.533  settings window closed by WM_CLOSE
+19:38:47.404  process exited, exit code = 0
+19:38:47.418  remaining ui1_t4test instances = 0
+19:38:47.424  config.ini restored, sha256 = 38A32E914E9769C3F3CABA303B72D83FA6A91F59E7376AAA0101B90BED2A57EC
+19:38:47.426  sha256 after  = BF375AC2BF0DC9003E7391A70CC25EA4584116B3916B1077F23EBB6A51F8D32B
+19:38:47.427  mtime  after  = 2026-11-02 18:59:02.119   size = 140481
+19:38:47.428  post-run assertion OK: identical bytes before and after the measurement
+19:38:47.428  DONE

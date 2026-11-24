@@ -1,0 +1,50 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053696
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T14 group C2 : AC-9 / AC-7 / AC-8 ===========
+  anchor sha = e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983 bytes=1053696
+
+--- AC-9: deliberately corrupted config must not crash and must fall back to defaults ---
+  wrote corrupted ini (182 bytes, 14 keys)
+  ball window survived: L=3662 T=1898 154x154
+CHECK: PASS AC-9.corrupt.no-crash  (corrupted ini accepted, window created, no crash)
+CHECK: PASS AC-9.corrupt.default-size  (size fell back to 88 -> 154 px (got 154))
+CHECK: PASS AC-9.corrupt.default-pos  (position fell back to default (3662,1898))
+  ini after the corrupt run: shape=9 size=999 opacity=999 refreshms=abc bgcolor=zzz posx=notanumber posy=
+CHECK: FAIL AC-9.corrupt.rewritten-sane  (config rewritten with the documented defaults)
+
+--- AC-9b: deleting a key must be repaired on the next start ---
+  removed the size key; keys now = 15
+  ball: L=3662 T=1898 154x154
+CHECK: PASS AC-9b.missing-key  (missing size key -> default 88 (154 px), got 154)
+CHECK: PASS AC-9b.key-restored  (size key recreated with value 88)
+
+--- AC-7: implied alpha via white/black backdrop difference (white ball, ring samples) ---
+CHECK: FAIL AC-7.opacity20  (implied alpha 0.282 (expect 0.200 +-0.02))
+CHECK: PASS AC-7.opacity100  (implied alpha 1.000 (expect 1.000 +-0.02))
+
+--- AC-8: strict maximin contrast, 8 presets at default opacity 85% ---
+  dark-grey #262A34  maximin=8.88 (text white)  documented=8.86  delta=0.02
+CHECK: PASS AC-8.dark-grey262A34  (maximin 8.88 >= 4.5 and matches the documented 8.86)
+  black     #000000  maximin=15.08 (text white)  documented=15.13  delta=0.05
+CHECK: PASS AC-8.black000000  (maximin 15.08 >= 4.5 and matches the documented 15.13)
+  white     #FFFFFF  maximin=14.84 (text black)  documented=14.88  delta=0.04
+CHECK: PASS AC-8.whiteFFFFFF  (maximin 14.84 >= 4.5 and matches the documented 14.88)
+  blue      #144BC8  maximin=5.28 (text white)  documented=5.28  delta=0.00
+CHECK: PASS AC-8.blue144BC8  (maximin 5.28 >= 4.5 and matches the documented 5.28)
+  green     #22A05A  maximin=4.68 (text black)  documented=4.68  delta=0.00
+CHECK: PASS AC-8.green22A05A  (maximin 4.68 >= 4.5 and matches the documented 4.68)
+  orange    #EB8C1E  maximin=6.10 (text black)  documented=6.11  delta=0.01
+CHECK: PASS AC-8.orangeEB8C1E  (maximin 6.10 >= 4.5 and matches the documented 6.11)
+  purple    #6E32BE  maximin=5.28 (text white)  documented=5.26  delta=0.02
+CHECK: PASS AC-8.purple6E32BE  (maximin 5.28 >= 4.5 and matches the documented 5.26)
+  red       #B41923  maximin=5.33 (text white)  documented=5.32  delta=0.01
+CHECK: PASS AC-8.redB41923  (maximin 5.33 >= 4.5 and matches the documented 5.32)
+  worst preset = green     #22A05A at 4.68
+CHECK: PASS AC-8.worst-min  (global minimum 4.68 (documented 4.68))
+
+  config restored: posx=-1 posy=-1 bg=#181C24
+  processes left: 0
+SUMMARY: checks=17 failed=2
+RESULT: FAIL
+EXITCODE=

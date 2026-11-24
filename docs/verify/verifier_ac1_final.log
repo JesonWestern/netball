@@ -1,0 +1,44 @@
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 18:36:37
+BUILD: newest source=src/ball_window.cpp mtime=2026-11-02 18:35:44
+BUILD: fresh=yes
+AC-1 EXE / RESOURCE / MANIFEST CHECK
+  target : D:\agentproject\网速悬浮球\build\out\NetBall.exe
+  limit  : 2097152 bytes (2 MiB)
+  exists : YES
+  bytes  : 1053184
+  usage  : 50.2% of limit
+  sha256 : F64D31DD597A92D347259F0CE3332C0B84D7541DACD7CBD911D5C449A8A93052
+  mtime  : 2026-11-02 18:36:37
+  PE sections:
+    .text      raw=808448   vsize=808184
+    .data      raw=8704     vsize=8352
+    .rdata     raw=66048    vsize=65872
+    .pdata     raw=47104    vsize=46800
+    .xdata     raw=64512    vsize=64472
+    .bss       raw=0        vsize=5024
+    .idata     raw=10752    vsize=10732
+    .CRT       raw=512      vsize=104
+    .tls       raw=512      vsize=16
+    .rsrc      raw=39936    vsize=39792
+    .reloc     raw=5632     vsize=5572
+  .rsrc      : present (raw size 39936 bytes)
+  VersionInfo (exact compare):
+    FileVersion      : '1.0.0.0'
+    ProductVersion   : '1.0.0.0'
+    ProductName      : 'NetBall'
+    OriginalFilename : 'NetBall.exe'
+    FileDescription  : 'NetBall 网速悬浮球'
+    desc codepoints  : U+004E U+0065 U+0074 U+0042 U+0061 U+006C U+006C U+0020 U+7F51 U+901F U+60AC U+6D6E U+7403
+    expected desc cp : U+004E U+0065 U+0074 U+0042 U+0061 U+006C U+006C U+0020 U+7F51 U+901F U+60AC U+6D6E U+7403
+    FileDescription  : MATCH (no mojibake)
+  icon resource:
+    extracted      : 32x32
+    pixels sampled : 256  variance=2271.62
+    assets/app.ico : 32x32 frame = 32x32
+  manifest (RT_MANIFEST id 1):
+    resource size  : 1625 bytes
+    asInvoker      : 1 hit(s)  (need exactly 1)
+    PerMonitorV2   : 1 hit(s)  (need exactly 1)
+
+METRIC: exe_bytes=1053184 limit_bytes=2097152 desc_match=1 manifest=asInvoker+PerMonitorV2
+RESULT: PASS (size ok, rsrc+versioninfo+icon+manifest ok, T5 cross-check passed)

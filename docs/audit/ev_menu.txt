@@ -1,0 +1,17 @@
+﻿PID=27392 HWND=0x500802
+POSTED_WM_RBUTTONUP
+MENU_WND=0xA70CDC
+MENU_HANDLE_SRC=MN_GETHMENU
+MENU_HANDLE=0x123C0EF3
+MENU_COUNT=8
+ITEM[0] sep=False checked=False text_cp=[U+7DE5 U+006E U+007F U+0028]
+ITEM[1] sep=True checked=False text_cp=[]
+ITEM[2] sep=False checked=True text_cp=[U+003B U+0060 U+0028 U+0057]
+ITEM[3] sep=False checked=False text_cp=[]
+ITEM[4] sep=False checked=False text_cp=[U+86FB U+006E U+007F U+004D U+004F U+006E U+007F U+0028]
+ITEM[5] sep=True checked=False text_cp=[]
+ITEM[6] sep=False checked=False text_cp=[U+0073 U+0051 U+5DAF U+0028]
+ITEM[7] sep=False checked=False text_cp=[]
+MENU_CLOSED=True
+POST_PROC_COUNT=0
+POST_SHA=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0

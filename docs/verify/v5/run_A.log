@@ -1,0 +1,24 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053696
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T14 group A : D-01 position memory ===========
+  anchor sha = e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983 bytes=1053696 mtime=2026-11-02 21:28:29
+  virtual screen x=[-1920..3840] y=[0..2160]
+
+--- A1: posx=-500 posy=300 (legal point on the monitor left of the primary) ---
+  ini written posx=-500 posy=300 -> -500,300
+CHECK: PASS A1.neg500.restored  (rect.L=-500 (want -500 +-2, |delta|=0); rect.T=300 (want 300); fellback_to_3662=False)
+
+--- A2: settings window -> click a preset colour swatch -> Save (IDC_SAVE=3016) ---
+  cfg before save: bgcolor=#181C24 textauto=1 posx=-500 posy=300
+CHECK: PASS A2.settings.opens  (hwnd=0xB50850 class=NetBallSettingsWnd title=NetBall 网速悬浮球 - 设置)
+  settings dpi=120 (scale 1.25)
+  swatch[0] client=(124,331) -> screen=(-373,671)
+CHECK: PASS A2.after-save.no-jump  (rect.L=-500 (want -500 +-2, |delta|=0); jumped_to_3662=False)
+  cfg after save : bgcolor=#262A34 textauto=1 posx=-500 posy=300
+CHECK: PASS A2.save.really-applied  (bgcolor #181C24 -> #262A34 (proves ApplyAndClose ran))
+CHECK: PASS A2.save.kept-neg-pos-in-ini  (ini posx=-500 posy=300)
+  processes after A1/A2: 0
+
+--- A3: posx=99999 posy=99999 (illegal) -> must fall back to a visible spot ---
+^C

@@ -1,0 +1,39 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053696
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T14 step 0 : anchor + environment ===========
+ENV root   = D:\agentproject\网速悬浮球
+ENV exe    = D:\agentproject\网速悬浮球\build\out\NetBall.exe
+ENV ini    = C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+ENV copy   = D:\agentproject\网速悬浮球\build\_tmp\v5\NetBall_v5.exe
+ART size      = 1053696 (expect 1053696) match=True
+ART mtime     = 2026-11-02 21:28:29.189
+ART sha256    = e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983
+ART sha match = True
+ART certutil  = e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983
+ART certutil -ceq GetFileHash = True
+PROC pre-existing NetBall/NetBall_v5 count = 0
+SCREEN virtual x=[-1920..3840] y=[0..2160] w=5760 h=2160
+DPI thread-awareness-from-NULL-hwnd = -1 (4 = PER_MONITOR_AWARE_V2, 2 = PER_MONITOR)
+DPI GetDpiForSystem = 168
+CFG current sha256 = bf0d8b8d6a1d45fb03c60e3386621adeb0e58f3640b8ebe0e7f56e2018abc39a size=201
+CFG current contents:
+CFG   [NetBall]
+CFG   shape=0
+CFG   size=88
+CFG   opacity=85
+CFG   textauto=1
+CFG   shownet=1
+CFG   showmem=1
+CFG   refreshms=1000
+CFG   alwaysontop=1
+CFG   autostart=0
+CFG   posx=-1920
+CFG   posy=0
+CFG   bgcolor=#181C24
+CFG   textcolor=#FFFFFF
+CFG   savedw=5760
+CFG   savedh=2160
+COPY size=1053696 sha256=e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983
+COPY sha -ceq anchor = True
+RESULT: PASS (private copy is the broadcast binary)

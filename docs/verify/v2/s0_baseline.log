@@ -1,0 +1,28 @@
+=== SNAPSHOT [baseline] 2026-11-02 20:15:15 ===
+USER    : sihuo
+appdir  : C:\Users\sihuo\AppData\Local\Programs\NetBall
+desktop : C:\Users\sihuo\Desktop
+startmenu: C:\Users\sihuo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\NetBall
+--- appdir ---
+APPDIR_ABSENT
+--- desktop lnk ---
+DESKTOP_LNK_ABSENT
+--- startmenu group ---
+STARTMENU_ABSENT
+--- appdir uninstaller pair ---
+  MISSING unins000.exe
+  MISSING unins000.dat
+  MISSING unins000.msg
+  MISSING NetBall.exe
+  MISSING unins_lnk C:\Users\sihuo\AppData\Local\Programs\NetBall\卸载 NetBall.lnk
+--- run value ---
+RUNVALUE_ABSENT
+--- uninstall registry ---
+UNINSTALL_KEY_ABSENT
+--- appdata config ---
+CFGDIR_EXISTS
+  \config.ini size=193
+--- processes ---
+  PID=428 NAME=CodeSetup-stable-4.12.3.42658816 PATH=C:\Users\sihuo\AppData\Local\Temp\buddycn-stable-user-x64\CodeSetup-stable-4.12.3.42658816.exe
+  PID=27100 NAME=CodeSetup-stable-4.12.3.42658816.tmp PATH=C:\Users\sihuo\AppData\Local\Temp\is-XGZ9M4A9J5.tmp\CodeSetup-stable-4.12.3.42658816.tmp
+=== END [baseline] ===

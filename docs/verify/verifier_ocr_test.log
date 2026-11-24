@@ -1,0 +1,7 @@
+OCR: upscaled 4x -> C:\Users\sihuo\AppData\Local\Temp\nb_ocr_upscaled.png (664x664)
+OCR_TEXT: 1 1 · 72 KB/s t 274 B/s 内 存 75 ％
+OCR_DOWN: 72 KB/s
+BALL_DOWN_BPS=73728
+METRIC: ocr_value=72 unit=KB/S bps=73728 tokens=2
+RESULT: PASS (downstream value machine-read from the screenshot)
+EXIT=0 

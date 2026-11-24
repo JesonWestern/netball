@@ -1,0 +1,59 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053696
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T14 AC-6 / AC-17 : silhouette via frame differencing ===========
+  anchor sha = e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983 bytes=1053696
+
+--- circle-88: shape=0 size=88 (expect 154x154) ---
+  rect L=900 T=400 154x154
+  hidden=True coverage=0.803 bbox=0,0..153,153 (154x154) inset@10%=0
+CHECK: PASS SIL.circle-88.geometry  (window 154x154 (expect 154x154))
+CHECK: PASS SIL.circle-88.silhouette-fills  (ink spans 154x154 of 154x154)
+CHECK: PASS SIL.circle-88.coverage  (coverage 0.803 vs analytic 0.785 (tol 0.04))
+CHECK: FAIL SIL.circle-88.inset10  (10%-height inset 0 vs analytic 0.2 (tol 0.04))
+
+--- roundedsq-88: shape=1 size=88 (expect 154x154) ---
+  rect L=900 T=400 154x154
+  hidden=True coverage=0.842 bbox=0,0..153,153 (154x154) inset@10%=0.026
+CHECK: PASS SIL.roundedsq-88.geometry  (window 154x154 (expect 154x154))
+CHECK: PASS SIL.roundedsq-88.silhouette-fills  (ink spans 154x154 of 154x154)
+CHECK: FAIL SIL.roundedsq-88.coverage  (coverage 0.842 vs analytic 0.954 (tol 0.04))
+CHECK: PASS SIL.roundedsq-88.inset10  (10%-height inset 0.026 vs analytic 0.05 (tol 0.04))
+
+--- capsule-88: shape=2 size=88 (expect 231x154) ---
+  rect L=900 T=400 231x154
+  hidden=True coverage=0.73 bbox=0,0..230,153 (231x154) inset@10%=0.121
+CHECK: PASS SIL.capsule-88.geometry  (window 231x154 (expect 231x154))
+CHECK: PASS SIL.capsule-88.silhouette-fills  (ink spans 231x154 of 231x154)
+CHECK: FAIL SIL.capsule-88.coverage  (coverage 0.73 vs analytic 0.857 (tol 0.04))
+CHECK: PASS SIL.capsule-88.inset10  (10%-height inset 0.121 vs analytic 0.133 (tol 0.04))
+
+--- circle-48: shape=0 size=48 (expect 84x84) ---
+  rect L=900 T=400 84x84
+  hidden=True coverage=0.736 bbox=0,0..83,83 (84x84) inset@10%=0.179
+CHECK: PASS SIL.circle-48.geometry  (window 84x84 (expect 84x84))
+CHECK: PASS SIL.circle-48.silhouette-fills  (ink spans 84x84 of 84x84)
+CHECK: FAIL SIL.circle-48.coverage  (coverage 0.736 vs analytic 0.785 (tol 0.04))
+CHECK: PASS SIL.circle-48.inset10  (10%-height inset 0.179 vs analytic 0.2 (tol 0.04))
+
+--- circle-160: shape=0 size=160 (expect 280x280) ---
+  rect L=900 T=400 280x280
+  hidden=True coverage=0.986 bbox=0,0..278,278 (279x279) inset@10%=0
+CHECK: PASS SIL.circle-160.geometry  (window 280x280 (expect 280x280))
+CHECK: PASS SIL.circle-160.silhouette-fills  (ink spans 279x279 of 280x280)
+CHECK: FAIL SIL.circle-160.coverage  (coverage 0.986 vs analytic 0.785 (tol 0.04))
+CHECK: FAIL SIL.circle-160.inset10  (10%-height inset 0 vs analytic 0.2 (tol 0.04))
+
+--- capsule-160: shape=2 size=160 (expect 420x280) ---
+  rect L=900 T=400 420x280
+  hidden=True coverage=0.897 bbox=0,0..418,278 (419x279) inset@10%=0
+CHECK: PASS SIL.capsule-160.geometry  (window 420x280 (expect 420x280))
+CHECK: PASS SIL.capsule-160.silhouette-fills  (ink spans 419x279 of 420x280)
+CHECK: FAIL SIL.capsule-160.coverage  (coverage 0.897 vs analytic 0.857 (tol 0.04))
+CHECK: FAIL SIL.capsule-160.inset10  (10%-height inset 0 vs analytic 0.133 (tol 0.04))
+
+  config restored: posx=-1 posy=-1
+  processes left: 0
+SUMMARY: checks=24 failed=8
+RESULT: FAIL
+EXITCODE=

@@ -1,0 +1,11 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053184
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T7b ANCHOR PREFLIGHT (read only, no NetBall started) ===========
+  anchor.txt: 7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+  ANCHOR-OK sha=7269afaaf069365db42dff2c5d8f8f79658248fbb6f466890aff4c10b64a74f0 bytes=1053184 mtime=2026-11-02 19:10:18
+  config.ini bgcolor now = #181C24  (default expects #181C24)
+  config.ini posx now    = -1
+  netball processes now  = 1
+  private copy (stale until the run): 0d97001592b8da779dcdc23b9b1d1dc121f59b6700e47571037edac75792c7d9 1053184 B mtime=2026-11-02 19:05:25
+RESULT: PASS (anchor accepted; nothing was started)

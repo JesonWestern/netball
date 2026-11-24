@@ -1,0 +1,24 @@
+EXE     : C:\Users\sihuo\AppData\Local\Programs\NetBall\NetBall.exe
+BYTES   : 1053184  (expected 1053184)
+SHA256  : 7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+MTIME   : 2026-11-02 19:10:18
+BYTES_OK
+--- version resources (raw strings) ---
+FileDescription    : NetBall 网速悬浮球
+FileVersion        : 1.0.0.0
+ProductName        : NetBall
+ProductVersion     : 1.0.0.0
+CompanyName        : NetBall
+InternalName       : NetBall
+OriginalFilename   : NetBall.exe
+LegalCopyright     : 
+Language           : 简体中文(中国大陆)
+FileDescription codepoints (actual)  : U+004EU+0065U+0074U+0042U+0061U+006CU+006CU+0020U+7F51U+901FU+60ACU+6D6EU+7403
+FileDescription codepoints (expect)  : U+004EU+0065U+0074U+0042U+0061U+006CU+006CU+0020U+7F51U+901FU+60ACU+6D6EU+7403
+FileDescription lenght actual/expected: 13/13
+FILEDESC_CODEPOINT_EXACT_MATCH
+FILEVERSION_OK 1.0.0.0
+--- icon extraction ---
+ICON_OK size=32x32 distinct_colors=319 png=d:\agentproject\网速悬浮球\docs\verify\media-v2\icon-from-installed.png png_bytes=1646
+ICON_NOT_BLANK
+META_DONE

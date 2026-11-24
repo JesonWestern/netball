@@ -1,0 +1,81 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053696
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T14 group C1 : AC-1/2/5/6/10/11/16/17 ===========
+  anchor sha = e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983 bytes=1053696 mtime=2026-11-02 21:28:29
+
+--- AC-1: artifact identity / version resource / manifest ---
+  FileDescription = 'NetBall 网速悬浮球' (length 13)
+  code points     = U+004E U+0065 U+0074 U+0042 U+0061 U+006C U+006C U+0020 U+7F51 U+901F U+60AC U+6D6E U+7403
+CHECK: PASS AC-1.filedescription  (13 code points, N-e-t-B-a-l-l-space + U+7F51 U+901F U+60AC U+6D6E U+7403)
+  FileVersion=1.0.0.0 ProductName='NetBall' CompanyName='NetBall'
+CHECK: PASS AC-1.size  (1053696 B <= 2097152)
+  manifest hits: asInvoker=1 PerMonitorV2=1 dpiAware=4
+CHECK: PASS AC-1.manifest  (asInvoker>=1 and PerMonitorV2>=1 (double hit))
+
+--- AC-16: no leftovers in build\out / project root ---
+  build\out entries = 1
+    NetBall.exe  1053696 B
+CHECK: PASS AC-16.out-only-exe  (build\out holds exactly NetBall.exe)
+  project root entries = 8
+    .agent
+    assets
+    build
+    dist
+    docs
+    installer
+    src
+    tools
+CHECK: PASS AC-16.root-clean  (0 unexpected root entries)
+
+--- AC-2 / AC-10 / AC-11 / AC-5 : one long-lived instance at 3000,300 ---
+CHECK: PASS AC-10.pos-3000  (rect (3000,300) restored from ini 3000,300)
+  exstyle=0x80088 (expect 0x80088 = LAYERED|TOOLWINDOW|TOPMOST), APPWINDOW=False
+CHECK: PASS AC-2.exstyle  (0x80088 == 0x80088)
+CHECK: PASS AC-2.no-appwindow  (WS_EX_APPWINDOW is clear)
+  second instance exited=True exitcode=0; process count 1 -> 1
+CHECK: PASS AC-11.second-exits  (second instance terminated (exit code 0))
+CHECK: PASS AC-11.count-stays-1  (count 1 -> 1)
+
+--- AC-5: 60 s steady-state resources (same instance) ---
+  t=0    WS=7.72 MB private=3.27 MB handles=172 GDI=18
+  t=30   WS=8.16 MB handles=173 GDI=18
+  t=60   WS=8.16 MB handles=173 GDI=18
+  samples=20 WS min=7.75 avg=7.99 max=8.18 MB
+CHECK: PASS AC-5.ws-steady  (steady-state WS max 8.18 MB <= 15 MB (min 7.75))
+CHECK: PASS AC-5.gdi-no-growth  (GDI 18 -> 18 -> 18 (no growth over 60 s))
+CHECK: PASS AC-5.handle-no-growth  (handles 172 -> 173 -> 173)
+CHECK: PASS AC-2.exstyle-stable  (exstyle still 0x80088 after 60 s)
+
+--- AC-6: three shapes at size 88 (opaque bright fill so pixels are decidable) ---
+    pixels: bg=49,49,49 coverage=0.702 inset@10%=0 (window 154x154)
+CHECK: PASS AC-6.circle.geometry  (154x154 (expect 154x154))
+CHECK: FAIL AC-6.circle.coverage  (coverage 0.702 vs analytic 0.785 (tol 0.03))
+CHECK: FAIL AC-6.circle.chord  (10%-height chord inset 0 vs analytic 0.2 (tol 0.03))
+    pixels: bg=0,0,0 coverage=0.865 inset@10%=0.026 (window 154x154)
+CHECK: PASS AC-6.rounded-square.geometry  (154x154 (expect 154x154))
+CHECK: FAIL AC-6.rounded-square.coverage  (coverage 0.865 vs analytic 0.954 (tol 0.03))
+CHECK: PASS AC-6.rounded-square.chord  (10%-height chord inset 0.026 vs analytic 0.05 (tol 0.03))
+    pixels: bg=0,0,0 coverage=0.781 inset@10%=0 (window 231x154)
+CHECK: PASS AC-6.capsule.geometry  (231x154 (expect 231x154))
+CHECK: FAIL AC-6.capsule.coverage  (coverage 0.781 vs analytic 0.857 (tol 0.03))
+CHECK: FAIL AC-6.capsule.chord  (10%-height chord inset 0 vs analytic 0.133 (tol 0.03))
+
+--- AC-17: DPI 175% -> 48/160/capsule160 physical sizes ---
+  GetDpiForSystem = 168 (175%)
+CHECK: PASS AC-17.dpi  (168 dpi == 175%)
+    coverage=0.716 inset@10%=0.167
+CHECK: PASS AC-17.size48  (84x84 (expect 84x84, ratio 1.75))
+CHECK: PASS AC-17.size48.ink  (rendered content coverage 0.716 > 0.3 (not a blank box))
+    coverage=0.978 inset@10%=0
+CHECK: PASS AC-17.size160  (280x280 (expect 280x280, ratio 1.75))
+CHECK: PASS AC-17.size160.ink  (rendered content coverage 0.978 > 0.3 (not a blank box))
+    coverage=0.776 inset@10%=0.124
+CHECK: PASS AC-17.capsule160  (420x280 (expect 420x280, ratio 2.625))
+CHECK: PASS AC-17.capsule160.ink  (rendered content coverage 0.776 > 0.3 (not a blank box))
+
+  config restored: posx=-1 posy=-1 shape=0 size=88
+  processes left: 0
+SUMMARY: checks=30 failed=5
+RESULT: FAIL
+EXITCODE=

@@ -1,0 +1,112 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053184
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T7b AC-17 : DPI / scaling ===========
+---------- step 1: verifier-1 DPI script (copy) ----------
+  AC-17 DPI / SCALING CHECK (expected 175%)
+    LogPixels (HKCU)      : <not set>
+    GetDpiForSystem(raw)  : 168 dpi   (DPI-unaware host virtualises this to 96)
+    GetDpiForSystem(PMv2) : 168 dpi
+    GetDpiForMonitor      : 168 dpi   <- authoritative
+    effective scale       : 175%  (168 dpi)
+    config backup     : D:\agentproject\网速悬浮球\docs\verify\t7b\config-ac17-backup.ini
+  
+    --- size=48 ---
+    config size now   : 48
+      SCREEN CAPTURE
+        class : NetBallBallWnd
+        out   : D:\agentproject\网速悬浮球\docs\verify\media-t7b\dpi-175-size48.png
+        hwnd  : 0xE01FE
+        rect  : L=3732 T=1968 R=3816 B=2052  capture=96x96 (padding 6)
+        screen: L=-1920 T=0 R=3840 B=2160  primary-only bug would clip here
+        file  : 4294 bytes
+        colors: 350 distinct colours (full scan)
+        fill  : RGB(20,28,36)  luma=26.5  covers 4708 px of the window
+        ball  : box L=6 T=6 R=89 B=89  (84x84 px)
+        ink   : 556 px  luma=236  box L=4 T=4 R=79 B=64  margin_to_shape_edge=-2 px
+        spill : 29 px of glyph colour outside the shape mask (advisory: desktop backdrop included)
+      RESULT: FAIL (glyph box reaches the shape bounding box, margin=-2 px -> text clipped/overflowing)
+  
+    --- size=160 ---
+    config size now   : 160
+      SCREEN CAPTURE
+        class : NetBallBallWnd
+        out   : D:\agentproject\网速悬浮球\docs\verify\media-t7b\dpi-175-size160.png
+        hwnd  : 0xF01FE
+        rect  : L=3536 T=1772 R=3816 B=2052  capture=292x292 (padding 6)
+        screen: L=-1920 T=0 R=3840 B=2160  primary-only bug would clip here
+        file  : 21730 bytes
+        colors: 1270 distinct colours (full scan)
+        fill  : RGB(28,28,36)  luma=28.9  covers 63390 px of the window
+        ball  : box L=6 T=6 R=285 B=285  (280x280 px)
+        ink   : 7641 px  luma=255  box L=3 T=2 R=250 B=208  margin_to_shape_edge=-4 px
+        spill : 3601 px of glyph colour outside the shape mask (advisory: desktop backdrop included)
+      RESULT: FAIL (glyph box reaches the shape bounding box, margin=-4 px -> text clipped/overflowing)
+  
+    config restored   : C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+  
+    window hwnd       : 0x150802
+    GetDpiForWindow   : 168 dpi -> 175%
+    DPI awareness     : PER_MONITOR_AWARE (2)
+      SCREEN CAPTURE
+        class : NetBallBallWnd
+        out   : D:\agentproject\网速悬浮球\docs\verify\media-t7b\dpi-t7b-175.png
+        hwnd  : 0x150802
+        rect  : L=3662 T=1898 R=3816 B=2052  capture=166x166 (padding 6)
+        screen: L=-1920 T=0 R=3840 B=2160  primary-only bug would clip here
+        file  : 8762 bytes
+        colors: 374 distinct colours (full scan)
+        fill  : RGB(28,28,36)  luma=28.9  covers 18019 px of the window
+        ball  : box L=6 T=6 R=159 B=159  (154x154 px)
+        ink   : 2276 px  luma=255  box L=23 T=49 R=143 B=116  margin_to_shape_edge=16 px
+        spill : 672 px of glyph colour outside the shape mask (advisory: desktop backdrop included)
+      METRIC: shot=D:\agentproject\网速悬浮球\docs\verify\media-t7b\dpi-t7b-175.png bytes=8762 cx=166 cy=166 colors=374 content_px=2276 margin_px=16 spill_px=672
+        note  : spill_px is advisory only - the desktop visible through a non-rectangular
+                shape can be as bright as the glyphs, so overflow is judged by the ink
+                margin above plus a human look at the png.
+      RESULT: PASS (real CopyFromScreen capture saved)
+  
+    screenshots for human read (blur judgement cannot be automated):
+      size=48       margin= -1px  D:\agentproject\网速悬浮球\docs\verify\media-t7b\dpi-175-size48.png
+      size=160      margin= -1px  D:\agentproject\网速悬浮球\docs\verify\media-t7b\dpi-175-size160.png
+      size=current  margin= 16px  D:\agentproject\网速悬浮球\docs\verify\media-t7b\dpi-t7b-175.png
+      - glyph pixels must not touch the edge (margin >= 1 px, checked automatically)
+      - strokes must look crisp, not doubled/smeared (human)
+    VIOLATION: size=48 : capture/text check failed (see lines above)
+    VIOLATION: size=160 : capture/text check failed (see lines above)
+  METRIC: system_dpi=168 window_dpi=168 scale_pct=175 awareness=2 margins=size48=-1,size160=-1,sizecurrent=16
+  RESULT: FAIL
+  exit=1
+CHECK: PASS ac17.system-dpi  (GetDpiForSystem=168 (168 = 175%))
+CHECK: PASS ac17.window-dpi  (GetDpiForWindow=168)
+CHECK: PASS ac17.scale  (effective scale=175%)
+CHECK: PASS ac17.awareness  (DPI awareness context=2 (2=PER_MONITOR_AWARE))
+  NOTE: check_ac17_t7b.ps1 exit=1 is driven by its unmasked -ExpectText margin
+        (bright wallpaper behind the ball counts as glyph ink). Advisory only;
+        glyph containment is decided by the masked analysis in step 2.
+
+---------- step 2: glyph containment at size 48 / 160 ----------
+  size= 48 DIP -> rect 84x84 (expect 84px) png=ac17-size48.png bytes=3484
+CHECK: PASS size48.physical  (W=84 expect 84 = 48 DIP x 175%)
+CHECK: PASS size48.png  (screenshot bytes=3484)
+  size=160 DIP -> rect 280x280 (expect 280px) png=ac17-size160.png bytes=14880
+CHECK: PASS size160.physical  (W=280 expect 280 = 160 DIP x 175%)
+CHECK: PASS size160.png  (screenshot bytes=14880)
+  manifest: D:\agentproject\网速悬浮球\build\_tmp\t7b\ac17-manifest.txt (2 rows)
+AC-17 GLYPH CONTAINMENT (text must stay inside the ball, nothing clipped)
+shot               ball        ink-bbox         margins l/t/r/b  spill     ink-px   verdict
+------------------------------------------------------------------------------------------------
+size48             85x85       19,31-81,67      11/23/11/25      0         1062     PASS  
+         worst chord overflow 0.0 px (positive = glyph outside the shape)
+size160            281x281     44,84-253,210    36/76/35/78      0         9618     PASS  
+         worst chord overflow 0.0 px (positive = glyph outside the shape)
+
+METRIC: shots=2 fails=0 max_spill=20
+RESULT: PASS (glyphs stay inside the shape at every tested size)
+PYEXIT-glyph: 0
+CHECK: PASS ac17.glyph-containment  (t7b_img.py glyph exit=0)
+  config restored to defaults
+
+SUMMARY: checks=9 failed=0
+RESULT: PASS
+EXIT=0 

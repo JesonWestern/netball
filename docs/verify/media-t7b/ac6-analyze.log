@@ -1,0 +1,12 @@
+AC-6 SHAPE RENDER (pixel assertions on real CopyFromScreen captures)
+shape    file                         bbox        aspect  coverage off@10% off@25% verdict
+------------------------------------------------------------------------------------------------
+shape0   ac6-shape0.png               154x153     1.007   0.781    0.195   0.065   PASS  
+         fill=#FCFCFC bbox=(8,9)-(161,161) window=154x154
+shape1   ac6-shape1.png               154x154     1.000   0.954    0.039   0.000   PASS  
+         fill=#FCFCFC bbox=(8,8)-(161,161) window=154x154
+shape2   ac6-shape2.png               231x154     1.500   0.851    0.139   0.048   PASS  
+         fill=#FCFCFC bbox=(8,8)-(238,161) window=231x154
+
+METRIC: shots=3 fails=0
+RESULT: PASS (every shape matched its geometric + pixel profile)

@@ -1,0 +1,29 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053696
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T14 corrected AC-9 (graceful) + AC-7 (backdrop-solved) ===========
+  anchor sha = e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983 bytes=1053696
+
+--- AC-9: corrupted ini + GRACEFUL exit (WM_COMMAND 1006) -> config rewritten ---
+  corrupted ini written (182 bytes)
+  survived with L=3662 T=1898 154x154
+CHECK: PASS AC-9.no-crash  (window created from a fully corrupted ini)
+CHECK: PASS AC-9.default-size  (size 999 -> 88 (154 px))
+CHECK: PASS AC-9.default-pos  (posx=notanumber -> default (3662,1898))
+  graceful exit: process gone=True
+CHECK: PASS AC-9.graceful-exit  (IDM_EXIT terminated the process)
+  ini after graceful exit: shape=0 size=88 opacity=85 refreshms=1000 bgcolor=#181C24 textcolor=#FFFFFF posx=3662 posy=1898
+CHECK: PASS AC-9.rewritten-sane  (config rewritten to the documented defaults)
+
+--- AC-7: implied alpha, solved against the measured backdrop ---
+    backdrop White: desk luma=20.0 ball luma=80.5
+    backdrop Black: desk luma=20.0 ball luma=74.7
+    backdrop separation = 0.0 luma (need >= 100 for a valid solve)
+backdrop not established (separation 0.0); AC-7 result VOID
+所在位置 D:\agentproject\网速悬浮球\docs\verify\v5\run_C7_fix.ps1:111 字符: 26
++ ...  -lt 100) { throw ("backdrop not established (separation {0:N1}); AC- ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (backdrop not es...C-7 result VOID:String) [], RuntimeException
+    + FullyQualifiedErrorId : backdrop not established (separation 0.0); AC-7 result VOID
+ 
+EXITCODE=

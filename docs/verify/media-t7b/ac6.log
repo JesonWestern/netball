@@ -1,0 +1,39 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053184
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T7b AC-6 : shape 0/1/2 ===========
+  wallpaper luma at the test spot = 41.2 -> ball colour #FFFFFF (opacity 100%%)
+  shape=0 rect=L700 T320 R854 B474 (154x154) png=ac6-shape0.png bytes=9979 shot=170x170
+CHECK: PASS shape0.png  (screenshot bytes=9979)
+CHECK: PASS shape0.position  (window parked at L=700 T=320 (asked 700,320))
+CHECK: PASS shape0.square  (W=154 H=154)
+CHECK: PASS shape0.size154  (W=154 expect 154)
+  shape=1 rect=L700 T320 R854 B474 (154x154) png=ac6-shape1.png bytes=8195 shot=170x170
+CHECK: PASS shape1.png  (screenshot bytes=8195)
+CHECK: PASS shape1.position  (window parked at L=700 T=320 (asked 700,320))
+CHECK: PASS shape1.square  (W=154 H=154)
+CHECK: PASS shape1.size154  (W=154 expect 154)
+  shape=2 rect=L700 T320 R931 B474 (231x154) png=ac6-shape2.png bytes=12659 shot=247x170
+CHECK: PASS shape2.png  (screenshot bytes=12659)
+CHECK: PASS shape2.position  (window parked at L=700 T=320 (asked 700,320))
+CHECK: PASS shape2.aspect  (W/H=1.500 expect 1.50 (88 DIP x 175%))
+CHECK: PASS shape2.height154  (H=154 expect 154)
+  manifest: D:\agentproject\网速悬浮球\build\_tmp\t7b\ac6-manifest.txt (3 rows)
+CHECK: PASS shots.captured  (captured 3/3 shape screenshots)
+
+AC-6 SHAPE RENDER (pixel assertions on real CopyFromScreen captures)
+shape    file                         bbox        aspect  coverage off@10% off@25% verdict
+------------------------------------------------------------------------------------------------
+shape0   ac6-shape0.png               154x154     1.000   0.778    0.208   0.071   PASS  
+         fill=#FCFCFC bbox=(8,8)-(161,161) window=154x154
+shape1   ac6-shape1.png               154x154     1.000   0.955    0.039   0.000   PASS  
+         fill=#FCFCFC bbox=(8,8)-(161,161) window=154x154
+shape2   ac6-shape2.png               231x154     1.500   0.853    0.139   0.048   FAIL  
+         ! probe(123,85) not inside the fill
+         fill=#FCFCFC bbox=(8,8)-(238,161) window=231x154
+
+RESULT: FAIL (1 shape(s) failed the pixel assertions)
+PYEXIT: 1
+
+SUMMARY: checks=13 failed=0 pyexit=1
+RESULT: FAIL

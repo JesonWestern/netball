@@ -1,0 +1,26 @@
+AC-8 TEXT CONTRAST (2-means inside the inscribed fill mask; desktop discarded)
+  core-cr = WCAG(chosen text colour, fill colour)  <- verdict metric
+  avg-cr  = WCAG(2-means cluster centroids)        <- antialiased edges dilute it
+shot                 fill      textcore  core-cr  avg-cr   predict  verdict
+------------------------------------------------------------------------------------
+swatch1-darkgray     #242C34   #FFFFFF   14.14    13.02    white    PASS  
+         glyph core #FFFFFF (luma deviation from fill = 212.5, text cluster 14.9% of mask)
+swatch2-black        #04040C   #FFFFFF   20.43    18.41    white    PASS  
+         glyph core #FFFFFF (luma deviation from fill = 250.1, text cluster 14.8% of mask)
+swatch3-white        #DCE4E4   #000000   16.26    14.76    black    PASS  
+         glyph core #000000 (luma deviation from fill = 225.6, text cluster 15.2% of mask)
+swatch4-blue         #1C54C4   #FFFFFF   6.74     6.90     white    PASS  
+         glyph core #FFFFFF (luma deviation from fill = 175.0, text cluster 14.3% of mask)
+swatch5-green        #248C54   #000000   4.95     3.00     black    PASS  
+         glyph core #000000 (luma deviation from fill = 102.5, text cluster 9.3% of mask)
+swatch6-orange       #CC7C24   #000000   6.48     6.86     black    PASS  
+         glyph core #000000 (luma deviation from fill = 137.9, text cluster 14.3% of mask)
+swatch7-purple       #7444BC   #FFFFFF   6.37     6.64     white    PASS  
+         glyph core #FFFFFF (luma deviation from fill = 159.0, text cluster 14.5% of mask)
+swatch8-red          #BC343C   #FFFFFF   5.68     6.12     white    PASS  
+         glyph core #FFFFFF (luma deviation from fill = 161.4, text cluster 14.3% of mask)
+default-bg           #1C1C2C   #FFFFFF   16.78    15.13    white    PASS  
+         glyph core #FFFFFF (luma deviation from fill = 225.2, text cluster 14.8% of mask)
+
+METRIC: shots=9 fails=0 min_required=4.5
+RESULT: PASS (every preset shot >= 4.5:1 inside the fill mask)

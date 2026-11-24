@@ -1,0 +1,39 @@
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 19:10:18 sha256=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+BUILD: newest src=settings_dialog.cpp mtime=2026-11-02 18:58:17
+BUILD: fresh=yes
+
+AC-3 NETWORK SPEED  2026-11-02 19:20:26
+COPY: main=NetBall.exe sha=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+COPY: priv=NetBall_v4.exe sha=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0  identical=True
+APP: pid=29720 launched
+APP: ball hwnd=0x70D40 rect=(2093, 1085, 2181, 1173)
+CONFIG at start: mtime=19:05:49 bytes=193
+CURL: pid=32796 max_time=60s rate_limit=600k url=https://speed.cloudflare.com/__down?bytes=20000000
+NOTE: curl --max-time on a 20 MB payload ALWAYS exits 28 (truncated by
+      design). rc=28 is expected and is not a failure.
+SAMPLE 1: t=4.03s cap_rc=0 colors=422 ink_px=2033 ball=154x154
+SAMPLE 2: t=8.03s cap_rc=0 colors=423 ink_px=1972 ball=154x154
+SAMPLE 3: t=12.03s cap_rc=0 colors=434 ink_px=2217 ball=154x154
+SAMPLE 4: t=16.02s cap_rc=0 colors=430 ink_px=2211 ball=154x154
+SAMPLE 5: t=20.01s cap_rc=0 colors=418 ink_px=1985 ball=154x154
+CURL: rc=0 wall=33.34s
+CURL -w: '20000000 33.316540 600302 200'
+OCR 1: text='1 M B/s 30 · 8 KB/s 存 85 ％' ball_bps=31539 err=94.75% [scale=6 thr=0 crop=0.24]
+OCR 2: text='1 · 07 M B/s 33 · 6 KB/s 存 85 ％' ball_bps=34406 err=94.27% [scale=6 thr=0 crop=0.24]
+OCR 3: text='943 KB/s 213 K B/s 勺 存 81 ％ At' ball_bps=965632 err=60.86% [scale=6 thr=0 crop=0.24]
+OCR 4: text='36 · 1 K B/s 259 KB/s 勺 存 81 ％ At' ball_bps=265216 err=55.82% [scale=6 thr=0 crop=0.24]
+OCR 5: text='1 · 09 M B/s 47 · 4 KB/s 内 存 81 ％ At' ball_bps=48538 err=91.91% [scale=6 thr=0 crop=0.24]
+APP: pid=29720 terminated (by PID only), rc=1
+
+GROUND_TRUTH bytes=20000000 seconds=33.317 rate=600302.4 B/s (586.23 KB/s)
+GATE: bytes>=300000 -> True ; window>=20s -> True
+
+| # | t(s) | ball_ocr | ball_B/s | ground_B/s | err% | <=20% |
+|---|---|---|---|---|---|---|
+| 1 | 4.03 | 1 M B/s 30 · 8 KB/s 存 85 ％ | 1048576 | 600302 | 94.75 | FAIL |
+| 2 | 8.03 | 1 · 07 M B/s 33 · 6 KB/s 存 85 ％ | 1121976 | 600302 | 94.27 | FAIL |
+| 3 | 12.03 | 943 KB/s 213 K B/s 勺 存 81 ％ At | 965632 | 600302 | 60.86 | FAIL |
+| 4 | 16.02 | 36 · 1 K B/s 259 KB/s 勺 存 81 ％ At | 265216 | 600302 | 55.82 | FAIL |
+| 5 | 20.01 | 1 · 09 M B/s 47 · 4 KB/s 内 存 81 ％ At | 1142947 | 600302 | 91.91 | FAIL |
+samples_within_20pct=0/5
+RESULT: FAIL (0/5 samples within 20%)

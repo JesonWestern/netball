@@ -1,0 +1,7 @@
+rc 2 exists False
+SCREEN CAPTURE
+  class : NetBallBallWnd
+  out   : d:\agentproject\ÍøËÙÐü¸¡Çò\docs\verify\media-v4\t-nowin.png
+RESULT: SKIP (process 'NetBall_v4' not running)
+
+

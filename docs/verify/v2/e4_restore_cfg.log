@@ -1,0 +1,31 @@
+已复制         1 个文件。
+SHA256 的 C:\Users\sihuo\AppData\Roaming\NetBall\config.ini 哈希:
+38a32e914e9769c3f3caba303b72d83fa6a91f59e7376aaa0101b90bed2a57ec
+CertUtil: -hashfile 命令成功完成。
+=== SNAPSHOT [final_restored] 2026-11-02 20:38:31 ===
+USER    : sihuo
+appdir  : C:\Users\sihuo\AppData\Local\Programs\NetBall
+desktop : C:\Users\sihuo\Desktop
+startmenu: C:\Users\sihuo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\NetBall
+--- appdir ---
+APPDIR_ABSENT
+--- desktop lnk ---
+DESKTOP_LNK_ABSENT
+--- startmenu group ---
+STARTMENU_ABSENT
+--- appdir uninstaller pair ---
+  MISSING unins000.exe
+  MISSING unins000.dat
+  MISSING unins000.msg
+  MISSING NetBall.exe
+  MISSING unins_lnk C:\Users\sihuo\AppData\Local\Programs\NetBall\鍗歌浇 NetBall.lnk
+--- run value ---
+RUNVALUE_ABSENT
+--- uninstall registry ---
+UNINSTALL_KEY_ABSENT
+--- appdata config ---
+CFGDIR_EXISTS
+  \config.ini size=193
+--- processes ---
+NO_RELATED_PROCESS
+=== END [final_restored] ===

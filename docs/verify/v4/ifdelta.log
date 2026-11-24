@@ -1,0 +1,65 @@
+PER-INTERFACE InOctets DELTA  19:25:09  (42 rows total)
+
+idx  typ mtu   oper filt alias                          kept
+21   6   1500  1    1    以太网-WFP Native MAC Layer LightWeight Filter-0000 -
+22   6   1500  1    1    以太网-QoS Packet Scheduler-0000  -
+23   6   1500  1    1    以太网-WFP 802.3 MAC Layer LightWeight Filter-0000 -
+37   6   1500  1    1    本地连接* 6-WFP Native MAC Layer LightWeight Filter-0000 -
+38   6   1500  1    1    本地连接* 6-QoS Packet Scheduler-0000 -
+39   6   1500  1    1    本地连接* 7-WFP Native MAC Layer LightWeight Filter-0000 -
+40   6   1500  1    1    本地连接* 7-QoS Packet Scheduler-0000 -
+41   6   1500  1    1    本地连接* 8-WFP Native MAC Layer LightWeight Filter-0000 -
+42   6   1500  1    1    本地连接* 8-QoS Packet Scheduler-0000 -
+15   6   1500  1    0    以太网                            YES
+14   6   0     6    0    以太网(内核调试器)                     -
+16   6   1500  1    0    本地连接* 6                        YES
+9    6   1500  1    0    本地连接* 7                        YES
+8    6   1500  1    0    本地连接* 8                        YES
+12   6   1500  2    0    蓝牙网络连接                         -
+19   6   1500  1    0    VMware Network Adapter VMnet1  YES
+20   6   1500  1    0    VMware Network Adapter VMnet8  YES
+17   23  1494  2    0    本地连接* 5                        -
+1    24  1500  1    0    Loopback Pseudo-Interface 1    -
+24   71  1500  1    1    WLAN-WFP Native MAC Layer LightWeight Filter-0000 -
+25   71  1500  1    1    WLAN-Virtual WiFi Filter Driver-0000 -
+26   71  1500  1    1    WLAN-Native WiFi Filter Driver-0000 -
+27   71  1500  1    1    WLAN-QoS Packet Scheduler-0000 -
+28   71  1500  1    1    WLAN-WFP 802.3 MAC Layer LightWeight Filter-0000 -
+29   71  1500  2    1    本地连接* 9-WFP Native MAC Layer LightWeight Filter-0000 -
+30   71  1500  2    1    本地连接* 9-Native WiFi Filter Driver-0000 -
+31   71  1500  2    1    本地连接* 9-QoS Packet Scheduler-0000 -
+32   71  1500  2    1    本地连接* 9-WFP 802.3 MAC Layer LightWeight Filter-0000 -
+33   71  1500  2    1    本地连接* 10-WFP Native MAC Layer LightWeight Filter-0000 -
+34   71  1500  2    1    本地连接* 10-Native WiFi Filter Driver-0000 -
+35   71  1500  2    1    本地连接* 10-QoS Packet Scheduler-0000 -
+36   71  1500  2    1    本地连接* 10-WFP 802.3 MAC Layer LightWeight Filter-0000 -
+11   71  1500  1    0    WLAN                           YES
+10   71  1500  2    0    本地连接* 9                        -
+6    71  1500  2    0    本地连接* 10                       -
+18   131 0     6    0    Teredo Tunneling Pseudo-Interface -
+7    131 0     6    0    Microsoft IP-HTTPS Platform Interface -
+4    131 0     6    0    6to4 Adapter                   -
+5    131 4091  2    0    本地连接* 1                        -
+13   131 1480  2    0    本地连接* 2                        -
+3    131 1460  2    0    本地连接* 3                        -
+2    131 1464  2    0    本地连接* 4                        -
+
+second-by-second InOctets delta (bytes)
+  t+1  21:47025  22:47025  23:47025  15:47025
+        MIRROR: interfaces [21, 22, 23, 15] all moved by exactly 47025 bytes
+  t+2  21:93164  22:93164  23:93164  15:93164
+        MIRROR: interfaces [21, 22, 23, 15] all moved by exactly 93164 bytes
+  t+3  21:92143  22:92143  23:92143  15:92143
+        MIRROR: interfaces [21, 22, 23, 15] all moved by exactly 92143 bytes
+  t+4  21:100649  22:100649  23:100649  15:100649
+        MIRROR: interfaces [21, 22, 23, 15] all moved by exactly 100649 bytes
+  t+5  21:95424  22:95424  23:95424  15:95424
+        MIRROR: interfaces [21, 22, 23, 15] all moved by exactly 95424 bytes
+  t+6  21:104554  22:104554  23:104554  15:104554
+        MIRROR: interfaces [21, 22, 23, 15] all moved by exactly 104554 bytes
+  t+7  21:95370  22:95370  23:95370  15:95370
+        MIRROR: interfaces [21, 22, 23, 15] all moved by exactly 95370 bytes
+  t+8  21:127870  22:127870  23:127870  15:127870
+        MIRROR: interfaces [21, 22, 23, 15] all moved by exactly 127870 bytes
+
+RESULT: PASS (per-interface deltas dumped)

@@ -1,0 +1,29 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053184
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+PROBE start diagnostics
+ini written: Name                           Value                                                                                   
+----                           -----                                                                                   
+autostart                      0                                                                                       
+savedh                         0                                                                                       
+posx                           700                                                                                     
+bgcolor                        #262A34                                                                                 
+shownet                        1                                                                                       
+textauto                       1                                                                                       
+alwaysontop                    1                                                                                       
+size                           160                                                                                     
+showmem                        1                                                                                       
+savedw                         0                                                                                       
+textcolor                      #FFFFFF                                                                                 
+shape                          0                                                                                       
+opacity                        85                                                                                      
+posy                           320                                                                                     
+refreshms                      1000
+started pid=19836
+alive after 2.5s = True
+main window handle=0x1620982 title='NetBall 网速悬浮球'
+FindByClass(pid) = 0x1620982
+FindByClass(any) = 0x1620982
+  info: L=700 T=320 R=980 B=600 W=280 H=280 visible=1
+proc NetBall_t7b pid=19836
+EXIT=0 

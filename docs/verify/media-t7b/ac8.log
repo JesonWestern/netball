@@ -1,0 +1,149 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053184
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T7b AC-8 : text contrast (presets x opacity 85%) ===========
+  private copy verified: 7269afaaf069365db42dff2c5d8f8f79658248fbb6f466890aff4c10b64a74f0 1053184 B mtime=2026-11-02 19:10:18
+  PRESETS_SOURCE=new   (blue #144BC8 / purple #6E32BE / red #B41923)
+  MEASURED_EXE: sha256=7269afaaf069365db42dff2c5d8f8f79658248fbb6f466890aff4c10b64a74f0 mtime=2026-11-02 19:10:18 bytes=1053184
+  swatch1-darkgray   #262A34 rect=280x280 png=ac8-swatch1-darkgray.png bytes=27705
+CHECK: PASS swatch1-darkgray.png  (screenshot bytes=27705)
+CHECK: PASS swatch1-darkgray.config-intact  (bgcolor after capture = #262A34 (wrote #262A34))
+CHECK: PASS swatch1-darkgray.size  (W=280 expect 280 (160 DIP x 175%))
+  swatch2-black      #000000 rect=280x280 png=ac8-swatch2-black.png bytes=27154
+CHECK: PASS swatch2-black.png  (screenshot bytes=27154)
+CHECK: PASS swatch2-black.config-intact  (bgcolor after capture = #000000 (wrote #000000))
+CHECK: PASS swatch2-black.size  (W=280 expect 280 (160 DIP x 175%))
+  swatch3-white      #FFFFFF rect=280x280 png=ac8-swatch3-white.png bytes=26810
+CHECK: PASS swatch3-white.png  (screenshot bytes=26810)
+CHECK: PASS swatch3-white.config-intact  (bgcolor after capture = #FFFFFF (wrote #FFFFFF))
+CHECK: PASS swatch3-white.size  (W=280 expect 280 (160 DIP x 175%))
+  swatch4-blue       #144BC8 rect=280x280 png=ac8-swatch4-blue.png bytes=28105
+CHECK: PASS swatch4-blue.png  (screenshot bytes=28105)
+CHECK: PASS swatch4-blue.config-intact  (bgcolor after capture = #144BC8 (wrote #144BC8))
+CHECK: PASS swatch4-blue.size  (W=280 expect 280 (160 DIP x 175%))
+  swatch5-green      #22A05A rect=280x280 png=ac8-swatch5-green.png bytes=35071
+CHECK: PASS swatch5-green.png  (screenshot bytes=35071)
+CHECK: PASS swatch5-green.config-intact  (bgcolor after capture = #22A05A (wrote #22A05A))
+CHECK: PASS swatch5-green.size  (W=280 expect 280 (160 DIP x 175%))
+  swatch6-orange     #EB8C1E rect=280x280 png=ac8-swatch6-orange.png bytes=35764
+CHECK: PASS swatch6-orange.png  (screenshot bytes=35764)
+CHECK: PASS swatch6-orange.config-intact  (bgcolor after capture = #EB8C1E (wrote #EB8C1E))
+CHECK: PASS swatch6-orange.size  (W=280 expect 280 (160 DIP x 175%))
+  swatch7-purple     #6E32BE rect=280x280 png=ac8-swatch7-purple.png bytes=27972
+CHECK: PASS swatch7-purple.png  (screenshot bytes=27972)
+CHECK: PASS swatch7-purple.config-intact  (bgcolor after capture = #6E32BE (wrote #6E32BE))
+CHECK: PASS swatch7-purple.size  (W=280 expect 280 (160 DIP x 175%))
+  swatch8-red        #B41923 rect=280x280 png=ac8-swatch8-red.png bytes=28016
+CHECK: PASS swatch8-red.png  (screenshot bytes=28016)
+CHECK: PASS swatch8-red.config-intact  (bgcolor after capture = #B41923 (wrote #B41923))
+CHECK: PASS swatch8-red.size  (W=280 expect 280 (160 DIP x 175%))
+  default-bg         #181C24 rect=280x280 png=ac8-default-bg.png bytes=27298
+CHECK: PASS default-bg.png  (screenshot bytes=27298)
+CHECK: PASS default-bg.config-intact  (bgcolor after capture = #181C24 (wrote #181C24))
+CHECK: PASS default-bg.size  (W=280 expect 280 (160 DIP x 175%))
+CHECK: PASS shots.captured  (captured 9/9 preset screenshots)
+
+AC-8 TEXT CONTRAST (2-means inside the inscribed fill mask; desktop discarded)
+  core-cr = WCAG(chosen text colour, fill colour)  <- verdict metric
+  avg-cr  = WCAG(2-means cluster centroids)        <- antialiased edges dilute it
+shot                 fill      textcore  core-cr  avg-cr   predict  verdict
+------------------------------------------------------------------------------------
+swatch1-darkgray     #24242C   #FFFFFF   15.40    12.96    white    PASS  
+         glyph core #FFFFFF (luma deviation from fill = 218.1, text cluster 14.9% of mask)
+swatch2-black        #040404   #FFFFFF   20.50    18.37    white    PASS  
+         glyph core #FFFFFF (luma deviation from fill = 251.0, text cluster 15.0% of mask)
+swatch3-white        #DCDCDC   #000000   15.31    14.79    black    PASS  
+         glyph core #000000 (luma deviation from fill = 220.0, text cluster 15.9% of mask)
+swatch4-blue         #1444AC   #FFFFFF   8.56     7.54     white    PASS  
+         glyph core #FFFFFF (luma deviation from fill = 189.5, text cluster 15.2% of mask)
+swatch5-green        #1C8C4C   #000000   4.90     2.90     black    PASS  
+         glyph core #000000 (luma deviation from fill = 99.2, text cluster 9.2% of mask)
+swatch6-orange       #CC7C1C   #000000   6.47     6.87     black    PASS  
+         glyph core #000000 (luma deviation from fill = 137.0, text cluster 14.7% of mask)
+swatch7-purple       #642CA4   #FFFFFF   8.61     7.52     white    PASS  
+         glyph core #FFFFFF (luma deviation from fill = 180.6, text cluster 15.4% of mask)
+swatch8-red          #9C1424   #FFFFFF   8.27     7.23     white    PASS  
+         glyph core #FFFFFF (luma deviation from fill = 192.5, text cluster 15.4% of mask)
+default-bg           #141C24   #FFFFFF   17.19    15.14    white    PASS  
+         glyph core #FFFFFF (luma deviation from fill = 228.5, text cluster 15.8% of mask)
+
+METRIC: shots=9 fails=0 min_required=4.5
+RESULT: PASS (every preset shot >= 4.5:1 inside the fill mask)
+PYEXIT-images: 0
+
+---------- arithmetic cross-check (maximin rule) ----------
+AC-8 / MATH  maximin(black,white) rule on the 8 real swatches
+  rule: score(text) = min(contrast over pure-black desktop, contrast over pure-white desktop)
+        pick argmax(score); >= 4.5 required
+
+preset             alpha  picked           score-pick score-other verdict note      
+--------------------------------------------------------------------------------------------
+swatch1-darkgray   100    white            14.35     1.46      PASS              
+swatch1-darkgray   85     white            8.86      1.35      PASS              
+swatch1-darkgray   70     white            5.42      1.25      PASS              
+swatch1-darkgray   60     white            4.00      1.20      KNOWN-LIM physically impossible, worst=4.00
+swatch1-darkgray   40     white            2.33      1.11      KNOWN-LIM physically impossible, worst=2.33
+swatch1-darkgray   20     white            1.48      1.05      KNOWN-LIM physically impossible, worst=1.48
+swatch2-black      100    white            21.00     1.00      PASS              
+swatch2-black      85     white            15.13     1.00      PASS              
+swatch2-black      70     white            8.45      1.00      PASS              
+swatch2-black      60     white            5.74      1.00      PASS              
+swatch2-black      40     white            2.85      1.00      KNOWN-LIM physically impossible, worst=2.85
+swatch2-black      20     white            1.61      1.00      KNOWN-LIM physically impossible, worst=1.61
+swatch3-white      100    black            21.00     1.00      PASS              
+swatch3-white      85     black            14.88     1.00      PASS              
+swatch3-white      70     black            9.90      1.00      PASS              
+swatch3-white      60     black            7.37      1.00      PASS              
+swatch3-white      40     black            3.66      1.00      KNOWN-LIM physically impossible, worst=3.66
+swatch3-white      20     black            1.66      1.00      KNOWN-LIM physically impossible, worst=1.66
+swatch4-blue       100    white            7.32      2.87      PASS              
+swatch4-blue       85     white            5.28      2.34      PASS              
+swatch4-blue       70     white            3.77      1.89      KNOWN-LIM physically impossible, worst=3.77
+swatch4-blue       60     white            3.02      1.66      KNOWN-LIM physically impossible, worst=3.02
+swatch4-blue       40     white            2.01      1.31      KNOWN-LIM physically impossible, worst=2.01
+swatch4-blue       20     white            1.39      1.10      KNOWN-LIM physically impossible, worst=1.39
+swatch5-green      100    black            6.24      3.36      PASS              
+swatch5-green      85     black            4.68      2.78      PASS              
+swatch5-green      70     black            3.43      2.30      KNOWN-LIM physically impossible, worst=3.43
+swatch5-green      60     black            2.76      2.02      KNOWN-LIM physically impossible, worst=2.76
+swatch5-green      40     black            1.78      1.58      KNOWN-LIM physically impossible, worst=1.78
+swatch5-green      20     white            1.25      1.22      KNOWN-LIM physically impossible, worst=1.25
+swatch6-orange     100    black            8.30      2.53      PASS              
+swatch6-orange     85     black            6.11      2.20      PASS              
+swatch6-orange     70     black            4.34      1.91      KNOWN-LIM physically impossible, worst=4.34
+swatch6-orange     60     black            3.41      1.73      KNOWN-LIM physically impossible, worst=3.41
+swatch6-orange     40     black            2.05      1.44      KNOWN-LIM physically impossible, worst=2.05
+swatch6-orange     20     black            1.29      1.19      KNOWN-LIM physically impossible, worst=1.29
+swatch7-purple     100    white            7.34      2.86      PASS              
+swatch7-purple     85     white            5.26      2.33      PASS              
+swatch7-purple     70     white            3.74      1.89      KNOWN-LIM physically impossible, worst=3.74
+swatch7-purple     60     white            3.02      1.66      KNOWN-LIM physically impossible, worst=3.02
+swatch7-purple     40     white            2.00      1.31      KNOWN-LIM physically impossible, worst=2.00
+swatch7-purple     20     white            1.39      1.11      KNOWN-LIM physically impossible, worst=1.39
+swatch8-red        100    white            6.77      3.10      PASS              
+swatch8-red        85     white            5.32      2.48      PASS              
+swatch8-red        70     white            3.96      1.99      KNOWN-LIM physically impossible, worst=3.96
+swatch8-red        60     white            3.20      1.72      KNOWN-LIM physically impossible, worst=3.20
+swatch8-red        40     white            2.10      1.33      KNOWN-LIM physically impossible, worst=2.10
+swatch8-red        20     white            1.42      1.10      KNOWN-LIM physically impossible, worst=1.42
+default-bg         100    white            17.07     1.23      PASS              
+default-bg         85     white            10.71     1.18      PASS              
+default-bg         70     white            6.31      1.14      PASS              
+default-bg         60     white            4.49      1.11      KNOWN-LIM physically impossible, worst=4.49
+default-bg         40     white            2.49      1.07      KNOWN-LIM physically impossible, worst=2.49
+default-bg         20     white            1.51      1.04      KNOWN-LIM physically impossible, worst=1.51
+midgray-808080     100    black            5.32      3.95      PASS              
+midgray-808080     85     black            4.06      3.07      KNOWN-LIM physically impossible, worst=4.06
+midgray-808080     70     black            3.04      2.43      KNOWN-LIM physically impossible, worst=3.04
+midgray-808080     60     black            2.48      2.10      KNOWN-LIM physically impossible, worst=2.48
+midgray-808080     40     black            1.66      1.61      KNOWN-LIM physically impossible, worst=1.66
+midgray-808080     20     white            1.25      1.21      KNOWN-LIM physically impossible, worst=1.25
+
+METRIC: cases=60 known_limitation=35 rule_violations=0 worst=1.248
+  known limitation: mid gray at low opacity flips with the backdrop;
+  no black/white choice can hold 4.5:1 on both a white and a black desktop.
+RESULT: PASS (maximin rule holds; every feasible preset/opacity >= 4.5:1)
+PYEXIT-math: 0
+
+SUMMARY: checks=28 failed=0 images_exit=0 math_exit=0
+RESULT: PASS

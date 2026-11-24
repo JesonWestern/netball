@@ -1,0 +1,44 @@
+
+== circle-88 154x154
+  y=  0 (   0%) left= 66 right= 87 width= 22
+  y=  8 ( 5.2%) left=  0 right=151 width=152
+  y= 15 ( 9.7%) left=  0 right=149 width=150
+  y= 30 (19.5%) left=  4 right=138 width=135
+  y= 46 (29.9%) left=  6 right=147 width=142
+  y= 77 (  50%) left=  0 right=153 width=154
+  y=107 (69.5%) left=  6 right=147 width=142
+  y=123 (79.9%) left=  2 right=141 width=140
+  y=138 (89.6%) left=  1 right=141 width=141
+  y=145 (94.2%) left=  0 right=149 width=150
+  y=153 (99.4%) left= 66 right= 89 width= 24
+  integrated area = 21405 px -> coverage 5.791
+
+== roundedsq-88 154x154
+  y=  0 (   0%) left= 27 right=127 width=101
+  y=  8 ( 5.2%) left= 11 right=142 width=132
+  y= 15 ( 9.7%) left=  5 right=148 width=144
+  y= 30 (19.5%) left=  0 right=153 width=154
+  y= 46 (29.9%) left=  0 right=153 width=154
+  y= 77 (  50%) left=  0 right=153 width=154
+  y=107 (69.5%) left=  0 right=153 width=154
+  y=123 (79.9%) left=  0 right=153 width=154
+  y=138 (89.6%) left=  5 right=148 width=144
+  y=145 (94.2%) left= 11 right=143 width=133
+  y=153 (99.4%) left= 26 right=128 width=103
+  integrated area = 22803 px -> coverage 1.438
+
+== capsule-88 231x154
+  y=  0 (   0%) left= 66 right=164 width= 99
+  y=  8 ( 5.2%) left= 41 right=189 width=149
+  y= 15 ( 9.7%) left= 30 right=200 width=171
+  y= 30 (19.5%) left= 15 right=215 width=201
+  y= 46 (29.9%) left=  6 right=224 width=219
+  y= 77 (  50%) left=  0 right=230 width=231
+  y=107 (69.5%) left=  6 right=224 width=219
+  y=123 (79.9%) left= 15 right=215 width=201
+  y=138 (89.6%) left= 30 right=200 width=171
+  y=145 (94.2%) left= 41 right=190 width=150
+  y=153 (99.4%) left= 66 right=166 width=101
+  integrated area = 30677 px -> coverage 1.972
+
+RESULT: INFO

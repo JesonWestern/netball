@@ -1,0 +1,35 @@
+﻿ROOT=D:\agentproject\网速悬浮球
+FILE NetBall.exe | bytes=1053696 | mtime=2026-11-02 21:28:29.189 | sha256=E085727CF87E4DF22B551596B2CB53D407EF177BA2539B4D9E6AC0FB33EBE983
+FILE NetBallSetup-1.0.0.exe | bytes=2414810 | mtime=2026-11-02 21:36:48.310 | sha256=CDDC99A7F087B91CB0144EC015A3C8D2FE6FB65F225FFAA842651D8C791FF969
+AC1 FileDescription='NetBall 网速悬浮球'
+AC1 cp=U+004E U+0065 U+0074 U+0042 U+0061 U+006C U+006C U+0020 U+7F51 U+901F U+60AC U+6D6E U+7403
+AC1 FileVersion=1.0.0.0 ProductName=NetBall ProductVersion=1.0.0.0 OriginalFilename=NetBall.exe CompanyName=NetBall Language=简体中文(中国大陆)
+AC1 want_cp=U+004E U+0065 U+0074 U+0042 U+0061 U+006C U+006C U+0020 U+7F51 U+901F U+60AC U+6D6E U+7403
+AC1 desc_equal=True
+AC1 icon=32x32 variance=17,837.33
+AC1 manifest_str 'PerMonitorV2' count=1
+AC1 manifest_str 'asInvoker' count=1
+AC1 manifest_str 'Microsoft.Windows.Common-Controls' count=0
+AC1 manifest_str 'requestedExecutionLevel' count=1
+AC1 PE machine=0x8664 (0x8664=x64)
+SETUP head=4D5A5000
+SETUP contains 'NetBall.exe'=False 'unins000'=False 'Inno Setup'=True
+SETUP VersionInfo ProductName='NetBall                                                     ' FileVersion='1.0.0.0             '
+ISS bytes=10551 head=EFBBBF
+ISS utf8_bom=True
+ISS_R1_group_two_icons=True
+ISS_R2_app_uninstall_lnk=True
+ISS_R3_ask_keep_config=True
+ISS_R4_displayname_icon=True
+ISS_R5_wizard_bmps=True
+ISS_R6_infobefore_readme=True
+ISS_R7_desktop_optional=True
+ISS_R8_appid_fixed=True
+ISS_R9_minversion=True
+ISS_R10_uninstalldelete=True
+ASCII build\build.bat bytes=3668 non_ascii=0
+ASCII build\package.bat bytes=5283 non_ascii=0
+README bytes=5225 head=EFBBBF bom=True
+README crlf=74 bare_lf=0
+BMP wizard-large.bmp 164x314 pixfmt=Format24bppRgb bytes=154542
+BMP wizard-small.bmp 55x58 pixfmt=Format24bppRgb bytes=9798

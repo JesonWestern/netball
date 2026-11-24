@@ -1,0 +1,27 @@
+=== SNAPSHOT [after_uninstall1] 2026-11-02 20:17:30 ===
+USER    : sihuo
+appdir  : C:\Users\sihuo\AppData\Local\Programs\NetBall
+desktop : C:\Users\sihuo\Desktop
+startmenu: C:\Users\sihuo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\NetBall
+--- appdir ---
+APPDIR_ABSENT
+--- desktop lnk ---
+DESKTOP_LNK_ABSENT
+--- startmenu group ---
+STARTMENU_ABSENT
+--- appdir uninstaller pair ---
+  MISSING unins000.exe
+  MISSING unins000.dat
+  MISSING unins000.msg
+  MISSING NetBall.exe
+  MISSING unins_lnk C:\Users\sihuo\AppData\Local\Programs\NetBall\卸载 NetBall.lnk
+--- run value ---
+RUNVALUE_ABSENT
+--- uninstall registry ---
+UNINSTALL_KEY_ABSENT
+--- appdata config ---
+CFGDIR_EXISTS
+  \config.ini size=193
+--- processes ---
+NO_RELATED_PROCESS
+=== END [after_uninstall1] ===

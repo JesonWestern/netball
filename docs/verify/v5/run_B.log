@@ -1,0 +1,74 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053696
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+=========== T14 group B : D-06 drag clamp / reset / menus ===========
+  cleanup: killing leftover NetBall_v5 pid=34212
+  anchor sha = e085727cf87e4df22b551596b2cb53d407ef177ba2539b4d9e6ac0fb33ebe983 bytes=1053696 mtime=2026-11-02 21:28:29
+  virtual screen x=[-1920..3840] y=[0..2160]
+
+--- B1: drag to the bottom-right corner (target cursor 3838,2158) ---
+  B1 rect: L=3686 T=2006 R=3840 B=2160 W=154 H=154
+CHECK: PASS B1.right-inside  (rect.right=3840 vs virtual right 3840 (overhang 0 px))
+CHECK: PASS B1.bottom-inside  (rect.bottom=2160 vs virtual bottom 2160 (overhang 0 px))
+CHECK: PASS B1.zero-offscreen  (0% of the ball is outside the virtual screen (not the 32px tolerance))
+  ini after B1: posx=3686 posy=2006
+CHECK: PASS B1.persisted-clamped  (ini matches the on-screen rect (3686,2006))
+
+--- B2: drag to the top-left (target cursor -1900,-50) ---
+  B2 rect: L=-1920 T=0 R=-1810 B=110 W=110 H=110
+CHECK: PASS B2.left-inside  (rect.left=-1920 vs virtual left -1920)
+CHECK: PASS B2.top-inside  (rect.top=0 vs virtual top 0)
+  ini after B2: posx=-1920 posy=0
+CHECK: PASS B2.persisted-clamped  (ini matches the on-screen rect (-1920,0))
+
+--- B3a: ball right-click menu enumeration (expect 8 items = 6 commands + 2 separators) ---
+  menu window hwnd=0x580D0C
+  menu rect L=-1865 T=55 196x184
+  --- ball dump ---
+    HMENU=0x1A3C0A0B count=8
+    item 0 id=1001 checked=0 sep=0 enabled=1 text=设置(&S)...
+    item 1 id=0 checked=0 sep=1 enabled=0 text=
+    item 2 id=1002 checked=1 sep=0 enabled=1 text=总在最前(&T)
+    item 3 id=1003 checked=0 sep=0 enabled=1 text=开机自启(&A)
+    item 4 id=1004 checked=0 sep=0 enabled=1 text=重置位置(&R)
+    item 5 id=0 checked=0 sep=1 enabled=0 text=
+    item 6 id=1005 checked=0 sep=0 enabled=1 text=关于(&B)
+    item 7 id=1006 checked=0 sep=0 enabled=1 text=退出(&X)
+CHECK: PASS menus.ball.count  (GetMenuItemCount = 8 (expect 8))
+CHECK: PASS menus.ball.commands  (6 commands (expect 6))
+CHECK: PASS menus.ball.separators  (2 separators (expect 2))
+CHECK: PASS menus.ball.ids  (ids = 1001,1002,1003,1004,1005,1006)
+CHECK: PASS menus.ball.all-enabled  (0 of 6 command items greyed out)
+CHECK: PASS menus.ball.topmost-checked  (1002 checked=1 (config alwaysontop=1))
+CHECK: PASS menus.ball.autostart-unchecked  (1003 checked=0 (config autostart=0))
+CHECK: PASS menus.ball.dismissed  (ESC closed the popup=True)
+
+--- B3b: tray menu enumeration (expect 5 items = 4 commands + 1 separator) ---
+  tray menu window hwnd=0x590D0C
+  tray menu rect L=-1865 T=55 212x121
+  --- tray dump ---
+    HMENU=0x1BE309DD count=5
+    item 0 id=1001 checked=0 sep=0 enabled=1 text=设置(&S)...
+    item 1 id=1010 checked=0 sep=0 enabled=1 text=显示或隐藏(&H)
+    item 2 id=1004 checked=0 sep=0 enabled=1 text=重置位置(&R)
+    item 3 id=0 checked=0 sep=1 enabled=0 text=
+    item 4 id=1006 checked=0 sep=0 enabled=1 text=退出(&X)
+CHECK: PASS menus.tray.count  (GetMenuItemCount = 5 (expect 5))
+CHECK: PASS menus.tray.commands  (4 commands (expect 4))
+CHECK: PASS menus.tray.separators  (1 separator (expect 1))
+CHECK: PASS menus.tray.ids  (ids = 1001,1010,1004,1006)
+CHECK: PASS menus.tray.all-enabled  (0 of 4 command items greyed out)
+CHECK: PASS menus.tray.has-resetpos  (id 1004 (reset position) present in the tray menu)
+CHECK: PASS menus.tray.dismissed  (ESC closed the popup=True)
+
+--- B3c: tray reset (exact message tray.cpp sends: WM_COMMAND 1004) ---
+  before reset: L=-1920 T=0
+  after  reset: L=3706 T=1942 R=3860 B=2096
+CHECK: PASS B3c.reset.moved  (position changed from (-1920,0) to (3706,1942))
+CHECK: FAIL B3c.reset.inside-virtual  (reset position is fully inside the virtual screen)
+CHECK: FAIL B3c.reset.default-spot  (rect (3706,1942) vs expected default (3662,1898))
+  ini after reset: posx=3706 posy=1942
+  config restored: posx=-1 posy=-1
+SUMMARY: checks=25 failed=2
+RESULT: FAIL
+EXITCODE=

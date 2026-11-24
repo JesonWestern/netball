@@ -1,0 +1,27 @@
+=== AC-1 BINARY METADATA ===
+AC1 path        = D:\agentproject\ÍøËÙÐü¸¡Çò\build\out\NetBall.exe
+AC1 bytes       = 1053184
+AC1 mtime       = 2026-11-02 19:10:18.485
+AC1 sha256      = 7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+AC1 size_ok     = True
+AC1 desc_raw    = [NetBall ÍøËÙÐü¸¡Çò]
+AC1 desc_len    = 13 (want 13)
+AC1 desc_cp     = U+004E U+0065 U+0074 U+0042 U+0061 U+006C U+006C U+0020 U+7F51 U+901F U+60AC U+6D6E U+7403
+AC1 want_cp     = U+004E U+0065 U+0074 U+0042 U+0061 U+006C U+006C U+0020 U+7F51 U+901F U+60AC U+6D6E U+7403
+AC1 desc_ok     = True
+AC1 FileVersion = 1.0.0.0
+AC1 ProductName = [NetBall]
+AC1 OriginalFn  = [NetBall.exe]
+AC1 icon        = 56x56 sampled=784 luma_mean=34.2 variance=2129.59
+AC1 icon_ok     = True
+AC1 manifest    = asInvoker=True PerMonitorV2=True
+AC1 manifest_ok = True
+
+=== AC-2 WINDOW STYLE (read-only, does not start anything) ===
+AC2 window      = NOT FOUND (no NetBall window right now)
+AC2 verdict     = BLOCKED-NOWND
+
+=== SHA AFTER ===
+AC1 sha_after   = 7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+AC1 sha_same    = True
+DONE

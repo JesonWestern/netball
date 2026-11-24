@@ -1,0 +1,4 @@
+DRYRUN exit=0 elapsed=1s stdoutLines=39 stderrLen=0
+DRYRUN child RESULT line: 
+DRYRUN child snapshot line: snapshot written: D:\agentproject\网速悬浮球\docs\verify\media-t7b\res-dryrun.log
+EXIT=0 

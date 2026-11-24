@@ -1,0 +1,11 @@
+ENV: root=D:\agentproject\网速悬浮球
+ENV: exe=D:\agentproject\网速悬浮球\build\_tmp\t7b\NetBall_t7b.exe size=1053184
+ENV: ini=C:\Users\sihuo\AppData\Roaming\NetBall\config.ini
+PROBE drag
+ball L=700 T=320 R=854 B=474 W=154 H=154 visible=1
+cursor target at (777,397) -> hwnd=0x1AC0934 class=NetBallBallWnd pid=9700 ex=0x80088
+foreground -> hwnd=0x100414 class=Chrome_WidgetWin_1 pid=5556 ex=0x100
+cursor now (777,397)
+after physical drag L=520 T=200 R=674 B=354 W=154 H=154 visible=1
+after posted drag L=340 T=80 R=494 B=234 W=154 H=154 visible=1
+EXIT=0 

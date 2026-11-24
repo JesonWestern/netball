@@ -1,0 +1,126 @@
+{
+  "total_rows": 42,
+  "kept_rows": 7,
+  "interfaces": [
+    {
+      "index": 15,
+      "alias": "以太网",
+      "description": "Realtek PCIe GbE Family Controller",
+      "type": 6,
+      "oper_status": 1,
+      "mtu": 1500,
+      "in_octets": 5250725800,
+      "out_octets": 793098963,
+      "recv_link_speed": 1000000000,
+      "hardware": true,
+      "filter_layer": false
+    },
+    {
+      "index": 16,
+      "alias": "本地连接* 6",
+      "description": "WAN Miniport (IP)",
+      "type": 6,
+      "oper_status": 1,
+      "mtu": 1500,
+      "in_octets": 0,
+      "out_octets": 0,
+      "recv_link_speed": 0,
+      "hardware": false,
+      "filter_layer": false
+    },
+    {
+      "index": 9,
+      "alias": "本地连接* 7",
+      "description": "WAN Miniport (IPv6)",
+      "type": 6,
+      "oper_status": 1,
+      "mtu": 1500,
+      "in_octets": 0,
+      "out_octets": 0,
+      "recv_link_speed": 0,
+      "hardware": false,
+      "filter_layer": false
+    },
+    {
+      "index": 8,
+      "alias": "本地连接* 8",
+      "description": "WAN Miniport (Network Monitor)",
+      "type": 6,
+      "oper_status": 1,
+      "mtu": 1500,
+      "in_octets": 0,
+      "out_octets": 0,
+      "recv_link_speed": 0,
+      "hardware": false,
+      "filter_layer": false
+    },
+    {
+      "index": 19,
+      "alias": "VMware Network Adapter VMnet1",
+      "description": "VMware Virtual Ethernet Adapter for VMnet1",
+      "type": 6,
+      "oper_status": 1,
+      "mtu": 1500,
+      "in_octets": 89,
+      "out_octets": 7445,
+      "recv_link_speed": 100000000,
+      "hardware": false,
+      "filter_layer": false
+    },
+    {
+      "index": 20,
+      "alias": "VMware Network Adapter VMnet8",
+      "description": "VMware Virtual Ethernet Adapter for VMnet8",
+      "type": 6,
+      "oper_status": 1,
+      "mtu": 1500,
+      "in_octets": 89,
+      "out_octets": 12351,
+      "recv_link_speed": 100000000,
+      "hardware": false,
+      "filter_layer": false
+    },
+    {
+      "index": 11,
+      "alias": "WLAN",
+      "description": "MediaTek Wi-Fi 6 MT7921 Wireless LAN Card",
+      "type": 71,
+      "oper_status": 1,
+      "mtu": 1500,
+      "in_octets": 8142144,
+      "out_octets": 3007842,
+      "recv_link_speed": 1201000000,
+      "hardware": true,
+      "filter_layer": false
+    }
+  ]
+}
+
+METRIC: total_rows=42 aggregated_rows=7
+RESULT: PASS (interface table parsed, 7 interface(s) eligible for aggregation)
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 18:29:44
+BUILD: newest source=src/main.cpp mtime=2026-11-02 18:23:40
+BUILD: fresh=yes
+AC-9 AUTOSTART CHECK (registry is authoritative)
+  key   : HKCU\Software\Microsoft\Windows\CurrentVersion\Run\NetBall
+  value : <absent>
+  ini   : autostart=0 (snapshot only - cfg::load() overwrites it from the registry)
+  check : value absent (autostart off)
+METRIC: run_value_present=0
+RESULT: PASS (registry state is self-consistent)
+AC-11 SINGLE INSTANCE CHECK
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 18:29:44
+BUILD: newest source=src/main.cpp mtime=2026-11-02 18:23:40
+BUILD: fresh=yes
+  exe     : d:\agentproject\网速悬浮球\build\out\NetBall.exe
+  gap     : 1.5s   settle: 3.0s
+  launch #1 ...
+  after #1 : 1 process(es) [20400]
+  launch #2 ...
+  after #2 : 0 process(es) []
+  launcher #1 returncode: still running
+  launcher #2 returncode: 0
+
+METRIC: processes_after_1=1 processes_after_2=0
+RESULT: FAIL (0 instances alive after the second launch, expected 1 -> no mutex/FindWindow guard)
+^C

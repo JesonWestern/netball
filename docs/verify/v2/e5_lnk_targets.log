@@ -1,0 +1,13 @@
+app_unins_lnk : PRESENT bytes=1187
+   target=C:\Users\sihuo\AppData\Local\Programs\NetBall\unins000.exe  expect=C:\Users\sihuo\AppData\Local\Programs\NetBall\unins000.exe  match=True
+   args= workdir=C:\Users\sihuo\AppData\Local\Programs\NetBall icon=,0
+sm_launch_lnk : PRESENT bytes=1258
+   target=C:\Users\sihuo\AppData\Local\Programs\NetBall\NetBall.exe  expect=C:\Users\sihuo\AppData\Local\Programs\NetBall\NetBall.exe  match=True
+   args= workdir=C:\Users\sihuo\AppData\Local\Programs\NetBall icon=,0
+sm_unins_lnk : PRESENT bytes=1265
+   target=C:\Users\sihuo\AppData\Local\Programs\NetBall\unins000.exe  expect=C:\Users\sihuo\AppData\Local\Programs\NetBall\unins000.exe  match=True
+   args= workdir=C:\Users\sihuo\AppData\Local\Programs\NetBall icon=,0
+desktop_lnk : PRESENT bytes=1244
+   target=C:\Users\sihuo\AppData\Local\Programs\NetBall\NetBall.exe  expect=C:\Users\sihuo\AppData\Local\Programs\NetBall\NetBall.exe  match=True
+   args= workdir=C:\Users\sihuo\AppData\Local\Programs\NetBall icon=,0
+LNK_DONE

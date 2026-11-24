@@ -1,0 +1,6 @@
+OCR: upscaled 6x threshold=110 -> C:\Users\sihuo\AppData\Local\Temp\nb_ocr_upscaled.png (996x996)
+OCR_TEXT: 。 1 1 · 72 KB/s 274 釤 内 存 乃 ％
+OCR_DOWN: 72 KB/s
+BALL_DOWN_BPS=73728
+METRIC: ocr_value=72 unit=KB/S bps=73728 tokens=1
+RESULT: PASS (downstream value machine-read from the screenshot)

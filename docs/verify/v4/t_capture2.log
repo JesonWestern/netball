@@ -1,0 +1,16 @@
+[none] rc=4294770688 out_len=208 exists=False
+   | Windows PowerShell
+   | Copyright (C) Microsoft Corporation. All rights reserved.
+   | 
+   | 处理 -File“d:\agentproject\网速悬浮球\docs\verify\media-v4\t-none.png”失败，因为该文件不具有 '.ps1' 扩展名。请指定一个有效的 Windows PowerShell 脚本文件名，然后重试。
+
+[CREATE_NO_WINDOW] rc=4294770688 out_len=220 exists=False
+   | Windows PowerShell
+   | Copyright (C) Microsoft Corporation. All rights reserved.
+   | 
+   | 处理 -File“d:\agentproject\网速悬浮球\docs\verify\media-v4\t-CREATE_NO_WINDOW.png”失败，因为该文件不具有 '.ps1' 扩展名。请指定一个有效的 Windows PowerShell 脚本文件名，然后重试。
+
+[DETACHED] rc=0 out_len=0 exists=False
+
+python=3.12.10
+stdout_encoding=utf-8

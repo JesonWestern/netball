@@ -1,0 +1,56 @@
+WIZARD_HWND=0x2E041E
+CANCEL_BTN=0x9E0C9C
+=== after cancel click ===
+WINDOW hwnd=0x4A08F4 pid=14244 class=ThumbnailDeviceHelperWnd text=
+  text_cp=
+WINDOW hwnd=0x208BE pid=14244 class=ThumbnailDeviceHelperWnd text=
+  text_cp=
+WINDOW hwnd=0x1020C pid=14244 class=Shell_TrayWnd text=
+  text_cp=
+WINDOW hwnd=0x1022E pid=14244 class=Shell_SecondaryTrayWnd text=
+  text_cp=
+WINDOW hwnd=0x2E041E pid=26952 class=TWizardForm text=安装 - NetBall 网速悬浮球
+  text_cp=U+5B89U+88C5U+0020U+002DU+0020U+004EU+0065U+0074U+0042U+0061U+006CU+006CU+0020U+7F51U+901FU+60ACU+6D6EU+7403
+WINDOW hwnd=0xBF0CD0 pid=26952 class=TApplication text=
+  text_cp=
+WINDOW hwnd=0x80786 pid=27104 class=Chrome_WidgetWin_1 text=agentproject - main.cpp - CodeBuddy CN
+  text_cp=U+0061U+0067U+0065U+006EU+0074U+0070U+0072U+006FU+006AU+0065U+0063U+0074U+0020U+002DU+0020U+006DU+0061U+0069U+006EU+002EU+0063U+0070U+0070U+0020U+002DU+0020U+0043U+006FU+0064U+0065U+0042U+0075U+0064U+0064U+0079U+0020U+0043U+004E
+WINDOW hwnd=0x10836 pid=14936 class=Chrome_WidgetWin_1 text=WorkBuddy
+  text_cp=U+0057U+006FU+0072U+006BU+0042U+0075U+0064U+0064U+0079
+WINDOW hwnd=0x30AE4 pid=14244 class=CabinetWClass text=D:\Documents\music - 文件资源管理器
+  text_cp=U+0044U+003AU+005CU+0044U+006FU+0063U+0075U+006DU+0065U+006EU+0074U+0073U+005CU+006DU+0075U+0073U+0069U+0063U+0020U+002DU+0020U+6587U+4EF6U+8D44U+6E90U+7BA1U+7406U+5668
+WINDOW hwnd=0x2E09CE pid=5556 class=Chrome_WidgetWin_1 text=哔哩哔哩 (゜-゜)つロ 干杯~-bilibili
+  text_cp=U+54D4U+54E9U+54D4U+54E9U+0020U+0028U+309CU+002DU+309CU+0029U+3064U+30EDU+0020U+5E72U+676FU+007EU+002DU+0062U+0069U+006CU+0069U+0062U+0069U+006CU+0069
+WINDOW hwnd=0xB0708 pid=20612 class=Windows.UI.Core.CoreWindow text=设置
+  text_cp=U+8BBEU+7F6E
+WINDOW hwnd=0x306E6 pid=23108 class=ApplicationFrameWindow text=设置
+  text_cp=U+8BBEU+7F6E
+WINDOW hwnd=0x105B0 pid=23576 class=CEF-OSC-WIDGET text=NVIDIA GeForce Overlay
+  text_cp=U+004EU+0056U+0049U+0044U+0049U+0041U+0020U+0047U+0065U+0046U+006FU+0072U+0063U+0065U+0020U+004FU+0076U+0065U+0072U+006CU+0061U+0079
+WINDOW hwnd=0x50392 pid=9904 class=Windows.UI.Core.CoreWindow text=Windows 输入体验
+  text_cp=U+0057U+0069U+006EU+0064U+006FU+0077U+0073U+0020U+8F93U+5165U+4F53U+9A8C
+WINDOW hwnd=0x102A8 pid=14244 class=EdgeUiInputTopWndClass text=
+  text_cp=
+WINDOW hwnd=0x102BA pid=14244 class=EdgeUiInputTopWndClass text=
+  text_cp=
+WINDOW hwnd=0x102C0 pid=14244 class=DummyDWMListenerWindow text=
+  text_cp=
+WINDOW hwnd=0x1028A pid=14244 class=DummyDWMListenerWindow text=
+  text_cp=
+WINDOW hwnd=0x10288 pid=14244 class=DummyDWMListenerWindow text=
+  text_cp=
+WINDOW hwnd=0x10286 pid=14244 class=DummyDWMListenerWindow text=
+  text_cp=
+WINDOW hwnd=0x10284 pid=14244 class=DummyDWMListenerWindow text=
+  text_cp=
+WINDOW hwnd=0x1A03D0 pid=32500 class=ConsoleWindowClass text=
+  text_cp=
+WINDOW hwnd=0xD60ACA pid=33124 class=ConsoleWindowClass text=
+  text_cp=
+WINDOW hwnd=0x10244 pid=14244 class=Progman text=Program Manager
+  text_cp=U+0050U+0072U+006FU+0067U+0072U+0061U+006DU+0020U+004DU+0061U+006EU+0061U+0067U+0065U+0072
+=== final ===
+WIZARD_STILL=0x2E041E
+PROC 33488 NetBallSetup-1.0.0
+PROC 26952 NetBallSetup-1.0.0.tmp
+CLOSE_DONE

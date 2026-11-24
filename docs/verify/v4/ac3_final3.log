@@ -1,0 +1,40 @@
+BUILD: exe=NetBall.exe bytes=1053184 mtime=2026-11-02 19:10:18 sha256=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+BUILD: newest src=settings_dialog.cpp mtime=2026-11-02 18:58:17
+BUILD: fresh=yes
+
+AC-3 NETWORK SPEED  2026-11-02 19:23:18
+COPY: main=NetBall.exe sha=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0
+COPY: priv=NetBall_v4.exe sha=7269AFAAF069365DB42DFF2C5D8F8F79658248FBB6F466890AFF4C10B64A74F0  identical=True
+APP: pid=34400 launched
+APP: ball hwnd=0x1A09D0 rect=(2093, 1085, 2181, 1173)
+CONFIG at start: mtime=19:23:19 bytes=193
+NIC: 7 eligible interface(s) after OperStatus/type/FilterInterface filter
+CURL: pid=13728 max_time=60s rate_limit=800k url=https://speed.cloudflare.com/__down?bytes=20000000
+NOTE: curl --max-time on a 20 MB payload ALWAYS exits 28 (truncated by
+      design). rc=28 is expected and is not a failure.
+SAMPLE 1: t=4.03s cap_rc=0 colors=385 ink_px=2406 ball=154x154 nic=79754 B/s
+SAMPLE 2: t=8.02s cap_rc=0 colors=372 ink_px=2341 ball=154x154 nic=79901 B/s
+SAMPLE 3: t=12.00s cap_rc=0 colors=364 ink_px=2382 ball=154x154 nic=67180 B/s
+SAMPLE 4: t=16.03s cap_rc=0 colors=378 ink_px=2340 ball=154x154 nic=103038 B/s
+SAMPLE 5: t=20.04s cap_rc=0 colors=1122 ink_px=2157 ball=152x152 nic=62225 B/s
+CURL: rc=28 wall=60.04s
+CURL -w: '1130496 60.016289 18836 200'
+OCR 1: text='136 KB/s 18 KB/s 勺 存 85 ％' ball_bps=139264 nic_bps=79754 err_vs_curl=639.33% err_vs_nic=74.62% [scale=6 thr=0 crop=0.24]
+OCR 2: text='42 KB/s 4 · 16 KB/ s 存 85 ％' ball_bps=43008 nic_bps=79901 err_vs_curl=128.32% err_vs_nic=46.17% [scale=6 thr=0 crop=0.24]
+OCR 3: text='293 KB/s 2 · 06 KB/s 存 85 ％' ball_bps=300032 nic_bps=67180 err_vs_curl=1492.82% err_vs_nic=346.61% [scale=6 thr=0 crop=0.24]
+OCR 4: text='98 KB/s 14 · 1 K B/s 勺 存 85 ％' ball_bps=100352 nic_bps=103038 err_vs_curl=432.75% err_vs_nic=2.61% [scale=6 thr=0 crop=0.24]
+OCR 5: text='36 · 8 KB/s 2 · 87 KB/s 存 87 ％' ball_bps=37683 nic_bps=62225 err_vs_curl=100.05% err_vs_nic=39.44% [scale=6 thr=0 crop=0.24]
+APP: pid=34400 terminated (by PID only), rc=1
+
+GROUND_TRUTH bytes=1130496 seconds=60.016 rate=18836.5 B/s (18.40 KB/s)
+GATE: bytes>=300000 -> True ; window>=20s -> True
+
+| # | t(s) | ball_ocr | ball_B/s | curl_GT_B/s | nic_B/s | err_vs_curl% | err_vs_nic% | <=20% |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 4.03 | 136 KB/s 18 KB/s 勺 存 85 ％ | 139264 | 18836 | 79754 | 639.33 | 74.62 | FAIL |
+| 2 | 8.02 | 42 KB/s 4 · 16 KB/ s 存 85 ％ | 43008 | 18836 | 79901 | 128.32 | 46.17 | FAIL |
+| 3 | 12.00 | 293 KB/s 2 · 06 KB/s 存 85 ％ | 300032 | 18836 | 67180 | 1492.82 | 346.61 | FAIL |
+| 4 | 16.03 | 98 KB/s 14 · 1 K B/s 勺 存 85 ％ | 100352 | 18836 | 103038 | 432.75 | 2.61 | FAIL |
+| 5 | 20.04 | 36 · 8 KB/s 2 · 87 KB/s 存 87 ％ | 37683 | 18836 | 62225 | 100.05 | 39.44 | FAIL |
+samples_within_20pct=0/5
+RESULT: FAIL (0/5 samples within 20%)

@@ -1,0 +1,221 @@
+ac7_self.txt
+ac7_self2.txt
+ac8_self.txt
+ac8_self2.txt
+ac8_self3.txt
+ac8_self4.txt
+all_probe.txt
+build.log
+build_b10.txt
+build_b11.txt
+build_b12.txt
+build_b13.txt
+build_b14.txt
+build_b5.txt
+build_b6.txt
+build_b7.txt
+build_b8.txt
+build_b9.txt
+build_copy.txt
+build_last.txt
+build_now.txt
+cfg_dump.txt
+drag_probe.log
+final_probe.ps1
+final_run.err
+final_run.log
+final_run2.txt
+gui_probe.log
+long_probe.ps1
+long_run.err
+long_run.log
+nb_long.exe
+nb_stab.exe
+NetBall.exe
+netball_shot.png
+pos_probe.ps1
+preset-capsule-100-gray.png
+preset-capsule-85.png
+preset-circle-100-dark.png
+preset-circle-100-white.png
+preset-circle-20-dark.png
+preset-circle-20.png
+preset-circle-85.png
+preset-round-60-mid.png
+preset-round-85.png
+preset-white-100.png
+preset-white-20.png
+preset_probe.ps1
+preset_run.err
+preset_run.log
+probe_netball.log
+probe_netball.ps1
+probe_run.err
+probe_run.log
+proc.log
+proc_probe.log
+rclick_probe.log
+run_build.log
+run_build.ps1
+run_final.out
+run_final.ps1
+run_long.out
+run_long.ps1
+run_long2.out
+run_preset.log
+run_preset.ps1
+run_preset2.log
+run_preset3.log
+run_preset4.log
+run_probe.log
+run_probe.ps1
+run_stability.out
+run_stability.ps1
+run_verify.out
+run_verify.ps1
+spike.exe
+spike_gui.txt
+spike_selftest.txt
+spike_shot.png
+stability_probe.ps1
+stability_run.err
+stability_run.log
+stab_now.txt
+tasks.csv
+true_contrast.py
+true_contrast.txt
+verify_probe.ps1
+verify_run.err
+verify_run.log
+=== 
+Add-Type @"
+using System;
+using System.Text;
+using System.Runtime.InteropServices;
+public class Nb {
+  public delegate bool Cb(IntPtr h, IntPtr p);
+  [DllImport("user32.dll")] public static extern bool EnumWindows(Cb cb, IntPtr p);
+  [DllImport("user32.dll", CharSet=CharSet.Unicode)] public static extern int GetClassNameW(IntPtr h, StringBuilder s, int n);
+  [DllImport("user32.dll")] public static extern bool GetWindowRect(IntPtr h, out RECT r);
+  [DllImport("user32.dll")] public static extern IntPtr GetWindowLongPtrW(IntPtr h, int idx);
+  [DllImport("user32.dll")] public static extern bool IsWindowVisible(IntPtr h);
+  [DllImport("user32.dll")] public static extern IntPtr SetThreadDpiAwarenessContext(IntPtr ctx);
+  [DllImport("user32.dll")] public static extern bool PostMessageW(IntPtr h, uint msg, IntPtr wp, IntPtr lp);
+  [DllImport("user32.dll")] public static extern bool SetWindowPos(IntPtr h, IntPtr after, int x, int y, int cx, int cy, uint flags);
+  public struct RECT { public int l, t, r, b; }
+  public static IntPtr FindClass(string cls) {
+    IntPtr found = IntPtr.Zero;
+    EnumWindows((h, p) => {
+      var sb = new StringBuilder(256);
+      GetClassNameW(h, sb, 256);
+      if (sb.ToString() == cls) { found = h; return false; }
+      return true;
+    }, IntPtr.Zero);
+    return found;
+  }
+}
+"@
+[void][Nb]::SetThreadDpiAwarenessContext([IntPtr](-4))
+
+$root   = (Get-Location).Path
+$exe    = Join-Path $root 'build\out\NetBall.exe'
+$outDir = Join-Path $root 'build\out'
+$cfgDir = Join-Path $env:APPDATA 'NetBall'
+if (-not (Test-Path $cfgDir)) { New-Item -ItemType Directory -Path $cfgDir | Out-Null }
+$cfgFile = Join-Path $cfgDir 'config.ini'
+
+function Write-Cfg([int]$shape, [int]$opacity, [string]$bg, [int]$size) {
+  $lines = @('[NetBall]', "shape=$shape", "size=$size", "opacity=$opacity",
+             'textauto=1', 'shownet=1', 'showmem=1', 'refreshms=1000',
+             'alwaysontop=1', 'autostart=0', 'posx=-1', 'posy=-1',
+             'savedw=0', 'savedh=0', "bgcolor=$bg", 'textcolor=#FFFFFF')
+  Set-Content -Path $cfgFile -Value $lines -Encoding ASCII
+}
+
+function Shot([string]$name) {
+  $h = [Nb]::FindClass('NetBallBallWnd')
+  if ($h -eq [IntPtr]::Zero) { "$name : NO WINDOW"; return }
+  $r = New-Object Nb+RECT
+  [void][Nb]::GetWindowRect($h, [ref]$r)
+  $w = $r.r - $r.l; $ht = $r.b - $r.t
+  $bmp = New-Object System.Drawing.Bitmap $w, $ht
+  $g = [System.Drawing.Graphics]::FromImage($bmp)
+  $g.CopyFromScreen($r.l, $r.t, 0, 0, (New-Object System.Drawing.Size($w, $ht)))
+  $bmp.Save((Join-Path $outDir ("preset-" + $name + ".png")))
+  $c = $bmp.GetPixel(2, 2)
+  "$name : size=${w}x${ht} pos=$($r.l),$($r.t) corner=($($c.R),$($c.G),$($c.B))"
+  $g.Dispose(); $bmp.Dispose()
+}
+
+$cases = @(
+  @{n='circle-85';       s=0; o=85;  bg='#181C24'},
+  @{n='round-85';        s=1; o=85;  bg='#0060C0'},
+  @{n='capsule-85';      s=2; o=85;  bg='#10A060'},
+  @{n='circle-20';       s=0; o=20;  bg='#181C24'},
+  @{n='circle-100-white';s=0; o=100; bg='#FFFFFF'},
+  @{n='capsule-100-gray';s=2; o=100; bg='#C8C8C8'},
+  @{n='round-60-mid';    s=1; o=60;  bg='#808080'}
+)
+
+foreach ($c in $cases) {
+  Get-Process NetBall -ErrorAction SilentlyContinue | Stop-Process -Force
+  Start-Sleep -Milliseconds 350
+  Write-Cfg $c.s $c.o $c.bg 88
+  $p = Start-Process -FilePath $exe -PassThru
+  Start-Sleep -Milliseconds 1800
+  Shot $c.n
+  $p.Refresh()
+  if (-not $p.HasExited) { "  ws_kb=" + [int]($p.WorkingSet64/1KB) }
+  if (-not $p.HasExited) { Stop-Process -Id $p.Id -Force }
+  Start-Sleep -Milliseconds 250
+}
+
+# ---------------- interaction: settings dialog / topmost / show-hide / resetpos / exit
+Get-Process NetBall -ErrorAction SilentlyContinue | Stop-Process -Force
+Start-Sleep -Milliseconds 300
+Write-Cfg 0 85 '#181C24' 88
+$p = Start-Process -FilePath $exe -PassThru
+Start-Sleep -Milliseconds 1800
+$h = [Nb]::FindClass('NetBallBallWnd')
+"interaction hwnd=$h"
+
+[void][Nb]::PostMessageW($h, 0x0111, [IntPtr]1001, [IntPtr]::Zero)     # WM_COMMAND IDM_SETTINGS
+Start-Sleep -Milliseconds 1400
+$sh = [Nb]::FindClass('NetBallSettingsWnd')
+"settings_wnd_opened=" + ($sh -ne [IntPtr]::Zero)
+if ($sh -ne [IntPtr]::Zero) { [void][Nb]::PostMessageW($sh, 0x0010, [IntPtr]::Zero, [IntPtr]::Zero); }
+Start-Sleep -Milliseconds 800
+"settings_wnd_closed=" + ([Nb]::FindClass('NetBallSettingsWnd') -eq [IntPtr]::Zero)
+
+$ex0 = [Nb]::GetWindowLongPtrW($h, -20).ToInt64()
+[void][Nb]::PostMessageW($h, 0x0111, [IntPtr]1002, [IntPtr]::Zero)
+Start-Sleep -Milliseconds 600
+$ex1 = [Nb]::GetWindowLongPtrW($h, -20).ToInt64()
+[void][Nb]::PostMessageW($h, 0x0111, [IntPtr]1002, [IntPtr]::Zero)
+Start-Sleep -Milliseconds 600
+$ex2 = [Nb]::GetWindowLongPtrW($h, -20).ToInt64()
+"topmost_toggle: before={0} off={1} on={2}" -f [bool]($ex0 -band 8), [bool]($ex1 -band 8), [bool]($ex2 -band 8)
+
+[void][Nb]::PostMessageW($h, 0x0111, [IntPtr]1010, [IntPtr]::Zero)
+Start-Sleep -Milliseconds 500
+$v1 = [Nb]::IsWindowVisible($h)
+[void][Nb]::PostMessageW($h, 0x0111, [IntPtr]1010, [IntPtr]::Zero)
+Start-Sleep -Milliseconds 500
+$v2 = [Nb]::IsWindowVisible($h)
+"tray_show_toggle: hidden_after_first=$(-not $v1) visible_after_second=$v2"
+
+# 假装被拖动到 (120,120)，再重置位置
+[void][Nb]::SetWindowPos($h, [IntPtr]::Zero, 120, 120, 0, 0, 0x0001 -bor 0x0004 -bor 0x0010)
+Start-Sleep -Milliseconds 400
+$r1 = New-Object Nb+RECT; [void][Nb]::GetWindowRect($h, [ref]$r1)
+[void][Nb]::PostMessageW($h, 0x0111, [IntPtr]1004, [IntPtr]::Zero)
+Start-Sleep -Milliseconds 800
+$r2 = New-Object Nb+RECT; [void][Nb]::GetWindowRect($h, [ref]$r2)
+"resetpos: $($r1.l),$($r1.t) -> $($r2.l),$($r2.t)"
+
+[void][Nb]::PostMessageW($h, 0x0111, [IntPtr]1011, [IntPtr]::Zero)     # IDM_TRAY_EXIT
+Start-Sleep -Milliseconds 1200
+$p.Refresh()
+"exit: has_exited={0} exitcode={1}" -f $p.HasExited, $(if ($p.HasExited) { $p.ExitCode } else { 'n/a' })
+"PRESET_DONE"
+

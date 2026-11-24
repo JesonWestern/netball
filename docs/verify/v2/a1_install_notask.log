@@ -1,0 +1,9 @@
+SETUP   : D:\agentproject\利堀傅検白\dist\NetBallSetup-1.0.0.exe
+ARGS    : /VERYSILENT /CURRENTUSER /SUPPRESSMSGBOXES /NORESTART /SP- /LANG=chinesesimplified /LOG=D:\agentproject\利堀傅検白\build\_tmp\v2\inno_install1.log /TASKS=
+INNOLOG : D:\agentproject\利堀傅検白\build\_tmp\v2\inno_install1.log
+LOADER_EXITED_PID=33524 EXITCODE=0 ELAPSED_MS=538
+ARTIFACT_UNINS_PRESENT
+--- inno log markers ---
+  2026-11-02 20:16:21.106   Installation process succeeded.
+  2026-11-02 20:16:21.106   Deinitializing Setup.
+  2026-11-02 20:16:21.123   Log closed.

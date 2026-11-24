@@ -1,0 +1,3 @@
+PROBE (bandwidth only)  2026-11-02 18:54:12
+curl rc=28 wall=25.04s out='737280 25.012329 29477 200'
+RESULT: BLOCKED (curl failed)

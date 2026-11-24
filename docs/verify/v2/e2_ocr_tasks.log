@@ -1,0 +1,8 @@
+OCR: input upscaled 2x -> 2434x1856
+OCR: engine language = zh-Hans-CN
+OCR_TEXT: 安 装 一 NetBall 网 速 悬 浮 球 选 择 附 加 任 务 您 想 要 安 装 程 序 执 行 哪 些 附 加 任 务 ？ 选 择 您 想 要 安 装 程 序 在 安 装 NetBall 网 速 悬 浮 球 时 执 行 的 附 加 任 务 ， 然 后 点 击 ' 下 一 附 加 快 捷 方 式 创 建 桌 面 快 捷 方 式 （ D) 上 一 步 （ B ） 下 一 步 （ N ） 取 氵 肖
+OCR_TEXT_NORM: 安装一NetBall网速悬浮球选择附加任务您想要安装程序执行哪些附加任务？选择您想要安装程序在安装NetBall网速悬浮球时执行的附加任务，然后点击'下一附加快捷方式创建桌面快捷方式（D)上一步（B）下一步（N）取氵肖
+OCR_CHARS: 109
+NEEDLE_HIT  U+9644U+52A0U+4EFBU+52A1
+NEEDLE_HIT  U+521BU+5EFAU+684CU+9762U+5FEBU+6377U+65B9U+5F0F
+RESULT: OCR_ALL_NEEDLES_HIT

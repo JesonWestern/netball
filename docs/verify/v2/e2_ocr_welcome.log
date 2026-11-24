@@ -1,0 +1,9 @@
+OCR: input upscaled 2x -> 2434x1856
+OCR: engine language = zh-Hans-CN
+OCR_TEXT: 安 装 - NetBaII 网 速 悬 浮 球 NetBall 欢 迎 使 用 NetBall 网 速 悬 浮 球 安 装 向 导 即 将 在 您 的 计 算 机 上 安 装 NetBall 网 速 悬 浮 球 1 0 。 建 议 您 在 继 续 安 装 前 关 闭 所 有 其 他 应 用 程 序 。 点 击 ' 下 一 步 " 继 续 ， 或 点 击 " 取 消 " 退 出 安 装 程 序 。 下 一 步 （ N ） 取 氵 肖
+OCR_TEXT_NORM: 安装-NetBaII网速悬浮球NetBall欢迎使用NetBall网速悬浮球安装向导即将在您的计算机上安装NetBall网速悬浮球10。建议您在继续安装前关闭所有其他应用程序。点击'下一步"继续，或点击"取消"退出安装程序。下一步（N）取氵肖
+OCR_CHARS: 121
+NEEDLE_HIT  U+5B89U+88C5U+5411U+5BFC
+NEEDLE_HIT  U+53D6U+6D88
+NEEDLE_HIT  U+4E0BU+4E00U+6B65
+RESULT: OCR_ALL_NEEDLES_HIT

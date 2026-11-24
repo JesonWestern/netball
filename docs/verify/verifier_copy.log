@@ -1,0 +1,17 @@
+信息: 没有运行的任务匹配指定标准。
+--- 
+SHA256 的 build\out\NetBall.exe 哈希:
+8ecf99c192842fbd5a2cf3235985825e0122126ca46fb26fc0d25640042f6265
+CertUtil: -hashfile 命令成功完成。
+SHA256 的 build\_tmp\vfy\NetBall_vfy.exe 哈希:
+8ecf99c192842fbd5a2cf3235985825e0122126ca46fb26fc0d25640042f6265
+CertUtil: -hashfile 命令成功完成。
+--- 
+ 驱动器 D 中的卷是 Work
+ 卷的序列号是 B8C8-5514
+
+ d:\agentproject\网速悬浮球\build\out 的目录
+
+2026/11/02  18:33         1,053,184 NetBall.exe
+               1 个文件      1,053,184 字节
+               0 个目录 93,744,455,680 可用字节

@@ -1,0 +1,27 @@
+NIC BACKGROUND PROBE  2026-11-02 19:21:56
+  sizeof(MIB_IF_ROW2)=1352  eligible_ifaces=7
+  iface idx=15  type=6   mtu=1500  以太网
+  iface idx=16  type=6   mtu=1500  本地连接* 6
+  iface idx=9   type=6   mtu=1500  本地连接* 7
+  iface idx=8   type=6   mtu=1500  本地连接* 8
+  iface idx=19  type=6   mtu=1500  VMware Network Adapter VMnet1
+  iface idx=20  type=6   mtu=1500  VMware Network Adapter VMnet8
+  iface idx=11  type=71  mtu=1500  WLAN
+
+  t_s   down            up
+  1     1.12 KB/s       389.27 B/s
+  2     575.37 B/s      562.38 B/s
+  3     15.75 KB/s      27.45 KB/s
+  4     15.03 KB/s      5.91 KB/s
+  5     2.27 KB/s       3.61 KB/s
+  6     8.86 KB/s       223.08 KB/s
+  7     32.05 KB/s      11.39 KB/s
+  8     33.70 KB/s      10.98 KB/s
+  9     561.07 B/s      684.86 B/s
+  10    2.05 KB/s       3.82 KB/s
+  11    524.79 B/s      735.70 B/s
+  12    5.06 KB/s       11.44 KB/s
+
+METRIC: background_down_bps=10026 (9.79 KB/s) over 12s
+  any AC-3 sample below this floor is unreachable on this host
+RESULT: PASS (background measured)
